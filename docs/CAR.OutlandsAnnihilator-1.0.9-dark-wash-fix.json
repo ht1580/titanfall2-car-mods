@@ -1,0 +1,46 @@
+{
+  "version": "1.0.9",
+  "gameTested": false,
+  "modelReplacementRequired": false,
+  "rootCause": [
+    "1.0.8 material used alpha blend state 0xF0138004 / mask 0x4",
+    "shader buffer enabled alpha-modulated emissive over the weapon"
+  ],
+  "correction": {
+    "blendState": "opaque",
+    "blendStateMask": "0x0",
+    "alphaModEmissive": 0.0,
+    "emissiveTint": [
+      0,
+      0,
+      0
+    ],
+    "ilmConnected": false,
+    "perfGloss": 0.35,
+    "perfSpecColor": [
+      0.015,
+      0.015,
+      0.015
+    ]
+  },
+  "ddsFormats": {
+    "col": "BC7_UNORM_SRGB",
+    "nml": "BC5_UNORM",
+    "gls": "BC4_UNORM",
+    "spc": "BC7_UNORM_SRGB",
+    "ao": "BC7_UNORM",
+    "cav": "BC7_UNORM"
+  },
+  "models": {
+    "ptpov_car101.mdl": {
+      "sha256": "44621c65d79c772dc62b4effda49b815de81afe6c8db04460a63507487e9295e",
+      "unchangedFrom1.0.8": true
+    },
+    "w_car101.mdl": {
+      "sha256": "8ac4837014be2f05862fdb2fb9b1e03830939aee6838e2d1fddc74a68059cb01",
+      "unchangedFrom1.0.8": true
+    }
+  },
+  "rpakSha256": "0e95ddf98f105f755d4f64d2c9a948e243fc4dd639268ce40f564d0f66a3a613",
+  "zipSha256": "aa89404755b87f5a4b7ad8c5fec22808cb220d4a9fb42aec9e314d2432166126"
+}
