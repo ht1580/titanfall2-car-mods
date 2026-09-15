@@ -1,0 +1,78 @@
+{
+  "version": "1.0.10",
+  "gameTested": false,
+  "offsetLocal": [
+    0,
+    0.65,
+    0
+  ],
+  "direction": "toward weapon along muzzle bone local +Y",
+  "mods": {
+    "CAR.OutlandsAnnihilator": {
+      "models": {
+        "ptpov_car101.mdl": {
+          "before": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after": [
+            0.0,
+            0.6500015258789062,
+            0.0
+          ],
+          "sha256": "cdaaaa2aa95a7576f2556f78d4ac5d618eca0de0a8f3fe229e905b1a34a72ffd"
+        },
+        "w_car101.mdl": {
+          "before": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after": [
+            0.0,
+            0.6499998569488525,
+            0.0
+          ],
+          "sha256": "2a425830ade7ba235ee5ab5d6dccd32b081cee5c010a1cd2df37fb030d199905"
+        }
+      },
+      "pakUnchanged": true,
+      "zipSha256": "07ad35cf1bb6726247336276a412cbe7120c6a0c136e1849afd62beeecae0776",
+      "zipSize": 13141529
+    },
+    "CAR.Mythic.Allfather": {
+      "models": {
+        "ptpov_car101.mdl": {
+          "before": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after": [
+            0.0,
+            0.6500015258789062,
+            0.0
+          ],
+          "sha256": "c6b1df115bd6c6610f0347cde942d435ba4af9bfce00e6f686a24d312c2a2e80"
+        },
+        "w_car101.mdl": {
+          "before": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "after": [
+            0.0,
+            0.6499998569488525,
+            0.0
+          ],
+          "sha256": "16308f5dd44bef7515949ec1d8c4570409c5d87186f96a7693751e4c3269c881"
+        }
+      },
+      "pakUnchanged": true,
+      "zipSha256": "19523bae2997bd181b16d3791438310907551a3c1a9f2b301f9c12f1d8b31b17",
+      "zipSize": 18430200
+    }
+  }
+}
