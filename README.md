@@ -29,3 +29,13 @@ B82660255C62D75618EC15D0E6181DA8CD42F57812D47FFDD20E742BD8D8280D  CAR.RichMahoga
 ```
 
 详细核对记录位于 `docs/`。
+
+## 原始制作资料
+
+完整制作资料作为 Release 附件提供：
+
+- [`CAR-Source-and-Final-Resources-2026-09-13.zip`](https://github.com/ht1580/titanfall2-car-mods/releases/download/v2026.09.14/CAR-Source-and-Final-Resources-2026-09-13.zip)
+- 大小：327,726,170 字节
+- SHA-256：`03A32910351ED465F291AFEE460C8181FF05361DE0BBF83AF7AC0607FB4A5C19`
+
+资料包共 1,482 个条目，包含制作工具、自动化脚本、SMD/QC、Blender 预览以及模型和材质制作资源。当前三个可安装版本请从同一 Release 下载。
