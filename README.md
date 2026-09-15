@@ -5,7 +5,7 @@
 ## 当前版本
 
 - `CAR.Mythic.Allfather-1.0.8.zip`：CAR 神话皮版本。
-- `CAR.OutlandsAnnihilator-1.0.6.zip`：CAR 外域毁灭者版本，保留静态计数器。
+- `CAR.OutlandsAnnihilator-1.0.7.zip`：CAR 外域毁灭者版本，保留静态计数器；修正 DDS 压缩与 sRGB 标记。
 - `CAR.RichMahogany-1.1.10.zip`：CAR 桃心花木版本，包含机瞄绑定修正。
 
 三个 CAR 替换模组互斥，同一时间只启用一个。
@@ -24,7 +24,7 @@
 
 ```text
 5D77E20F6A4C2DFE21D819E820BDA1FC2B8D4C4E65354175075528B9976A2DDC  CAR.Mythic.Allfather-1.0.8.zip
-B8D06D75755E4DCFD771A5018FE9AB43BB29B892EBF502877BBE89AFB1461A8D  CAR.OutlandsAnnihilator-1.0.6.zip
+B85AF0C3FA610B338A54FE73030A5AAF999D7E995BB0C0C62A60E8C855BFEC82  CAR.OutlandsAnnihilator-1.0.7.zip
 B82660255C62D75618EC15D0E6181DA8CD42F57812D47FFDD20E742BD8D8280D  CAR.RichMahogany-1.1.10.zip
 ```
 
