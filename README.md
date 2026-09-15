@@ -34,8 +34,8 @@ B82660255C62D75618EC15D0E6181DA8CD42F57812D47FFDD20E742BD8D8280D  CAR.RichMahoga
 
 完整制作资料作为 Release 附件提供：
 
-- [`CAR-Source-and-Final-Resources-2026-09-13.zip`](https://github.com/ht1580/titanfall2-car-mods/releases/download/v2026.09.14/CAR-Source-and-Final-Resources-2026-09-13.zip)
-- 大小：327,726,170 字节
-- SHA-256：`03A32910351ED465F291AFEE460C8181FF05361DE0BBF83AF7AC0607FB4A5C19`
+- [`CAR-Source-and-Final-Resources-2026-09-14.zip`](https://github.com/ht1580/titanfall2-car-mods/releases/download/v2026.09.14/CAR-Source-and-Final-Resources-2026-09-14.zip)
+- 大小：433,340,087 字节
+- SHA-256：`7E9865583C086628CF37805F8B75B8E7373545CA35D616240448905A67A8AD72`
 
-资料包共 1,482 个条目，包含制作工具、自动化脚本、SMD/QC、Blender 预览以及模型和材质制作资源。当前三个可安装版本请从同一 Release 下载。
+资料包共 1,597 个条目，包含制作工具、自动化脚本、SMD/QC、Blender 预览、模型和材质制作资源，以及当前三个展开后的模组和安装包。外域毁灭者部分已同步 1.0.7 的 DDS 编码脚本、贴图、RPAK 与核对记录。
