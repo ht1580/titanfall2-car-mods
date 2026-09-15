@@ -5,7 +5,7 @@
 ## 当前版本
 
 - `CAR.Mythic.Allfather-1.0.8.zip`：CAR 神话皮版本。
-- `CAR.OutlandsAnnihilator-1.0.7.zip`：CAR 外域毁灭者版本，保留静态计数器；修正 DDS 压缩与 sRGB 标记。
+- `CAR.OutlandsAnnihilator-1.0.8.zip`：CAR 外域毁灭者版本，保留静态计数器；使用官方 RePak 1.4 新格式重建，并修正 DDS 压缩与 sRGB 标记。
 - `CAR.RichMahogany-1.1.10.zip`：CAR 桃心花木版本，包含机瞄绑定修正。
 
 三个 CAR 替换模组互斥，同一时间只启用一个。
@@ -24,7 +24,7 @@
 
 ```text
 5D77E20F6A4C2DFE21D819E820BDA1FC2B8D4C4E65354175075528B9976A2DDC  CAR.Mythic.Allfather-1.0.8.zip
-B85AF0C3FA610B338A54FE73030A5AAF999D7E995BB0C0C62A60E8C855BFEC82  CAR.OutlandsAnnihilator-1.0.7.zip
+0F675B6A5C48FB3AC9ACC056E39A99FF12E7B9D7EA2D747D29BAD8F1168BDA1A  CAR.OutlandsAnnihilator-1.0.8.zip
 B82660255C62D75618EC15D0E6181DA8CD42F57812D47FFDD20E742BD8D8280D  CAR.RichMahogany-1.1.10.zip
 ```
 
@@ -35,7 +35,9 @@ B82660255C62D75618EC15D0E6181DA8CD42F57812D47FFDD20E742BD8D8280D  CAR.RichMahoga
 完整制作资料作为 Release 附件提供：
 
 - [`CAR-Source-and-Final-Resources-2026-09-14.zip`](https://github.com/ht1580/titanfall2-car-mods/releases/download/v2026.09.14/CAR-Source-and-Final-Resources-2026-09-14.zip)
-- 大小：433,340,087 字节
-- SHA-256：`7E9865583C086628CF37805F8B75B8E7373545CA35D616240448905A67A8AD72`
+- 大小：521,575,582 字节
+- SHA-256：`04E73F074C59B96F28CFCBD1B1DB681DCDA5BAED82521ECE3687B320B6C1F035`
 
-资料包共 1,597 个条目，包含制作工具、自动化脚本、SMD/QC、Blender 预览、模型和材质制作资源，以及当前三个展开后的模组和安装包。外域毁灭者部分已同步 1.0.7 的 DDS 编码脚本、贴图、RPAK 与核对记录。
+主资料包包含制作工具、自动化脚本、SMD/QC、Blender 预览、模型和材质制作资源，以及三个展开后的模组和安装包。
+
+RePak 1.4 更新后的脚本、map、材质、RPAK、1.0.8 成品和 Titanfall Mod Workbench 1.3.0 位于 Release 附件 `CAR-RePak-1.4-Source-Update-2026-09-14.zip`。Workbench 1.3.0 的 GUI 默认使用 RePak 1.4，仍可选择 1.2 兼容旧 map。
