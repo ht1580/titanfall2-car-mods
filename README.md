@@ -42,4 +42,6 @@ B82660255C62D75618EC15D0E6181DA8CD42F57812D47FFDD20E742BD8D8280D  CAR.RichMahoga
 
 RePak 1.4 更新后的脚本、map、材质、RPAK、1.0.8 成品和 Titanfall Mod Workbench 1.3.0 位于 Release 附件 [`CAR-RePak-1.4-Source-Update-2026-09-14.zip`](https://github.com/ht1580/titanfall2-car-mods/releases/download/v2026.09.14/CAR-RePak-1.4-Source-Update-2026-09-14.zip)，SHA-256 为 `1F5E76A35D4A4514DB43F1EF7F6122BEA39003F3443DD81F92089F1F1C8CA16A`。
 
+神话皮 1.0.9 的 PCF 文本源、已编译 PCF、Northstar 粒子清单、客户端挂载脚本和带 VFX 挂点的 QC 位于 [`CAR-Mythic-PCF-Source-Update-1.0.9.zip`](https://github.com/ht1580/titanfall2-car-mods/releases/download/v2026.09.14/CAR-Mythic-PCF-Source-Update-1.0.9.zip)，SHA-256 为 `92689514E04F87EC051FA9B38E6D85EC29A8D392AB60518E41AB78CB3620663A`。
+
 可直接下载 [`TitanfallModWorkbench-1.3.0.exe`](https://github.com/ht1580/titanfall2-car-mods/releases/download/v2026.09.14/TitanfallModWorkbench-1.3.0.exe)。Workbench 1.3.0 的 GUI 默认使用 RePak 1.4，仍可选择 1.2 兼容旧 map。
