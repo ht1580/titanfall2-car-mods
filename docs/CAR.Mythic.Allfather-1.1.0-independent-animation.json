@@ -1,0 +1,58 @@
+{
+  "version": "1.1.0",
+  "gameTested": false,
+  "release": "D:\\TitanfallMods\\CAR.Mythic.Allfather-1.1.0.zip",
+  "sha256": "7c366931c0969e26d3cc9edc5fe134e393039243e9a8def65a03a0345136956d",
+  "compiledSequences": {
+    "viewCount": 100,
+    "viewIndependent": [
+      "mythic_eye_motion",
+      "mythic_motion",
+      "mythic_wing_motion"
+    ],
+    "worldCount": 2,
+    "worldIndependent": [
+      "mythic_motion"
+    ],
+    "ordinaryViewReferencesToIndependent": 0,
+    "ordinaryWorldReferencesToIndependent": 0,
+    "viewIndependentFlags": {
+      "mythic_motion": 29,
+      "mythic_eye_motion": 29,
+      "mythic_wing_motion": 29
+    },
+    "worldIndependentFlags": {
+      "mythic_motion": 29
+    }
+  },
+  "sourceBindings": {
+    "base": {
+      "def_eye_body": 4140,
+      "def_wing_upper_arm_l_1": 8118,
+      "def_wing_upper_arm_r_1": 8118,
+      "def_c_base": 107100
+    },
+    "evolved": {
+      "def_eye_body": 7857,
+      "def_wing_upper_arm_l_1": 18528,
+      "def_wing_upper_arm_r_1": 18528,
+      "def_c_base": 108741
+    }
+  },
+  "qc": {
+    "viewAutoplayDeltaLayers": [
+      "mythic_eye_motion",
+      "mythic_motion",
+      "mythic_wing_motion"
+    ],
+    "worldAutoplayDeltaLayers": [
+      "mythic_motion"
+    ],
+    "viewMuzzleTowardGun": true,
+    "worldMuzzleTowardGun": true
+  },
+  "unchangedFrom1010": {
+    "comparedFiles": 45,
+    "changedUnexpectedFiles": []
+  }
+}
