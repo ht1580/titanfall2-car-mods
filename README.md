@@ -4,7 +4,7 @@
 
 ## 当前版本
 
-- `CAR.Mythic.Allfather-1.0.8.zip`：CAR 神话皮版本。
+- `CAR.Mythic.Allfather-1.0.9.zip`：CAR 神话皮版本；加入独立 PCF 眼部/核心动态光效，并补回原 Apex 模型的三个 VFX 挂点。
 - `CAR.OutlandsAnnihilator-1.0.8.zip`：CAR 外域毁灭者版本，保留静态计数器；使用官方 RePak 1.4 新格式重建，并修正 DDS 压缩与 sRGB 标记。
 - `CAR.RichMahogany-1.1.10.zip`：CAR 桃心花木版本，包含机瞄绑定修正。
 
@@ -23,7 +23,7 @@
 ## 文件校验（SHA-256）
 
 ```text
-5D77E20F6A4C2DFE21D819E820BDA1FC2B8D4C4E65354175075528B9976A2DDC  CAR.Mythic.Allfather-1.0.8.zip
+4427441DDD682A9216B12797CC7B8B60FEC5F99603A4C7BC85D5E46F4DF45606  CAR.Mythic.Allfather-1.0.9.zip
 0F675B6A5C48FB3AC9ACC056E39A99FF12E7B9D7EA2D747D29BAD8F1168BDA1A  CAR.OutlandsAnnihilator-1.0.8.zip
 B82660255C62D75618EC15D0E6181DA8CD42F57812D47FFDD20E742BD8D8280D  CAR.RichMahogany-1.1.10.zip
 ```
