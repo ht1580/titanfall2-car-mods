@@ -1,0 +1,340 @@
+{
+  "textures": [
+    {
+      "semantic": "col",
+      "source": "input/apex-original/texture/art/mshop/weapons/class/smg/car/reactive/v22_opmech/skins/rt01/car_react_v22_opmech_rt01_main_col.png",
+      "source_sha256": "359748fc24032e45addba00ce65da1be285326a1229c0bb540d449b74b9345d9",
+      "source_metadata": {
+        "srgb": 0,
+        "gamma": 0.45455,
+        "dpi": [
+          71.9836,
+          71.9836
+        ],
+        "Software": "DirectXTex"
+      },
+      "format": "BC7_UNORM_SRGB",
+      "dxgi": 99,
+      "mips": 12,
+      "srgb_input_and_output": true,
+      "dds_sha256": "62dfd606dbab974d8c8076c0c3f4880349e5a2de763ffe8a4d3b8a3b9adc6023",
+      "command": [
+        "<BUNDLE>\\tools\\texconv.exe",
+        "-y",
+        "-nologo",
+        "-dx10",
+        "-f",
+        "BC7_UNORM_SRGB",
+        "-m",
+        "0",
+        "-sepalpha",
+        "-srgb",
+        "-o",
+        "<BUNDLE>\\build\\assets\\texture\\models\\Weapons_R2\\codex_car_outlands\\rebuild1011",
+        "<BUNDLE>\\build\\input\\car_outlands_col.png"
+      ],
+      "stored_channel_mae_0_255": [
+        0.07453179359436035,
+        0.06708788871765137,
+        0.0866861343383789
+      ],
+      "source_mean_rgb": [
+        50.6842303276062,
+        40.514246463775635,
+        40.3885452747345
+      ],
+      "dds_mean_rgb": [
+        50.701873540878296,
+        40.514609575271606,
+        40.34439539909363
+      ],
+      "old_dds_mean_rgb": [
+        108.33210396766663,
+        100.40492367744446,
+        100.23450231552124
+      ],
+      "old_dds_mae_rgb": [
+        57.647873640060425,
+        59.89067721366882,
+        59.84595704078674
+      ],
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "semantic": "nml",
+      "source": "input/apex-original/texture/art/mshop/weapons/class/smg/car/reactive/v22_opmech/skins/rt01/car_react_v22_opmech_rt01_main_nml.png",
+      "source_sha256": "eb0dc295676e0d3ca69b438f03649454e523be20643f769edd9a8f12ffbf505d",
+      "source_metadata": {
+        "srgb": 0,
+        "gamma": 0.45455,
+        "dpi": [
+          71.9836,
+          71.9836
+        ],
+        "Software": "DirectXTex"
+      },
+      "format": "BC5_UNORM",
+      "dxgi": 83,
+      "mips": 12,
+      "srgb_input_and_output": false,
+      "dds_sha256": "e26a73feadae615927f9d13144a8b5c369d21a22dbde731b108d7a485a6d0217",
+      "command": [
+        "<BUNDLE>\\tools\\texconv.exe",
+        "-y",
+        "-nologo",
+        "-dx10",
+        "-f",
+        "BC5_UNORM",
+        "-m",
+        "0",
+        "-sepalpha",
+        "--ignore-srgb",
+        "-o",
+        "<BUNDLE>\\build\\assets\\texture\\models\\Weapons_R2\\codex_car_outlands\\rebuild1011",
+        "<BUNDLE>\\build\\input\\car_outlands_nml.png"
+      ],
+      "stored_channel_mae_0_255": [
+        0.4465773105621338,
+        0.5458090305328369
+      ],
+      "source_mean_rgb": [
+        127.25443077087402,
+        128.1283266544342,
+        0.0
+      ],
+      "dds_mean_rgb": [
+        126.87886595726013,
+        127.67873859405518,
+        0.0
+      ],
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "semantic": "gls",
+      "source": "input/apex-original/texture/art/mshop/weapons/class/smg/car/reactive/v22_opmech/skins/rt01/car_react_v22_opmech_rt01_main_gls.png",
+      "source_sha256": "bbbc102cb2ed7835459a2fbcb7ca4515486ed0d7f1aeb925a81c1e6fe79ac9d2",
+      "source_metadata": {
+        "srgb": 0,
+        "gamma": 0.45455,
+        "dpi": [
+          71.9836,
+          71.9836
+        ],
+        "Software": "DirectXTex"
+      },
+      "format": "BC4_UNORM",
+      "dxgi": 80,
+      "mips": 12,
+      "srgb_input_and_output": false,
+      "dds_sha256": "8e9e70b25ddd12c07f922e74999cbd67ca7b4a95d439d6ab6a4520a8c760a7b3",
+      "command": [
+        "<BUNDLE>\\tools\\texconv.exe",
+        "-y",
+        "-nologo",
+        "-dx10",
+        "-f",
+        "BC4_UNORM",
+        "-m",
+        "0",
+        "-sepalpha",
+        "--ignore-srgb",
+        "-o",
+        "<BUNDLE>\\build\\assets\\texture\\models\\Weapons_R2\\codex_car_outlands\\rebuild1011",
+        "<BUNDLE>\\build\\input\\car_outlands_gls.png"
+      ],
+      "stored_channel_mae_0_255": [
+        0.5830271244049072
+      ],
+      "source_mean_rgb": [
+        137.37513494491577,
+        137.37513494491577,
+        137.37513494491577
+      ],
+      "dds_mean_rgb": [
+        136.81985592842102,
+        136.81985592842102,
+        136.81985592842102
+      ],
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "semantic": "spc",
+      "source": "input/apex-original/texture/art/mshop/weapons/class/smg/car/reactive/v22_opmech/skins/rt01/car_react_v22_opmech_rt01_main_spc.png",
+      "source_sha256": "91c1864f9c35b159d24b265b12e8acd730e3e7a1941bc701b2221ee4ef86458e",
+      "source_metadata": {
+        "srgb": 0,
+        "gamma": 0.45455,
+        "dpi": [
+          71.9836,
+          71.9836
+        ],
+        "Software": "DirectXTex"
+      },
+      "format": "BC7_UNORM_SRGB",
+      "dxgi": 99,
+      "mips": 12,
+      "srgb_input_and_output": true,
+      "dds_sha256": "0a86ba3c4f239b29f6ff9783cc5a05df8b741c45ccdb22372237b74bfac7634f",
+      "command": [
+        "<BUNDLE>\\tools\\texconv.exe",
+        "-y",
+        "-nologo",
+        "-dx10",
+        "-f",
+        "BC7_UNORM_SRGB",
+        "-m",
+        "0",
+        "-sepalpha",
+        "-srgb",
+        "-o",
+        "<BUNDLE>\\build\\assets\\texture\\models\\Weapons_R2\\codex_car_outlands\\rebuild1011",
+        "<BUNDLE>\\build\\input\\car_outlands_spc.png"
+      ],
+      "stored_channel_mae_0_255": [
+        0.044469356536865234,
+        0.05768871307373047,
+        0.03410148620605469
+      ],
+      "source_mean_rgb": [
+        68.11615538597107,
+        62.61724233627319,
+        60.03522300720215
+      ],
+      "dds_mean_rgb": [
+        68.12536931037903,
+        62.60798788070679,
+        60.023258686065674
+      ],
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "semantic": "ao",
+      "source": "input/apex-original/texture/art/mshop/weapons/class/smg/car/reactive/v22_opmech/skins/rt01/car_react_v22_opmech_rt01_main_ao.png",
+      "source_sha256": "73b96329f655181b6012f9f786854830b7a38b536c8a31f3e3b882c19bc3ff44",
+      "source_metadata": {
+        "srgb": 0,
+        "gamma": 0.45455,
+        "dpi": [
+          71.9836,
+          71.9836
+        ],
+        "Software": "DirectXTex"
+      },
+      "format": "BC7_UNORM",
+      "dxgi": 98,
+      "mips": 11,
+      "srgb_input_and_output": false,
+      "dds_sha256": "380adad7a97c66389be0328b40ac8eea1501aa79c44a330fa6d1a9554cb774c5",
+      "command": [
+        "<BUNDLE>\\tools\\texconv.exe",
+        "-y",
+        "-nologo",
+        "-dx10",
+        "-f",
+        "BC7_UNORM",
+        "-m",
+        "0",
+        "-sepalpha",
+        "--ignore-srgb",
+        "-o",
+        "<BUNDLE>\\build\\assets\\texture\\models\\Weapons_R2\\codex_car_outlands\\rebuild1011",
+        "<BUNDLE>\\build\\input\\car_outlands_ao.png"
+      ],
+      "stored_channel_mae_0_255": [
+        0.020292282104492188,
+        0.020292282104492188,
+        0.020292282104492188
+      ],
+      "source_mean_rgb": [
+        250.7095947265625,
+        250.7095947265625,
+        250.7095947265625
+      ],
+      "dds_mean_rgb": [
+        250.71302604675293,
+        250.71302604675293,
+        250.71302604675293
+      ],
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "semantic": "cav",
+      "source": "input/apex-original/texture/art/mshop/weapons/class/smg/car/reactive/v22_opmech/skins/rt01/car_react_v22_opmech_rt01_main_cav.png",
+      "source_sha256": "809aa408fc93e184b7d4771ca6dfddb6d260660d61dff65fa62c8bca7d5ce976",
+      "source_metadata": {
+        "srgb": 0,
+        "gamma": 0.45455,
+        "dpi": [
+          71.9836,
+          71.9836
+        ],
+        "Software": "DirectXTex"
+      },
+      "format": "BC7_UNORM",
+      "dxgi": 98,
+      "mips": 12,
+      "srgb_input_and_output": false,
+      "dds_sha256": "3f6aba805d7825f524976e7f79d1e9d5a0e2aae93d218bbcede3dd5181f8514a",
+      "command": [
+        "<BUNDLE>\\tools\\texconv.exe",
+        "-y",
+        "-nologo",
+        "-dx10",
+        "-f",
+        "BC7_UNORM",
+        "-m",
+        "0",
+        "-sepalpha",
+        "--ignore-srgb",
+        "-o",
+        "<BUNDLE>\\build\\assets\\texture\\models\\Weapons_R2\\codex_car_outlands\\rebuild1011",
+        "<BUNDLE>\\build\\input\\car_outlands_cav.png"
+      ],
+      "stored_channel_mae_0_255": [
+        0.010953903198242188,
+        0.010953903198242188,
+        0.010953903198242188
+      ],
+      "source_mean_rgb": [
+        250.95242071151733,
+        250.95242071151733,
+        250.95242071151733
+      ],
+      "dds_mean_rgb": [
+        250.95385551452637,
+        250.95385551452637,
+        250.95385551452637
+      ],
+      "size": [
+        2048,
+        2048
+      ]
+    }
+  ],
+  "preserved_files": [
+    "mod/models/weapons/car101/ptpov_car101.mdl",
+    "mod/models/weapons/car101/w_car101.mdl",
+    "keyvalues/scripts/weapons/mp_weapon_car.txt"
+  ],
+  "material_buffer": "same as 1.0.10; no new lighting assumptions",
+  "source_pixels": "unadjusted original export; no gloss/specular darkening",
+  "fresh_apex_extraction": false,
+  "runtime_tested": false,
+  "zip_sha256": "ca5e6f9b7a5a0361d812f8a9bdee19321e23255a98849ea29d447e761e859440",
+  "rpak_sha256": "f9ea6a1e9ee73951c3c6e4084252c45d20a22ebb9bc1ea1984c49f7f61e6a3f1"
+}

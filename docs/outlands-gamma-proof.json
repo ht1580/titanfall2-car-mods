@@ -1,0 +1,8 @@
+{
+  "linear_to_srgb_prediction_mae_vs_old_dds": [
+    0.05441617965698242,
+    0.13897967338562012,
+    0.06384801864624023
+  ],
+  "meaning": "Old DDS is consistent with an extra linear-to-sRGB encode of already sRGB source samples."
+}
