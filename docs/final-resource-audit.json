@@ -1,0 +1,459 @@
+{
+  "gameTested": false,
+  "mods": [
+    {
+      "name": "Codex.CAR.OutlandsAnnihilator",
+      "version": "1.0.11",
+      "loadPriority": 0,
+      "rpakAssetCounts": {
+        "txtr": 6,
+        "matl": 2
+      },
+      "models": [
+        {
+          "file": "ptpov_car101.mdl",
+          "attachments": [
+            {
+              "name": "muzzle_flash",
+              "bone": "muzzle_flash",
+              "localPosition": [
+                0.0,
+                0.6500015258789062,
+                0.0
+              ]
+            },
+            {
+              "name": "shell",
+              "bone": "def_c_base",
+              "localPosition": [
+                -0.5699999928474426,
+                3.7900009155273438,
+                8.890000343322754
+              ]
+            }
+          ],
+          "customMaterials": 1,
+          "zeroGuidButPathResolvableMaterials": [
+            "models\\Weapons_R2\\codex_car_outlands\\car_outlands"
+          ],
+          "missingCustomMaterialPaths": [],
+          "zeroGuidNote": "Stored GUID is zero; both material/path_skn.rpak and _fix.rpak hashes exist in the asset table. Runtime fallback not validated."
+        },
+        {
+          "file": "w_car101.mdl",
+          "attachments": [
+            {
+              "name": "muzzle_flash",
+              "bone": "muzzle_flash",
+              "localPosition": [
+                0.0,
+                0.6499998569488525,
+                0.0
+              ]
+            },
+            {
+              "name": "shell",
+              "bone": "shell",
+              "localPosition": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ],
+          "customMaterials": 1,
+          "zeroGuidButPathResolvableMaterials": [
+            "models\\Weapons_R2\\codex_car_outlands\\car_outlands"
+          ],
+          "missingCustomMaterialPaths": [],
+          "zeroGuidNote": "Stored GUID is zero; both material/path_skn.rpak and _fix.rpak hashes exist in the asset table. Runtime fallback not validated."
+        }
+      ],
+      "audioEvents": []
+    },
+    {
+      "name": "Codex.CAR.Mythic.Allfather",
+      "version": "1.1.1",
+      "loadPriority": 0,
+      "rpakAssetCounts": {
+        "txtr": 80,
+        "matl": 48
+      },
+      "models": [
+        {
+          "file": "ptpov_car101.mdl",
+          "attachments": [
+            {
+              "name": "VFX_eye",
+              "bone": "def_core_orb",
+              "localPosition": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "VFX_base",
+              "bone": "def_c_base",
+              "localPosition": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "VFX_Bifrost",
+              "bone": "def_c_base",
+              "localPosition": [
+                0.0,
+                3.8976287841796875,
+                0.0
+              ]
+            },
+            {
+              "name": "muzzle_flash",
+              "bone": "muzzle_flash",
+              "localPosition": [
+                0.0,
+                0.6500015258789062,
+                0.0
+              ]
+            },
+            {
+              "name": "shell",
+              "bone": "def_c_base",
+              "localPosition": [
+                -0.5699999928474426,
+                3.7900009155273438,
+                8.890000343322754
+              ]
+            }
+          ],
+          "customMaterials": 1,
+          "zeroGuidButPathResolvableMaterials": [
+            "models\\Weapons_R2\\codex_car_mythic\\main_base_default"
+          ],
+          "missingCustomMaterialPaths": [],
+          "zeroGuidNote": "Stored GUID is zero; both material/path_skn.rpak and _fix.rpak hashes exist in the asset table. Runtime fallback not validated."
+        },
+        {
+          "file": "w_car101.mdl",
+          "attachments": [
+            {
+              "name": "muzzle_flash",
+              "bone": "muzzle_flash",
+              "localPosition": [
+                0.0,
+                0.6499998569488525,
+                0.0
+              ]
+            },
+            {
+              "name": "VFX_eye",
+              "bone": "def_core_orb",
+              "localPosition": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "VFX_base",
+              "bone": "def_c_base",
+              "localPosition": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            {
+              "name": "VFX_Bifrost",
+              "bone": "def_c_base",
+              "localPosition": [
+                0.0,
+                3.897629976272583,
+                0.0
+              ]
+            },
+            {
+              "name": "shell",
+              "bone": "shell",
+              "localPosition": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          ],
+          "customMaterials": 1,
+          "zeroGuidButPathResolvableMaterials": [
+            "models\\Weapons_R2\\codex_car_mythic\\main_base_default"
+          ],
+          "missingCustomMaterialPaths": [],
+          "zeroGuidNote": "Stored GUID is zero; both material/path_skn.rpak and _fix.rpak hashes exist in the asset table. Runtime fallback not validated."
+        }
+      ],
+      "audioEvents": [
+        "Weapon_Car_EmptyReload_BoltBack",
+        "Weapon_Car_EmptyReload_BoltFront",
+        "Weapon_Car_EmptyReload_HandRest",
+        "Weapon_Car_FirstShot_1P",
+        "Weapon_Car_LoopEnd_1P",
+        "Weapon_Car_Loop_1P",
+        "Weapon_Car_Reload_MagGrab",
+        "Weapon_Car_Reload_MagHandRest",
+        "Weapon_Car_Reload_MagInsert",
+        "Weapon_Car_Reload_MagPull",
+        "Weapon_Car_SecondShot_1P"
+      ]
+    }
+  ],
+  "mythicColorFindings": [
+    {
+      "texture": "eye_default_col",
+      "source": "D:\\CodexStorage\\Projects\\2026-09-08\\w-3\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_default_col.png",
+      "sourceMean": [
+        66.5352783203125,
+        66.30115127563477,
+        66.53837585449219
+      ],
+      "ddsMean": [
+        134.3262481689453,
+        134.1013946533203,
+        134.40646743774414
+      ],
+      "mae": [
+        67.79096984863281,
+        67.80025100708008,
+        67.86809158325195
+      ],
+      "payloadPrefixFoundInFinalRpak": true
+    },
+    {
+      "texture": "eye_rt01_col",
+      "source": "D:\\CodexStorage\\Projects\\2026-09-08\\w-3\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt01_col.png",
+      "sourceMean": [
+        66.5352783203125,
+        66.30115127563477,
+        66.53837585449219
+      ],
+      "ddsMean": [
+        134.3262481689453,
+        134.1013946533203,
+        134.40646743774414
+      ],
+      "mae": [
+        67.79096984863281,
+        67.80025100708008,
+        67.86809158325195
+      ],
+      "payloadPrefixFoundInFinalRpak": true
+    },
+    {
+      "texture": "eye_rt02_col",
+      "source": "D:\\CodexStorage\\Projects\\2026-09-08\\w-3\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt02_col.png",
+      "sourceMean": [
+        66.5352783203125,
+        66.30115127563477,
+        66.53837585449219
+      ],
+      "ddsMean": [
+        134.3262481689453,
+        134.1013946533203,
+        134.40646743774414
+      ],
+      "mae": [
+        67.79096984863281,
+        67.80025100708008,
+        67.86809158325195
+      ],
+      "payloadPrefixFoundInFinalRpak": true
+    },
+    {
+      "texture": "eye_rt03_col",
+      "source": "D:\\CodexStorage\\Projects\\2026-09-08\\w-3\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt03_col.png",
+      "sourceMean": [
+        66.5352783203125,
+        66.30115127563477,
+        66.53837585449219
+      ],
+      "ddsMean": [
+        134.3262481689453,
+        134.1013946533203,
+        134.40646743774414
+      ],
+      "mae": [
+        67.79096984863281,
+        67.80025100708008,
+        67.86809158325195
+      ],
+      "payloadPrefixFoundInFinalRpak": true
+    },
+    {
+      "texture": "feather_default_col",
+      "source": "D:\\CodexStorage\\Projects\\2026-09-08\\w-3\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_default_col.png",
+      "sourceMean": [
+        170.8635368347168,
+        143.1788444519043,
+        121.9884033203125
+      ],
+      "ddsMean": [
+        212.10973358154297,
+        194.6259651184082,
+        177.88673782348633
+      ],
+      "mae": [
+        41.24752426147461,
+        51.447120666503906,
+        55.89834213256836
+      ],
+      "payloadPrefixFoundInFinalRpak": true
+    },
+    {
+      "texture": "feather_rt01_col",
+      "source": "D:\\CodexStorage\\Projects\\2026-09-08\\w-3\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt01_col.png",
+      "sourceMean": [
+        56.606571197509766,
+        52.797977447509766,
+        59.90564727783203
+      ],
+      "ddsMean": [
+        128.88314056396484,
+        124.66016006469727,
+        132.71551513671875
+      ],
+      "mae": [
+        72.27656936645508,
+        71.8621826171875,
+        72.80986785888672
+      ],
+      "payloadPrefixFoundInFinalRpak": true
+    },
+    {
+      "texture": "feather_rt02_col",
+      "source": "D:\\CodexStorage\\Projects\\2026-09-08\\w-3\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt02_col.png",
+      "sourceMean": [
+        126.95005416870117,
+        113.7049674987793,
+        86.3267707824707
+      ],
+      "ddsMean": [
+        184.37227630615234,
+        174.4543800354004,
+        152.51743698120117
+      ],
+      "mae": [
+        57.42222213745117,
+        60.749412536621094,
+        66.19066619873047
+      ],
+      "payloadPrefixFoundInFinalRpak": true
+    },
+    {
+      "texture": "feather_rt03_col",
+      "source": "D:\\CodexStorage\\Projects\\2026-09-08\\w-3\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt03_col.png",
+      "sourceMean": [
+        87.71014785766602,
+        74.33589553833008,
+        112.96337890625
+      ],
+      "ddsMean": [
+        156.6180419921875,
+        144.39566802978516,
+        169.01353073120117
+      ],
+      "mae": [
+        68.90789413452148,
+        70.05977249145508,
+        56.05015182495117
+      ],
+      "payloadPrefixFoundInFinalRpak": true
+    },
+    {
+      "texture": "main_default_col",
+      "source": "D:\\CodexStorage\\Projects\\2026-09-08\\w-3\\work\\car_mythic\\texture_project\\.workbench_textures\\main_default_col.png",
+      "sourceMean": [
+        59.70115661621094,
+        58.54867172241211,
+        58.085079193115234
+      ],
+      "ddsMean": [
+        84.70038986206055,
+        83.90862655639648,
+        83.60164260864258
+      ],
+      "mae": [
+        25.005069732666016,
+        25.364784240722656,
+        25.521331787109375
+      ],
+      "payloadPrefixFoundInFinalRpak": true
+    },
+    {
+      "texture": "main_rt01_col",
+      "source": "D:\\CodexStorage\\Projects\\2026-09-08\\w-3\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt01_col.png",
+      "sourceMean": [
+        41.47367477416992,
+        38.69597244262695,
+        39.17719650268555
+      ],
+      "ddsMean": [
+        70.14107894897461,
+        67.93404006958008,
+        68.65574264526367
+      ],
+      "mae": [
+        28.672103881835938,
+        29.241439819335938,
+        29.481903076171875
+      ],
+      "payloadPrefixFoundInFinalRpak": true
+    },
+    {
+      "texture": "main_rt02_col",
+      "source": "D:\\CodexStorage\\Projects\\2026-09-08\\w-3\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt02_col.png",
+      "sourceMean": [
+        27.599605560302734,
+        26.916099548339844,
+        26.738094329833984
+      ],
+      "ddsMean": [
+        38.58393859863281,
+        37.84435272216797,
+        36.1898078918457
+      ],
+      "mae": [
+        10.987438201904297,
+        10.930671691894531,
+        9.454109191894531
+      ],
+      "payloadPrefixFoundInFinalRpak": true
+    },
+    {
+      "texture": "main_rt03_col",
+      "source": "D:\\CodexStorage\\Projects\\2026-09-08\\w-3\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt03_col.png",
+      "sourceMean": [
+        42.99221420288086,
+        41.2514533996582,
+        52.56745529174805
+      ],
+      "ddsMean": [
+        84.79978942871094,
+        83.60332107543945,
+        96.4981575012207
+      ],
+      "mae": [
+        41.81049728393555,
+        42.35423278808594,
+        43.93426513671875
+      ],
+      "payloadPrefixFoundInFinalRpak": true
+    }
+  ],
+  "knownUnresolved": [
+    "Mythic color DDS double sRGB encoding confirmed in final RPak",
+    "Mythic client FX stores entities and calls EffectStop with one argument instead of client integer effect handle + stop flags",
+    "Mythic FX lifecycle and procounter stage gating need review",
+    "Four zero-GUID material entries have resolvable paths but runtime behavior not checked"
+  ]
+}

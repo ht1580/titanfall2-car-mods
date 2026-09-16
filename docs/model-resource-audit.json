@@ -1,0 +1,285 @@
+{
+  "gameTested": false,
+  "mods": [
+    {
+      "mod": "CAR.OutlandsAnnihilator",
+      "version": "1.0.11",
+      "priority": 0,
+      "models": [
+        {
+          "file": "ptpov_car101.mdl",
+          "sha256": "cdaaaa2aa95a7576f2556f78d4ac5d618eca0de0a8f3fe229e905b1a34a72ffd",
+          "bones": 85,
+          "vertices": 42508,
+          "bodygroups": [
+            [
+              "car101_body",
+              1,
+              1
+            ],
+            [
+              "sight_holo",
+              2,
+              1
+            ],
+            [
+              "sight_acgs",
+              2,
+              2
+            ],
+            [
+              "sight_cro",
+              2,
+              4
+            ],
+            [
+              "proscreen",
+              2,
+              8
+            ],
+            [
+              "car101_sight_on",
+              2,
+              16
+            ],
+            [
+              "car101_magazine",
+              2,
+              32
+            ]
+          ],
+          "sights": [
+            {
+              "vertices": 2249,
+              "bones": {
+                "def_c_base": 2249
+              }
+            }
+          ],
+          "ruiParents": [
+            [
+              "def_c_holo"
+            ],
+            [
+              "def_c_acgs"
+            ],
+            [
+              "def_c_cro"
+            ],
+            [
+              "def_c_proscreen"
+            ],
+            [
+              "def_c_sight_on"
+            ],
+            [
+              "def_c_sight_on"
+            ]
+          ],
+          "animationCount": 124,
+          "emptyAnimations": 0
+        },
+        {
+          "file": "w_car101.mdl",
+          "sha256": "2a425830ade7ba235ee5ab5d6dccd32b081cee5c010a1cd2df37fb030d199905",
+          "bones": 14,
+          "vertices": 16301,
+          "bodygroups": [
+            [
+              "car101",
+              1,
+              1
+            ],
+            [
+              "sight_holo",
+              2,
+              1
+            ],
+            [
+              "sight_acgs",
+              2,
+              2
+            ],
+            [
+              "sight_cro",
+              2,
+              4
+            ],
+            [
+              "proscreen",
+              2,
+              8
+            ],
+            [
+              "car101_sight_on",
+              2,
+              16
+            ]
+          ],
+          "sights": [
+            {
+              "vertices": 546,
+              "bones": {
+                "def_c_base": 546
+              }
+            }
+          ],
+          "ruiParents": [],
+          "animationCount": 1,
+          "emptyAnimations": 0
+        }
+      ],
+      "problems": [],
+      "pakLoading": {
+        "Postload": {
+          "car_outlands_colorspace_1011.rpak": "common.rpak"
+        }
+      },
+      "scripts": [],
+      "weaponPatches": {
+        "keyvalues\\scripts\\weapons\\mp_weapon_car.txt": "WeaponData\n{\n Mods\n {\n iron_sights { \"viewmodel_offset_ads\" \"0 0 0.65\" }\n }\n}\n"
+      }
+    },
+    {
+      "mod": "CAR.Mythic.Allfather",
+      "version": "1.1.1",
+      "priority": 0,
+      "models": [
+        {
+          "file": "ptpov_car101.mdl",
+          "sha256": "98a419cc4b74dfe94ec37032707042643592577d61090d4b0e8c219f61c2a30a",
+          "bones": 199,
+          "vertices": 108576,
+          "bodygroups": [
+            [
+              "car101_body",
+              1,
+              1
+            ],
+            [
+              "sight_holo",
+              2,
+              1
+            ],
+            [
+              "sight_acgs",
+              2,
+              2
+            ],
+            [
+              "sight_cro",
+              2,
+              4
+            ],
+            [
+              "proscreen",
+              2,
+              8
+            ],
+            [
+              "car101_sight_on",
+              2,
+              16
+            ],
+            [
+              "car101_magazine",
+              2,
+              32
+            ]
+          ],
+          "sights": [
+            {
+              "vertices": 5341,
+              "bones": {
+                "def_c_base": 5341
+              }
+            }
+          ],
+          "ruiParents": [
+            [
+              "def_c_holo"
+            ],
+            [
+              "def_c_acgs"
+            ],
+            [
+              "def_c_cro"
+            ],
+            [
+              "def_c_proscreen"
+            ],
+            [
+              "def_c_base"
+            ],
+            [
+              "def_c_sight_on"
+            ]
+          ],
+          "animationCount": 127,
+          "emptyAnimations": 0
+        },
+        {
+          "file": "w_car101.mdl",
+          "sha256": "4cf4a5e5df294ca01891f53227f1fa5d40f60ebd21c7fc9d3b3672e883455450",
+          "bones": 22,
+          "vertices": 20095,
+          "bodygroups": [
+            [
+              "car101",
+              1,
+              1
+            ],
+            [
+              "sight_holo",
+              2,
+              1
+            ],
+            [
+              "sight_acgs",
+              2,
+              2
+            ],
+            [
+              "sight_cro",
+              2,
+              4
+            ],
+            [
+              "proscreen",
+              2,
+              8
+            ],
+            [
+              "car101_sight_on",
+              2,
+              16
+            ]
+          ],
+          "sights": [
+            {
+              "vertices": 552,
+              "bones": {
+                "def_c_base": 552
+              }
+            }
+          ],
+          "ruiParents": [],
+          "animationCount": 2,
+          "emptyAnimations": 0
+        }
+      ],
+      "problems": [],
+      "pakLoading": {
+        "Postload": {
+          "car_mythic_complete.rpak": "common.rpak"
+        }
+      },
+      "scripts": [
+        "mod\\scripts\\vscripts\\client\\cl_codex_car_mythic_fx.gnut"
+      ],
+      "weaponPatches": {
+        "keyvalues\\scripts\\weapons\\mp_weapon_car.txt": "WeaponData\n{\n    Mods\n    {\n        iron_sights\n        {\n            \"viewmodel_offset_ads\" \"0 0 0.65\"\n        }\n        pro_screen\n        {\n            \"ui8_enable\" \"0\"\n        }\n    }\n}\n"
+      }
+    }
+  ]
+}
