@@ -42,6 +42,8 @@ B82660255C62D75618EC15D0E6181DA8CD42F57812D47FFDD20E742BD8D8280D  CAR.RichMahoga
 
 详细核对记录位于 `docs/`。
 
+Mythic Allfather 1.1.1 的[贴图与 PCF 核对](docs/Mythic-Allfather-1.1.1-texture-pcf-audit-2026-09-15.md)确认了底色重复 sRGB 编码、换色发光叠层映射遗漏，并发现客户端粒子 API 兼容风险；现有安装包尚未修正，也未通过游戏内验证。
+
 ## 原始制作资料
 
 完整制作资料作为 Release 附件提供：

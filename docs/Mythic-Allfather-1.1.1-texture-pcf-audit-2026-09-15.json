@@ -1,0 +1,6197 @@
+{
+  "release": "CAR.Mythic.Allfather-1.1.1.zip",
+  "release_sha256": "b284da1be03e9c14934594f9c5f073d43d5467dcdd143d0c29e780ec4f7454e6",
+  "game_tested": false,
+  "package_modified": false,
+  "textures": {
+    "pak_sha256": "1a5a9a3512ba64d85c0e3f460fdfc528c7aee7286ce4cc7ae6f87f310dcd3983",
+    "pak_bytes": 28023152,
+    "asset_count": 128,
+    "texture_count": 80,
+    "material_count": 48,
+    "streaming": false,
+    "textures": [
+      {
+        "name": "eye_default_col",
+        "guid": "066b2e1df2ab1cbd",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM_SRGB",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_default_col.png",
+        "source_sha256": "1d61e2b36758e166c5a6e53e262e77819596c77d94a28cf50d8b9d4409497279",
+        "dds_sha256": "10b68047094ea545b902f8fe93206769372203a12d17d68bdb7145856e3b5cad",
+        "source_mean": [
+          66.5353,
+          66.3012,
+          66.5384
+        ],
+        "packed_mean": [
+          134.3262,
+          134.1014,
+          134.4065
+        ],
+        "mae": [
+          67.791,
+          67.8003,
+          67.8681
+        ],
+        "double_srgb_mae": [
+          0.1864,
+          0.1998,
+          0.2489
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_col.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0712,
+          0.068,
+          0.0711
+        ]
+      },
+      {
+        "name": "eye_default_nml",
+        "guid": "9d159fad509f08ad",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC5_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_default_nml.png",
+        "source_sha256": "3befbe8fc270c7e3cee97d0d618f2d413bed93c191f241099badf3da7c442b5f",
+        "dds_sha256": "8665ad3c9c9e386b2a188db76e89002f60fb46e69096efd3f1c7668c6380fde9",
+        "source_mean": [
+          128.1209,
+          128.6753
+        ],
+        "packed_mean": [
+          127.5257,
+          128.0893
+        ],
+        "mae": [
+          1.8994,
+          1.5795
+        ],
+        "double_srgb_mae": [
+          59.0995,
+          59.3281
+        ],
+        "alpha_range": [
+          255,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_nml.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.241,
+          0.2316
+        ]
+      },
+      {
+        "name": "eye_default_gls",
+        "guid": "e5f70617114524e8",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_default_gls.png",
+        "source_sha256": "a559458912a3cdc585ac81fa73cdcee0dd0078e496e74f82b152f22d545a020d",
+        "dds_sha256": "7175139ce041f6d2fef6a4511c30c6b21a36303e4dc76724a8c2f0a84d605844",
+        "source_mean": [
+          128.0
+        ],
+        "packed_mean": [
+          128.0
+        ],
+        "mae": [
+          0.0
+        ],
+        "double_srgb_mae": [
+          59.845
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "eye_default_spc",
+        "guid": "4c436fae55efc838",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_default_spc.png",
+        "source_sha256": "e365fd90f44f958f823379da46ac325fecbcb772f7966e1018362db0aa1c717f",
+        "dds_sha256": "23e148c59938d47e9bbe067a79219ad8122752ceac4afebaaa913079f862cc49",
+        "source_mean": [
+          37.9943,
+          38.1093,
+          37.9921
+        ],
+        "packed_mean": [
+          37.99,
+          38.1547,
+          37.974
+        ],
+        "mae": [
+          0.0375,
+          0.1203,
+          0.0549
+        ],
+        "double_srgb_mae": [
+          54.1865,
+          55.2261,
+          54.1966
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_spc.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1121,
+          0.1113,
+          0.1124
+        ]
+      },
+      {
+        "name": "eye_default_ao",
+        "guid": "72ec19ec5981a559",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_default_ao.png",
+        "source_sha256": "a852358ef7b15d2d3be7eb5ae0f7d1a1e3b6b8910361865ff6c5859798a10d25",
+        "dds_sha256": "dcdc08cdde5abcc5551353d5872587239fd868ed242221d033a4307b5c61de28",
+        "source_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "packed_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "double_srgb_mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "eye_default_cav",
+        "guid": "0a34fc8aa1542a9b",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_default_cav.png",
+        "source_sha256": "b4e726b76d72c45ad4e1e0abc70b85a7faca14afc69c2b609435ce616768c7ad",
+        "dds_sha256": "9877d6d49123ef582657b082b2122b6fd9d74a168f2952fc33e22949d1869fad",
+        "source_mean": [
+          243.0106,
+          243.0106,
+          243.0106
+        ],
+        "packed_mean": [
+          243.0108,
+          243.0108,
+          243.0108
+        ],
+        "mae": [
+          0.0124,
+          0.0124,
+          0.0124
+        ],
+        "double_srgb_mae": [
+          1.4605,
+          1.4605,
+          1.4605
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_cav.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0165,
+          0.0165,
+          0.0165
+        ]
+      },
+      {
+        "name": "eye_default_ilm",
+        "guid": "bb2f751b85b92ee5",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\eye_default_ilm.png",
+        "source_sha256": "b56cf096c1d02121751b949efdf8a9967ef1631b0f375071202b80584232e7ec",
+        "dds_sha256": "83ccdbb7ba1bfc002f0d32fce3e025b382c869095944a6f0b7e16a00617661c4",
+        "source_mean": [
+          37.9943,
+          38.1093,
+          37.9921
+        ],
+        "packed_mean": [
+          37.99,
+          38.1547,
+          37.974
+        ],
+        "mae": [
+          0.0375,
+          0.1203,
+          0.0549
+        ],
+        "double_srgb_mae": [
+          54.1865,
+          55.2261,
+          54.1966
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_ilm.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1121,
+          0.1113,
+          0.1124
+        ]
+      },
+      {
+        "name": "eye_rt01_col",
+        "guid": "b1c41f7fa708a7b5",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM_SRGB",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt01_col.png",
+        "source_sha256": "1d61e2b36758e166c5a6e53e262e77819596c77d94a28cf50d8b9d4409497279",
+        "dds_sha256": "586fdcbf1a947d79215c29780a877c7422b350d8a8f98f62c267ab0d09ee783e",
+        "source_mean": [
+          66.5353,
+          66.3012,
+          66.5384
+        ],
+        "packed_mean": [
+          134.3262,
+          134.1014,
+          134.4065
+        ],
+        "mae": [
+          67.791,
+          67.8003,
+          67.8681
+        ],
+        "double_srgb_mae": [
+          0.1864,
+          0.1998,
+          0.2489
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt01_col.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0712,
+          0.068,
+          0.0711
+        ]
+      },
+      {
+        "name": "eye_rt01_nml",
+        "guid": "a7e9c6d37a247477",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC5_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt01_nml.png",
+        "source_sha256": "3befbe8fc270c7e3cee97d0d618f2d413bed93c191f241099badf3da7c442b5f",
+        "dds_sha256": "234df8e05794097701a2fd1a2cd3e0a99916bd1ac27b481ad90ceb6cfa54738e",
+        "source_mean": [
+          128.1209,
+          128.6753
+        ],
+        "packed_mean": [
+          127.5257,
+          128.0893
+        ],
+        "mae": [
+          1.8994,
+          1.5795
+        ],
+        "double_srgb_mae": [
+          59.0995,
+          59.3281
+        ],
+        "alpha_range": [
+          255,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt01_nml.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.241,
+          0.2316
+        ]
+      },
+      {
+        "name": "eye_rt01_gls",
+        "guid": "ea04888f237be2c3",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt01_gls.png",
+        "source_sha256": "a559458912a3cdc585ac81fa73cdcee0dd0078e496e74f82b152f22d545a020d",
+        "dds_sha256": "120967160d1b4aec26a709e820a72ef365898e1af921578e4d052192af9f2a9b",
+        "source_mean": [
+          128.0
+        ],
+        "packed_mean": [
+          128.0
+        ],
+        "mae": [
+          0.0
+        ],
+        "double_srgb_mae": [
+          59.845
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "eye_rt01_spc",
+        "guid": "16b7639a54cd7922",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt01_spc.png",
+        "source_sha256": "e365fd90f44f958f823379da46ac325fecbcb772f7966e1018362db0aa1c717f",
+        "dds_sha256": "61a0d0a569b805e72fdd31a5cfdb94d6d08559d118a47f73f44a9a80d0fefab0",
+        "source_mean": [
+          37.9943,
+          38.1093,
+          37.9921
+        ],
+        "packed_mean": [
+          37.99,
+          38.1547,
+          37.974
+        ],
+        "mae": [
+          0.0375,
+          0.1203,
+          0.0549
+        ],
+        "double_srgb_mae": [
+          54.1865,
+          55.2261,
+          54.1966
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt01_spc.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1121,
+          0.1113,
+          0.1124
+        ]
+      },
+      {
+        "name": "eye_rt01_ao",
+        "guid": "a4025f726cc1d556",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt01_ao.png",
+        "source_sha256": "a852358ef7b15d2d3be7eb5ae0f7d1a1e3b6b8910361865ff6c5859798a10d25",
+        "dds_sha256": "9abf661f8eedd4fb90b56f5ce5726e3ca642c70c1104aaaa184bffececa26773",
+        "source_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "packed_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "double_srgb_mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "eye_rt01_cav",
+        "guid": "c1c5baa5c0872586",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt01_cav.png",
+        "source_sha256": "b4e726b76d72c45ad4e1e0abc70b85a7faca14afc69c2b609435ce616768c7ad",
+        "dds_sha256": "d952709925441e99b2a92f940c8a40b0c7c68085a6e6eb422831555c76a796b1",
+        "source_mean": [
+          243.0106,
+          243.0106,
+          243.0106
+        ],
+        "packed_mean": [
+          243.0108,
+          243.0108,
+          243.0108
+        ],
+        "mae": [
+          0.0124,
+          0.0124,
+          0.0124
+        ],
+        "double_srgb_mae": [
+          1.4605,
+          1.4605,
+          1.4605
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt01_cav.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0165,
+          0.0165,
+          0.0165
+        ]
+      },
+      {
+        "name": "eye_rt01_ilm",
+        "guid": "6d839067a43f3a0c",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\eye_rt01_ilm.png",
+        "source_sha256": "b56cf096c1d02121751b949efdf8a9967ef1631b0f375071202b80584232e7ec",
+        "dds_sha256": "61a0d0a569b805e72fdd31a5cfdb94d6d08559d118a47f73f44a9a80d0fefab0",
+        "source_mean": [
+          37.9943,
+          38.1093,
+          37.9921
+        ],
+        "packed_mean": [
+          37.99,
+          38.1547,
+          37.974
+        ],
+        "mae": [
+          0.0375,
+          0.1203,
+          0.0549
+        ],
+        "double_srgb_mae": [
+          54.1865,
+          55.2261,
+          54.1966
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt01_ilm.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1121,
+          0.1113,
+          0.1124
+        ]
+      },
+      {
+        "name": "eye_rt02_col",
+        "guid": "d906d008e25ac361",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM_SRGB",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt02_col.png",
+        "source_sha256": "1d61e2b36758e166c5a6e53e262e77819596c77d94a28cf50d8b9d4409497279",
+        "dds_sha256": "7059767749d6e45e429d82f32130b45028516b691a17fd3b74368560fe824b4d",
+        "source_mean": [
+          66.5353,
+          66.3012,
+          66.5384
+        ],
+        "packed_mean": [
+          134.3262,
+          134.1014,
+          134.4065
+        ],
+        "mae": [
+          67.791,
+          67.8003,
+          67.8681
+        ],
+        "double_srgb_mae": [
+          0.1864,
+          0.1998,
+          0.2489
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt02_col.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0712,
+          0.068,
+          0.0711
+        ]
+      },
+      {
+        "name": "eye_rt02_nml",
+        "guid": "cfc65975a8ba43a7",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC5_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt02_nml.png",
+        "source_sha256": "3befbe8fc270c7e3cee97d0d618f2d413bed93c191f241099badf3da7c442b5f",
+        "dds_sha256": "b653f826a36bce78debbbfa3ac6c397a9a5e703415f1f4479706392d8b8f4e07",
+        "source_mean": [
+          128.1209,
+          128.6753
+        ],
+        "packed_mean": [
+          127.5257,
+          128.0893
+        ],
+        "mae": [
+          1.8994,
+          1.5795
+        ],
+        "double_srgb_mae": [
+          59.0995,
+          59.3281
+        ],
+        "alpha_range": [
+          255,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt02_nml.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.241,
+          0.2316
+        ]
+      },
+      {
+        "name": "eye_rt02_gls",
+        "guid": "11e11b315211b1f3",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt02_gls.png",
+        "source_sha256": "a559458912a3cdc585ac81fa73cdcee0dd0078e496e74f82b152f22d545a020d",
+        "dds_sha256": "120967160d1b4aec26a709e820a72ef365898e1af921578e4d052192af9f2a9b",
+        "source_mean": [
+          128.0
+        ],
+        "packed_mean": [
+          128.0
+        ],
+        "mae": [
+          0.0
+        ],
+        "double_srgb_mae": [
+          59.845
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "eye_rt02_spc",
+        "guid": "3e93f63c83634852",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt02_spc.png",
+        "source_sha256": "e365fd90f44f958f823379da46ac325fecbcb772f7966e1018362db0aa1c717f",
+        "dds_sha256": "61a0d0a569b805e72fdd31a5cfdb94d6d08559d118a47f73f44a9a80d0fefab0",
+        "source_mean": [
+          37.9943,
+          38.1093,
+          37.9921
+        ],
+        "packed_mean": [
+          37.99,
+          38.1547,
+          37.974
+        ],
+        "mae": [
+          0.0375,
+          0.1203,
+          0.0549
+        ],
+        "double_srgb_mae": [
+          54.1865,
+          55.2261,
+          54.1966
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt02_spc.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1121,
+          0.1113,
+          0.1124
+        ]
+      },
+      {
+        "name": "eye_rt02_ao",
+        "guid": "a1c7604f24cfff4a",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt02_ao.png",
+        "source_sha256": "a852358ef7b15d2d3be7eb5ae0f7d1a1e3b6b8910361865ff6c5859798a10d25",
+        "dds_sha256": "9abf661f8eedd4fb90b56f5ce5726e3ca642c70c1104aaaa184bffececa26773",
+        "source_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "packed_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "double_srgb_mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "eye_rt02_cav",
+        "guid": "ead61179d5a45bbe",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt02_cav.png",
+        "source_sha256": "b4e726b76d72c45ad4e1e0abc70b85a7faca14afc69c2b609435ce616768c7ad",
+        "dds_sha256": "d952709925441e99b2a92f940c8a40b0c7c68085a6e6eb422831555c76a796b1",
+        "source_mean": [
+          243.0106,
+          243.0106,
+          243.0106
+        ],
+        "packed_mean": [
+          243.0108,
+          243.0108,
+          243.0108
+        ],
+        "mae": [
+          0.0124,
+          0.0124,
+          0.0124
+        ],
+        "double_srgb_mae": [
+          1.4605,
+          1.4605,
+          1.4605
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt02_cav.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0165,
+          0.0165,
+          0.0165
+        ]
+      },
+      {
+        "name": "eye_rt02_ilm",
+        "guid": "9693e73bb95c7044",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\eye_rt02_ilm.png",
+        "source_sha256": "b56cf096c1d02121751b949efdf8a9967ef1631b0f375071202b80584232e7ec",
+        "dds_sha256": "0d0c11024a9c356446b89fdc545d4daac334bd6d9c8a055b6e5439746175e5b2",
+        "source_mean": [
+          37.9943,
+          38.1093,
+          37.9921
+        ],
+        "packed_mean": [
+          37.99,
+          38.1547,
+          37.974
+        ],
+        "mae": [
+          0.0375,
+          0.1203,
+          0.0549
+        ],
+        "double_srgb_mae": [
+          54.1865,
+          55.2261,
+          54.1966
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt02_ilm.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1121,
+          0.1113,
+          0.1124
+        ]
+      },
+      {
+        "name": "eye_rt03_col",
+        "guid": "0109db316690d736",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM_SRGB",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt03_col.png",
+        "source_sha256": "1d61e2b36758e166c5a6e53e262e77819596c77d94a28cf50d8b9d4409497279",
+        "dds_sha256": "a3adaee5720ae05a31cbe6b22287a243524256d59dfedccf87d5be8614ede102",
+        "source_mean": [
+          66.5353,
+          66.3012,
+          66.5384
+        ],
+        "packed_mean": [
+          134.3262,
+          134.1014,
+          134.4065
+        ],
+        "mae": [
+          67.791,
+          67.8003,
+          67.8681
+        ],
+        "double_srgb_mae": [
+          0.1864,
+          0.1998,
+          0.2489
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt03_col.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0712,
+          0.068,
+          0.0711
+        ]
+      },
+      {
+        "name": "eye_rt03_nml",
+        "guid": "f8fd28cfe1d90efc",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC5_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt03_nml.png",
+        "source_sha256": "3befbe8fc270c7e3cee97d0d618f2d413bed93c191f241099badf3da7c442b5f",
+        "dds_sha256": "f32bbe310286c8c52bed25bfe4b6973cf53e30acf396fedb25c173d545da8391",
+        "source_mean": [
+          128.1209,
+          128.6753
+        ],
+        "packed_mean": [
+          127.5257,
+          128.0893
+        ],
+        "mae": [
+          1.8994,
+          1.5795
+        ],
+        "double_srgb_mae": [
+          59.0995,
+          59.3281
+        ],
+        "alpha_range": [
+          255,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt03_nml.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.241,
+          0.2316
+        ]
+      },
+      {
+        "name": "eye_rt03_gls",
+        "guid": "3b17ea8b8b307d48",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt03_gls.png",
+        "source_sha256": "a559458912a3cdc585ac81fa73cdcee0dd0078e496e74f82b152f22d545a020d",
+        "dds_sha256": "51546e2082fc5a853d866f9fefc3eb62cc95f6904c80d9a0e0103aac31a72f84",
+        "source_mean": [
+          128.0
+        ],
+        "packed_mean": [
+          128.0
+        ],
+        "mae": [
+          0.0
+        ],
+        "double_srgb_mae": [
+          59.845
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "eye_rt03_spc",
+        "guid": "67cac596c2b5e998",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt03_spc.png",
+        "source_sha256": "e365fd90f44f958f823379da46ac325fecbcb772f7966e1018362db0aa1c717f",
+        "dds_sha256": "0d0c11024a9c356446b89fdc545d4daac334bd6d9c8a055b6e5439746175e5b2",
+        "source_mean": [
+          37.9943,
+          38.1093,
+          37.9921
+        ],
+        "packed_mean": [
+          37.99,
+          38.1547,
+          37.974
+        ],
+        "mae": [
+          0.0375,
+          0.1203,
+          0.0549
+        ],
+        "double_srgb_mae": [
+          54.1865,
+          55.2261,
+          54.1966
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt03_spc.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1121,
+          0.1113,
+          0.1124
+        ]
+      },
+      {
+        "name": "eye_rt03_ao",
+        "guid": "9f8c612bfbe156f3",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt03_ao.png",
+        "source_sha256": "a852358ef7b15d2d3be7eb5ae0f7d1a1e3b6b8910361865ff6c5859798a10d25",
+        "dds_sha256": "a0eb315a6aa557d11caabd757420c796e3eb99d415f3c4307a30bd7d6ac75155",
+        "source_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "packed_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "double_srgb_mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "eye_rt03_cav",
+        "guid": "12d91ca234a36bed",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\eye_rt03_cav.png",
+        "source_sha256": "b4e726b76d72c45ad4e1e0abc70b85a7faca14afc69c2b609435ce616768c7ad",
+        "dds_sha256": "42d482cf51c88e3312e44c21a477d4232e4b96f30dfff7395a708f544a360228",
+        "source_mean": [
+          243.0106,
+          243.0106,
+          243.0106
+        ],
+        "packed_mean": [
+          243.0108,
+          243.0108,
+          243.0108
+        ],
+        "mae": [
+          0.0124,
+          0.0124,
+          0.0124
+        ],
+        "double_srgb_mae": [
+          1.4605,
+          1.4605,
+          1.4605
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt03_cav.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0165,
+          0.0165,
+          0.0165
+        ]
+      },
+      {
+        "name": "eye_rt03_ilm",
+        "guid": "be96f264312ad837",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\eye_rt03_ilm.png",
+        "source_sha256": "b56cf096c1d02121751b949efdf8a9967ef1631b0f375071202b80584232e7ec",
+        "dds_sha256": "0d0c11024a9c356446b89fdc545d4daac334bd6d9c8a055b6e5439746175e5b2",
+        "source_mean": [
+          37.9943,
+          38.1093,
+          37.9921
+        ],
+        "packed_mean": [
+          37.99,
+          38.1547,
+          37.974
+        ],
+        "mae": [
+          0.0375,
+          0.1203,
+          0.0549
+        ],
+        "double_srgb_mae": [
+          54.1865,
+          55.2261,
+          54.1966
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_eye_rt03_ilm.png",
+        "original_dimensions": [
+          512,
+          512
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1121,
+          0.1113,
+          0.1124
+        ]
+      },
+      {
+        "name": "feather_default_col",
+        "guid": "02b5ccc99ef42157",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM_SRGB",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_default_col.png",
+        "source_sha256": "f4fde04899dc6955d33bbb14ceb4bbbacc7842511c1c2fef52e09c19cbe1486f",
+        "dds_sha256": "d313d3767867d145391290ace078e1a15709d6c04ce2f5256991ffcf9faec93e",
+        "source_mean": [
+          170.8635,
+          143.1788,
+          121.9884
+        ],
+        "packed_mean": [
+          212.1097,
+          194.626,
+          177.8867
+        ],
+        "mae": [
+          41.2475,
+          51.4471,
+          55.8983
+        ],
+        "double_srgb_mae": [
+          0.6512,
+          0.6038,
+          0.6733
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_feathers_col.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "feather_default_nml",
+        "guid": "99ad2f655dba8f45",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC5_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_default_nml.png",
+        "source_sha256": "4c4692baec456d29b9929ff01ecb532ca28397c3a0b59a1d840938ae231b8443",
+        "dds_sha256": "3547bdd185e630a9a799287814ab66077ed8048a2edf460fad0e36c714b33e53",
+        "source_mean": [
+          126.1868,
+          127.1158
+        ],
+        "packed_mean": [
+          125.6678,
+          126.6038
+        ],
+        "mae": [
+          1.5342,
+          1.584
+        ],
+        "double_srgb_mae": [
+          57.9084,
+          57.1771
+        ],
+        "alpha_range": [
+          255,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_feathers_nml.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "feather_default_gls",
+        "guid": "e37568f4851262d5",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_default_gls.png",
+        "source_sha256": "f0c5540d4649796e8757d8b970cefada3d809f8fa3057f9f8915bd2c1c778fde",
+        "dds_sha256": "4ae409a95ff5e3da624c1066e2208edf2a0de2775ec9a8186b549a7c2b8a3ffb",
+        "source_mean": [
+          119.6868
+        ],
+        "packed_mean": [
+          119.6841
+        ],
+        "mae": [
+          0.491
+        ],
+        "double_srgb_mae": [
+          60.9461
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_feathers_gls.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0
+        ]
+      },
+      {
+        "name": "feather_default_spc",
+        "guid": "488e0e5a3a0b524b",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_default_spc.png",
+        "source_sha256": "c925ae67456c9d6655ade02bf9cec3b2ebab2933be460ae97422a4e56972161e",
+        "dds_sha256": "9d09eaa9af74ca34874d42816eeeb049c4c3575c41f14808e7bbf0f27d2d5bf1",
+        "source_mean": [
+          87.7541,
+          82.3764,
+          112.5003
+        ],
+        "packed_mean": [
+          87.753,
+          82.3694,
+          112.508
+        ],
+        "mae": [
+          0.5159,
+          0.5047,
+          0.5198
+        ],
+        "double_srgb_mae": [
+          69.9089,
+          70.9276,
+          63.511
+        ],
+        "alpha_range": [
+          252,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_feathers_spc.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "feather_default_ao",
+        "guid": "706a7cca1df0c083",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_default_ao.png",
+        "source_sha256": "f3d63c556ca16f90e82886c2c33e60364e7ac5dfde9cfc1908da991e37a743cf",
+        "dds_sha256": "9411dc2ea08ab86b90636295464a8092a705234c30fd37c1d15ccdd702a94c07",
+        "source_mean": [
+          86.7587,
+          86.7587,
+          86.7587
+        ],
+        "packed_mean": [
+          86.761,
+          86.761,
+          86.761
+        ],
+        "mae": [
+          0.172,
+          0.172,
+          0.172
+        ],
+        "double_srgb_mae": [
+          39.8336,
+          39.8336,
+          39.8336
+        ],
+        "alpha_range": [
+          251,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_feathers_ao.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "feather_default_cav",
+        "guid": "067f9b361bfe7fad",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_default_cav.png",
+        "source_sha256": "a852358ef7b15d2d3be7eb5ae0f7d1a1e3b6b8910361865ff6c5859798a10d25",
+        "dds_sha256": "a0eb315a6aa557d11caabd757420c796e3eb99d415f3c4307a30bd7d6ac75155",
+        "source_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "packed_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "double_srgb_mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "feather_rt01_col",
+        "guid": "ac93381cde6c5a80",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM_SRGB",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt01_col.png",
+        "source_sha256": "36b0fa50c4d2442bc139d72f9ee7056e80c0c6cc992c3e1b634cd8972923a0cf",
+        "dds_sha256": "3ad0818b59d093c5de5cbafbf73f2f256cefaa717d53f1c18d6ee435692fe6d1",
+        "source_mean": [
+          56.6066,
+          52.798,
+          59.9056
+        ],
+        "packed_mean": [
+          128.8831,
+          124.6602,
+          132.7155
+        ],
+        "mae": [
+          72.2766,
+          71.8622,
+          72.8099
+        ],
+        "double_srgb_mae": [
+          0.3377,
+          0.4016,
+          0.3417
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt01\\car_mythic_v25_nogo_level02_rt01_feather_col.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "feather_rt01_nml",
+        "guid": "a2b8df70b1882742",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC5_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt01_nml.png",
+        "source_sha256": "4c4692baec456d29b9929ff01ecb532ca28397c3a0b59a1d840938ae231b8443",
+        "dds_sha256": "3547bdd185e630a9a799287814ab66077ed8048a2edf460fad0e36c714b33e53",
+        "source_mean": [
+          126.1868,
+          127.1158
+        ],
+        "packed_mean": [
+          125.6678,
+          126.6038
+        ],
+        "mae": [
+          1.5342,
+          1.584
+        ],
+        "double_srgb_mae": [
+          57.9084,
+          57.1771
+        ],
+        "alpha_range": [
+          255,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt01\\car_mythic_v25_nogo_level02_rt01_feather_nml.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "feather_rt01_gls",
+        "guid": "e4d3a12c61136b7f",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt01_gls.png",
+        "source_sha256": "f0c5540d4649796e8757d8b970cefada3d809f8fa3057f9f8915bd2c1c778fde",
+        "dds_sha256": "4ae409a95ff5e3da624c1066e2208edf2a0de2775ec9a8186b549a7c2b8a3ffb",
+        "source_mean": [
+          119.6868
+        ],
+        "packed_mean": [
+          119.6841
+        ],
+        "mae": [
+          0.491
+        ],
+        "double_srgb_mae": [
+          60.9461
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt01\\car_mythic_v25_nogo_level02_rt01_feather_gls.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0
+        ]
+      },
+      {
+        "name": "feather_rt01_spc",
+        "guid": "11867c37926501de",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt01_spc.png",
+        "source_sha256": "595827552912fc86dc9b990e30aded3afda9f5a0ccb52d96ae33d098c032741c",
+        "dds_sha256": "ce5cb8b3932f466e950bd353fd787ef9cfeb31a8e3fec2637854e9b5877bd44d",
+        "source_mean": [
+          52.6683,
+          51.2072,
+          59.3463
+        ],
+        "packed_mean": [
+          52.5897,
+          51.1913,
+          59.35
+        ],
+        "mae": [
+          0.155,
+          0.2144,
+          0.1144
+        ],
+        "double_srgb_mae": [
+          72.6149,
+          72.1647,
+          73.1137
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt01\\car_mythic_v25_nogo_level02_rt01_feather_spc.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "feather_rt01_ao",
+        "guid": "3a23b819d245be1e",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt01_ao.png",
+        "source_sha256": "a852358ef7b15d2d3be7eb5ae0f7d1a1e3b6b8910361865ff6c5859798a10d25",
+        "dds_sha256": "a0eb315a6aa557d11caabd757420c796e3eb99d415f3c4307a30bd7d6ac75155",
+        "source_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "packed_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "double_srgb_mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "feather_rt01_cav",
+        "guid": "bdc897751644c4d2",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt01_cav.png",
+        "source_sha256": "a852358ef7b15d2d3be7eb5ae0f7d1a1e3b6b8910361865ff6c5859798a10d25",
+        "dds_sha256": "a0eb315a6aa557d11caabd757420c796e3eb99d415f3c4307a30bd7d6ac75155",
+        "source_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "packed_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "double_srgb_mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "feather_rt02_col",
+        "guid": "712a3cf14bc03792",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM_SRGB",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt02_col.png",
+        "source_sha256": "3b418ed72611abcff6108f3965c1670e9b60fb74ed21d246a323839c8809ad90",
+        "dds_sha256": "abbb3b96ef51596ff2ba608caaa853484b07eca4a896f6385b2d5bbdb20d37ba",
+        "source_mean": [
+          126.9501,
+          113.705,
+          86.3268
+        ],
+        "packed_mean": [
+          184.3723,
+          174.4544,
+          152.5174
+        ],
+        "mae": [
+          57.4222,
+          60.7494,
+          66.1907
+        ],
+        "double_srgb_mae": [
+          0.8134,
+          0.7724,
+          0.8646
+        ],
+        "alpha_range": [
+          251,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt02\\car_mythic_v25_nogo_level02_rt02_feather_col.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "feather_rt02_nml",
+        "guid": "67e9c65de0810850",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC5_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt02_nml.png",
+        "source_sha256": "4c4692baec456d29b9929ff01ecb532ca28397c3a0b59a1d840938ae231b8443",
+        "dds_sha256": "3547bdd185e630a9a799287814ab66077ed8048a2edf460fad0e36c714b33e53",
+        "source_mean": [
+          126.1868,
+          127.1158
+        ],
+        "packed_mean": [
+          125.6678,
+          126.6038
+        ],
+        "mae": [
+          1.5342,
+          1.584
+        ],
+        "double_srgb_mae": [
+          57.9084,
+          57.1771
+        ],
+        "alpha_range": [
+          255,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt02\\car_mythic_v25_nogo_level02_rt02_feather_nml.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "feather_rt02_gls",
+        "guid": "aa048819900c4c8d",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt02_gls.png",
+        "source_sha256": "5c0915454d9a97a626ece1f99152abe91ef6af61cc668e7c07f0527a6cedee56",
+        "dds_sha256": "34474294d1e49a0d4615006d5f73369463a119bf2bd4fdd5958c2c92c85171fc",
+        "source_mean": [
+          136.318
+        ],
+        "packed_mean": [
+          136.3199
+        ],
+        "mae": [
+          0.1724
+        ],
+        "double_srgb_mae": [
+          56.305
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt02\\car_mythic_v25_nogo_level02_rt02_feather_gls.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0
+        ]
+      },
+      {
+        "name": "feather_rt02_spc",
+        "guid": "d6b76324c15de2ec",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt02_spc.png",
+        "source_sha256": "837393a1a6a2954e6edaa019fa81059fa41ec99349bdf84d0c591c1fec6eca47",
+        "dds_sha256": "be804d4436df636b2890e0be25f027b8d82f53d87d0e472b1d3d9f19fb064e3f",
+        "source_mean": [
+          51.6344,
+          49.4196,
+          47.3011
+        ],
+        "packed_mean": [
+          51.6265,
+          49.4094,
+          47.276
+        ],
+        "mae": [
+          0.1538,
+          0.2249,
+          0.1516
+        ],
+        "double_srgb_mae": [
+          72.2661,
+          72.0945,
+          71.7356
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt02\\car_mythic_v25_nogo_level02_rt02_feather_spc.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "feather_rt02_ao",
+        "guid": "3835aa0303f5c1d4",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt02_ao.png",
+        "source_sha256": "a852358ef7b15d2d3be7eb5ae0f7d1a1e3b6b8910361865ff6c5859798a10d25",
+        "dds_sha256": "0add991338433d3b45805521f76be3b35663c10f10a71675aa670df16332db77",
+        "source_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "packed_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "double_srgb_mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "feather_rt02_cav",
+        "guid": "842d42942bc50ce8",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt02_cav.png",
+        "source_sha256": "a852358ef7b15d2d3be7eb5ae0f7d1a1e3b6b8910361865ff6c5859798a10d25",
+        "dds_sha256": "0add991338433d3b45805521f76be3b35663c10f10a71675aa670df16332db77",
+        "source_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "packed_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "double_srgb_mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "feather_rt03_col",
+        "guid": "378ee81061407fa8",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM_SRGB",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt03_col.png",
+        "source_sha256": "5619ac3cee71ce41e5fc89b3c73425afc3560959257da6650606cd9783d3f91d",
+        "dds_sha256": "5fb1b2a69419b9c45520f84491ada6f570c28a9c02b9f77f60925844f28a0327",
+        "source_mean": [
+          87.7101,
+          74.3359,
+          112.9634
+        ],
+        "packed_mean": [
+          156.618,
+          144.3957,
+          169.0135
+        ],
+        "mae": [
+          68.9079,
+          70.0598,
+          56.0502
+        ],
+        "double_srgb_mae": [
+          0.96,
+          0.905,
+          1.0621
+        ],
+        "alpha_range": [
+          251,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt03\\car_mythic_v25_nogo_level02_rt03_feather_col.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "feather_rt03_nml",
+        "guid": "2e4e717d593eaf76",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC5_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt03_nml.png",
+        "source_sha256": "4c4692baec456d29b9929ff01ecb532ca28397c3a0b59a1d840938ae231b8443",
+        "dds_sha256": "86ca77b483d7f6fa186c0de4be2a1d816a540affc8cdd7f94988a010438477cf",
+        "source_mean": [
+          126.1868,
+          127.1158
+        ],
+        "packed_mean": [
+          125.6678,
+          126.6038
+        ],
+        "mae": [
+          1.5342,
+          1.584
+        ],
+        "double_srgb_mae": [
+          57.9084,
+          57.1771
+        ],
+        "alpha_range": [
+          255,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt03\\car_mythic_v25_nogo_level02_rt03_feather_nml.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "feather_rt03_gls",
+        "guid": "70693338d72b442b",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt03_gls.png",
+        "source_sha256": "f0c5540d4649796e8757d8b970cefada3d809f8fa3057f9f8915bd2c1c778fde",
+        "dds_sha256": "bc920ee6900ca78b8f3ceb1704ac247590d4867c5925756c3071ba29bd539929",
+        "source_mean": [
+          119.6868
+        ],
+        "packed_mean": [
+          119.6841
+        ],
+        "mae": [
+          0.491
+        ],
+        "double_srgb_mae": [
+          60.9461
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt03\\car_mythic_v25_nogo_level02_rt03_feather_gls.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0
+        ]
+      },
+      {
+        "name": "feather_rt03_spc",
+        "guid": "9d1c0e44087cda8a",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt03_spc.png",
+        "source_sha256": "837393a1a6a2954e6edaa019fa81059fa41ec99349bdf84d0c591c1fec6eca47",
+        "dds_sha256": "be804d4436df636b2890e0be25f027b8d82f53d87d0e472b1d3d9f19fb064e3f",
+        "source_mean": [
+          51.6344,
+          49.4196,
+          47.3011
+        ],
+        "packed_mean": [
+          51.6265,
+          49.4094,
+          47.276
+        ],
+        "mae": [
+          0.1538,
+          0.2249,
+          0.1516
+        ],
+        "double_srgb_mae": [
+          72.2661,
+          72.0945,
+          71.7356
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt03\\car_mythic_v25_nogo_level02_rt03_feather_spc.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "feather_rt03_ao",
+        "guid": "36479bec1cd66dc6",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt03_ao.png",
+        "source_sha256": "a852358ef7b15d2d3be7eb5ae0f7d1a1e3b6b8910361865ff6c5859798a10d25",
+        "dds_sha256": "0add991338433d3b45805521f76be3b35663c10f10a71675aa670df16332db77",
+        "source_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "packed_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "double_srgb_mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "feather_rt03_cav",
+        "guid": "495e29818c5c9d7e",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\feather_rt03_cav.png",
+        "source_sha256": "a852358ef7b15d2d3be7eb5ae0f7d1a1e3b6b8910361865ff6c5859798a10d25",
+        "dds_sha256": "0add991338433d3b45805521f76be3b35663c10f10a71675aa670df16332db77",
+        "source_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "packed_mean": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "double_srgb_mae": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "alpha_range": [
+          255,
+          255
+        ]
+      },
+      {
+        "name": "main_default_col",
+        "guid": "e625de9da7b30654",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM_SRGB",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_default_col.png",
+        "source_sha256": "e45916786b3bd03cea32adf163eed83c5ab64cdd3240eb2a8c8507206d94e7aa",
+        "dds_sha256": "120dfa1f021e7e233a5a5c38ac137d8212e7917ac9f66d27ee3fc64b53d1da74",
+        "source_mean": [
+          59.7333,
+          58.5788,
+          58.1141
+        ],
+        "packed_mean": [
+          84.7004,
+          83.9086,
+          83.6016
+        ],
+        "mae": [
+          24.9674,
+          25.3299,
+          25.4876
+        ],
+        "double_srgb_mae": [
+          0.6,
+          0.5602,
+          0.5893
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_main_col.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1876,
+          0.1778,
+          0.1756
+        ]
+      },
+      {
+        "name": "main_default_nml",
+        "guid": "dce5680a3c73d712",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC5_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_default_nml.png",
+        "source_sha256": "5d95a38e065ee728bfbe2462dd3842b085e4282178eb397464a11dad4386a4aa",
+        "dds_sha256": "8eded1d65a7bfc213745a7cb177de2a61299bd853a26b3711e7bfa34a232cac6",
+        "source_mean": [
+          127.925,
+          127.8853
+        ],
+        "packed_mean": [
+          127.5305,
+          127.3519
+        ],
+        "mae": [
+          0.9136,
+          1.6001
+        ],
+        "double_srgb_mae": [
+          59.6591,
+          59.0745
+        ],
+        "alpha_range": [
+          255,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_main_nml.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1892,
+          0.2863
+        ]
+      },
+      {
+        "name": "main_default_gls",
+        "guid": "1f0029c5e5cb455e",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_default_gls.png",
+        "source_sha256": "ee4ee168eb6e68353345eca4ba5cd224d66fbe5407a82a24a0d9e94c8e4fd589",
+        "dds_sha256": "a976ad3473c5a10bfbfc2754348e338711e0ab080ab9703b424362005407f6c6",
+        "source_mean": [
+          158.0751
+        ],
+        "packed_mean": [
+          158.0902
+        ],
+        "mae": [
+          0.288
+        ],
+        "double_srgb_mae": [
+          46.9287
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_main_gls.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.2073
+        ]
+      },
+      {
+        "name": "main_default_spc",
+        "guid": "4bb304d12384879f",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_default_spc.png",
+        "source_sha256": "6edeebf3809a5ce72786a15c9a3607d5eb0d61f286676b593e1a230db439685d",
+        "dds_sha256": "b67dd38bd5551381cbb741d3c9f615fef83c02bbfa8c88335a08d44eb9c5e4ed",
+        "source_mean": [
+          114.5797,
+          98.3213,
+          83.1211
+        ],
+        "packed_mean": [
+          114.5854,
+          98.3262,
+          83.1004
+        ],
+        "mae": [
+          0.6421,
+          0.5785,
+          0.5906
+        ],
+        "double_srgb_mae": [
+          57.0701,
+          63.7574,
+          68.9928
+        ],
+        "alpha_range": [
+          56,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_main_spc.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1344,
+          0.1278,
+          0.1197
+        ]
+      },
+      {
+        "name": "main_default_ao",
+        "guid": "200ff1149fd60329",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_default_ao.png",
+        "source_sha256": "cb674eb4eb0574ef45139a05d829b9ffea7bddf78cc9ad1d1c537a44b62af20e",
+        "dds_sha256": "b71c478224c437b6acad370725fb45d9b62fbb86ed28c89b6c2ab22faf603c48",
+        "source_mean": [
+          247.6135,
+          247.6135,
+          247.6135
+        ],
+        "packed_mean": [
+          247.6382,
+          247.6382,
+          247.6382
+        ],
+        "mae": [
+          0.192,
+          0.192,
+          0.192
+        ],
+        "double_srgb_mae": [
+          3.7102,
+          3.7102,
+          3.7102
+        ],
+        "alpha_range": [
+          251,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_main_ao.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "main_default_cav",
+        "guid": "f7f5200ea7644a93",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_default_cav.png",
+        "source_sha256": "16caf681cbf6814cfb5c7396c5483bd1066870473ba87b41daf4c6dd836933a5",
+        "dds_sha256": "95bdba30bec9cd2d8e3ba877697e08ea2c5e0bf1f0d8789d0bc36e3df30fcbe6",
+        "source_mean": [
+          250.5744,
+          250.5744,
+          250.5744
+        ],
+        "packed_mean": [
+          250.5962,
+          250.5962,
+          250.5962
+        ],
+        "mae": [
+          0.1293,
+          0.1293,
+          0.1293
+        ],
+        "double_srgb_mae": [
+          2.2775,
+          2.2775,
+          2.2775
+        ],
+        "alpha_range": [
+          251,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_main_cav.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.2459,
+          0.2459,
+          0.2459
+        ]
+      },
+      {
+        "name": "main_default_ilm",
+        "guid": "a3b2f5d08b1c5f19",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\main_default_ilm.png",
+        "source_sha256": "d9e3d808c82ee48ddb76e4f72f72424817cad6c167077d46ba148ede15798925",
+        "dds_sha256": "4804108e6f91149f56470f5a12a1d2ceb4024bb61bd96334ebe4a7d578167248",
+        "source_mean": [
+          0.256,
+          0.2562,
+          0.256
+        ],
+        "packed_mean": [
+          0.2558,
+          0.2561,
+          0.2557
+        ],
+        "mae": [
+          0.0063,
+          0.0068,
+          0.0064
+        ],
+        "double_srgb_mae": [
+          0.1751,
+          0.1746,
+          0.1751
+        ],
+        "alpha_range": [
+          77,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\car_mythic_v25_nogo_main_ilm.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.001,
+          0.001,
+          0.001
+        ]
+      },
+      {
+        "name": "main_rt01_col",
+        "guid": "d06fa4c1991c274a",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM_SRGB",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt01_col.png",
+        "source_sha256": "135f958d931a0890203c30eac0f0e73aab5321ba2e9dcb1a66ff09d620fc3c13",
+        "dds_sha256": "ad9e27ebd5bbc26217fee4733a5b7b4ce1021d05f6cca37ecfb993bfe86cb4c8",
+        "source_mean": [
+          41.4939,
+          38.7146,
+          39.1947
+        ],
+        "packed_mean": [
+          70.1411,
+          67.934,
+          68.6557
+        ],
+        "mae": [
+          28.6475,
+          29.2196,
+          29.4611
+        ],
+        "double_srgb_mae": [
+          0.5769,
+          0.551,
+          0.5799
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt01\\car_mythic_v25_nogo_level02_rt01_main_col.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.161,
+          0.1497,
+          0.1482
+        ]
+      },
+      {
+        "name": "main_rt01_nml",
+        "guid": "a6aa289d08806201",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC5_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt01_nml.png",
+        "source_sha256": "4af79d443af85fe09b42a98d426953d8a67d15f35aba487c2c23c8af3e18e81f",
+        "dds_sha256": "abd5cfdaf02f5daf229744f37a8d9e0bc2829141368fbf393759ce4ec0b20d18",
+        "source_mean": [
+          127.9273,
+          127.887
+        ],
+        "packed_mean": [
+          127.5285,
+          127.3498
+        ],
+        "mae": [
+          0.92,
+          1.6097
+        ],
+        "double_srgb_mae": [
+          59.6623,
+          59.0755
+        ],
+        "alpha_range": [
+          255,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt01\\car_mythic_v25_nogo_level02_rt01_main_nml.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1903,
+          0.2874
+        ]
+      },
+      {
+        "name": "main_rt01_gls",
+        "guid": "dc7e8c3a8f4ce3b1",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt01_gls.png",
+        "source_sha256": "00707def677efd5b51f441bbb3c94f1f8909cc5556c1aca9e3b9be36f5845447",
+        "dds_sha256": "c917e3d252537dab54e3d92ab5baf2e2bb337d111e39438890d9cbac386fbf32",
+        "source_mean": [
+          151.4705
+        ],
+        "packed_mean": [
+          151.4822
+        ],
+        "mae": [
+          0.2907
+        ],
+        "double_srgb_mae": [
+          49.5947
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt01\\car_mythic_v25_nogo_level02_rt01_main_gls.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.2087
+        ]
+      },
+      {
+        "name": "main_rt01_spc",
+        "guid": "6df32de0025dbab1",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt01_spc.png",
+        "source_sha256": "ab2aa82b17aa09b8e2058096e3d5f17a82caef5001eb96bce74053c66af0ecb4",
+        "dds_sha256": "39dd858b1fed6eaa76ac811598b9e8927d013a39c9753ddb71a4120b666fc57d",
+        "source_mean": [
+          103.456,
+          99.1837,
+          99.3294
+        ],
+        "packed_mean": [
+          103.4524,
+          99.1765,
+          99.331
+        ],
+        "mae": [
+          0.5174,
+          0.4884,
+          0.5017
+        ],
+        "double_srgb_mae": [
+          61.7663,
+          63.2723,
+          63.297
+        ],
+        "alpha_range": [
+          32,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt01\\car_mythic_v25_nogo_level02_rt01_main_spc.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1258,
+          0.1232,
+          0.1199
+        ]
+      },
+      {
+        "name": "main_rt01_ao",
+        "guid": "a1b703c8ed18ee64",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt01_ao.png",
+        "source_sha256": "cb674eb4eb0574ef45139a05d829b9ffea7bddf78cc9ad1d1c537a44b62af20e",
+        "dds_sha256": "b71c478224c437b6acad370725fb45d9b62fbb86ed28c89b6c2ab22faf603c48",
+        "source_mean": [
+          247.6135,
+          247.6135,
+          247.6135
+        ],
+        "packed_mean": [
+          247.6382,
+          247.6382,
+          247.6382
+        ],
+        "mae": [
+          0.192,
+          0.192,
+          0.192
+        ],
+        "double_srgb_mae": [
+          3.7102,
+          3.7102,
+          3.7102
+        ],
+        "alpha_range": [
+          251,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt01\\car_mythic_v25_nogo_level02_rt01_main_ao.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "main_rt01_cav",
+        "guid": "8056022458cc0056",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt01_cav.png",
+        "source_sha256": "16caf681cbf6814cfb5c7396c5483bd1066870473ba87b41daf4c6dd836933a5",
+        "dds_sha256": "95bdba30bec9cd2d8e3ba877697e08ea2c5e0bf1f0d8789d0bc36e3df30fcbe6",
+        "source_mean": [
+          250.5744,
+          250.5744,
+          250.5744
+        ],
+        "packed_mean": [
+          250.5962,
+          250.5962,
+          250.5962
+        ],
+        "mae": [
+          0.1293,
+          0.1293,
+          0.1293
+        ],
+        "double_srgb_mae": [
+          2.2775,
+          2.2775,
+          2.2775
+        ],
+        "alpha_range": [
+          251,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt01\\car_mythic_v25_nogo_level02_rt01_main_cav.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.2459,
+          0.2459,
+          0.2459
+        ]
+      },
+      {
+        "name": "main_rt01_ilm",
+        "guid": "4b6a6c220ef203c7",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\main_rt01_ilm.png",
+        "source_sha256": "3fee91aa56903677be915329aecacbd9ddd3dcde6713e75c7ddf88a39fb77a85",
+        "dds_sha256": "a3e51430c6022d05832978ea11a45c4ad5a6eecbb74631a4138e22289dd08828",
+        "source_mean": [
+          0.7365,
+          0.7363,
+          0.7365
+        ],
+        "packed_mean": [
+          0.7349,
+          0.7351,
+          0.7349
+        ],
+        "mae": [
+          0.0201,
+          0.0216,
+          0.0201
+        ],
+        "double_srgb_mae": [
+          0.5438,
+          0.5414,
+          0.5439
+        ],
+        "alpha_range": [
+          69,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt01\\car_mythic_v25_nogo_level02_rt01_main_ilm.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0029,
+          0.0028,
+          0.0029
+        ]
+      },
+      {
+        "name": "main_rt02_col",
+        "guid": "678d3755ed009df4",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM_SRGB",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt02_col.png",
+        "source_sha256": "9da428aa11535dd728667068e7c978417963788637a0b2eb968203d99b1b9303",
+        "dds_sha256": "bfe1fbf7241f6437e657d72d25b0d772e5efb8f7c1aaea1025530b9b37139c5c",
+        "source_mean": [
+          27.6164,
+          26.9315,
+          26.7524
+        ],
+        "packed_mean": [
+          38.5839,
+          37.8444,
+          36.1898
+        ],
+        "mae": [
+          10.9679,
+          10.913,
+          9.4376
+        ],
+        "double_srgb_mae": [
+          0.4841,
+          0.456,
+          0.365
+        ],
+        "alpha_range": [
+          251,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt02\\car_mythic_v25_nogo_level02_rt02_main_col.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1124,
+          0.108,
+          0.0968
+        ]
+      },
+      {
+        "name": "main_rt02_nml",
+        "guid": "3bfa14e67632123d",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC5_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt02_nml.png",
+        "source_sha256": "5c69c0001517b5d56789ef9f3e07e4187395422abb22fbd85aa28952535fb068",
+        "dds_sha256": "be489cef03470f7e86cc2ad6e1aac38f2868413eeaeb573750f3a438a7a49c6d",
+        "source_mean": [
+          127.9281,
+          127.9435
+        ],
+        "packed_mean": [
+          127.5338,
+          127.406
+        ],
+        "mae": [
+          0.911,
+          1.6017
+        ],
+        "double_srgb_mae": [
+          59.6579,
+          59.0531
+        ],
+        "alpha_range": [
+          255,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt02\\car_mythic_v25_nogo_level02_rt02_main_nml.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1862,
+          0.2859
+        ]
+      },
+      {
+        "name": "main_rt02_gls",
+        "guid": "71ce7884033269de",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt02_gls.png",
+        "source_sha256": "1046d438640999512f9c0b7e26a64e0fbb1df1b157ff7c31f8c1edfa75e9f60c",
+        "dds_sha256": "d18ed3fb318628179d25f287655b03613f62528b80c14878634a30d3f2227a13",
+        "source_mean": [
+          165.9164
+        ],
+        "packed_mean": [
+          165.9263
+        ],
+        "mae": [
+          0.28
+        ],
+        "double_srgb_mae": [
+          43.5802
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt02\\car_mythic_v25_nogo_level02_rt02_main_gls.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.2186
+        ]
+      },
+      {
+        "name": "main_rt02_spc",
+        "guid": "0510c074310b2db5",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt02_spc.png",
+        "source_sha256": "e0f698076002f8b59bed884857375f6edad77a5919f523558cdc70d80f678b5f",
+        "dds_sha256": "d32bfaa08ec5a946482e67a70b06aac8952028b2a07cd158767c7111640990c1",
+        "source_mean": [
+          120.0223,
+          104.8363,
+          83.5139
+        ],
+        "packed_mean": [
+          120.0115,
+          104.8276,
+          83.4784
+        ],
+        "mae": [
+          0.98,
+          0.8563,
+          0.9347
+        ],
+        "double_srgb_mae": [
+          57.5576,
+          62.9415,
+          68.9833
+        ],
+        "alpha_range": [
+          69,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt02\\car_mythic_v25_nogo_level02_rt02_main_spc.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.2142,
+          0.2022,
+          0.1874
+        ]
+      },
+      {
+        "name": "main_rt02_ao",
+        "guid": "383ab444858c3703",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt02_ao.png",
+        "source_sha256": "cb674eb4eb0574ef45139a05d829b9ffea7bddf78cc9ad1d1c537a44b62af20e",
+        "dds_sha256": "b71c478224c437b6acad370725fb45d9b62fbb86ed28c89b6c2ab22faf603c48",
+        "source_mean": [
+          247.6135,
+          247.6135,
+          247.6135
+        ],
+        "packed_mean": [
+          247.6382,
+          247.6382,
+          247.6382
+        ],
+        "mae": [
+          0.192,
+          0.192,
+          0.192
+        ],
+        "double_srgb_mae": [
+          3.7102,
+          3.7102,
+          3.7102
+        ],
+        "alpha_range": [
+          251,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt02\\car_mythic_v25_nogo_level02_rt02_main_ao.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "main_rt02_cav",
+        "guid": "163fd086c6290ff8",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt02_cav.png",
+        "source_sha256": "16caf681cbf6814cfb5c7396c5483bd1066870473ba87b41daf4c6dd836933a5",
+        "dds_sha256": "95bdba30bec9cd2d8e3ba877697e08ea2c5e0bf1f0d8789d0bc36e3df30fcbe6",
+        "source_mean": [
+          250.5744,
+          250.5744,
+          250.5744
+        ],
+        "packed_mean": [
+          250.5962,
+          250.5962,
+          250.5962
+        ],
+        "mae": [
+          0.1293,
+          0.1293,
+          0.1293
+        ],
+        "double_srgb_mae": [
+          2.2775,
+          2.2775,
+          2.2775
+        ],
+        "alpha_range": [
+          251,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt02\\car_mythic_v25_nogo_level02_rt02_main_cav.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.2459,
+          0.2459,
+          0.2459
+        ]
+      },
+      {
+        "name": "main_rt02_ilm",
+        "guid": "e287feb6566ece8f",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\main_rt02_ilm.png",
+        "source_sha256": "d9e3d808c82ee48ddb76e4f72f72424817cad6c167077d46ba148ede15798925",
+        "dds_sha256": "4804108e6f91149f56470f5a12a1d2ceb4024bb61bd96334ebe4a7d578167248",
+        "source_mean": [
+          0.256,
+          0.2562,
+          0.256
+        ],
+        "packed_mean": [
+          0.2558,
+          0.2561,
+          0.2557
+        ],
+        "mae": [
+          0.0063,
+          0.0068,
+          0.0064
+        ],
+        "double_srgb_mae": [
+          0.1751,
+          0.1746,
+          0.1751
+        ],
+        "alpha_range": [
+          77,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt02\\car_mythic_v25_nogo_level02_rt02_main_ilm.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.001,
+          0.001,
+          0.001
+        ]
+      },
+      {
+        "name": "main_rt03_col",
+        "guid": "294c9b15a8232a9f",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM_SRGB",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt03_col.png",
+        "source_sha256": "24c7fd51a2167ae0f6d14f4d381c6107ed913700f37195c49538e7ac5fb18e00",
+        "dds_sha256": "42af71d16037f2c61bb23c8936ef7077d3c84a3aba6cf6d19fb9b8ae96e10b92",
+        "source_mean": [
+          42.9996,
+          41.2584,
+          52.5781
+        ],
+        "packed_mean": [
+          84.7998,
+          83.6033,
+          96.4982
+        ],
+        "mae": [
+          41.8007,
+          42.3452,
+          43.9208
+        ],
+        "double_srgb_mae": [
+          1.118,
+          1.0496,
+          1.0857
+        ],
+        "alpha_range": [
+          251,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt03\\car_mythic_v25_nogo_level02_rt03_main_col.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1995,
+          0.1944,
+          0.2311
+        ]
+      },
+      {
+        "name": "main_rt03_nml",
+        "guid": "feed3cd817dc05f0",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC5_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt03_nml.png",
+        "source_sha256": "b408a231796001f0e552a35766ea105e5b30a923c2d02c626c429df4ed111990",
+        "dds_sha256": "69784282094842b278864c8a3ac3461954259dcdf71f53ae3f2e05044d32ae83",
+        "source_mean": [
+          127.1558,
+          127.1821
+        ],
+        "packed_mean": [
+          126.73,
+          126.6454
+        ],
+        "mae": [
+          0.9404,
+          1.5973
+        ],
+        "double_srgb_mae": [
+          59.9557,
+          59.303
+        ],
+        "alpha_range": [
+          255,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt03\\car_mythic_v25_nogo_level02_rt03_main_nml.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.2128,
+          0.2952
+        ]
+      },
+      {
+        "name": "main_rt03_gls",
+        "guid": "34c1a075b1440973",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt03_gls.png",
+        "source_sha256": "7cdf7ee0f5726accdea7eec459d3f10e5ded00d41a4ae12cb850917a65e73eb0",
+        "dds_sha256": "9debd7d6b3ba4b6c13a495d50c02e2a540a3458ea473cee05a152f8f96d9dd89",
+        "source_mean": [
+          167.1469
+        ],
+        "packed_mean": [
+          167.158
+        ],
+        "mae": [
+          0.2912
+        ],
+        "double_srgb_mae": [
+          42.7997
+        ],
+        "alpha_range": [
+          254,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt03\\car_mythic_v25_nogo_level02_rt03_main_gls.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1533
+        ]
+      },
+      {
+        "name": "main_rt03_spc",
+        "guid": "c76a064cebd919c6",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt03_spc.png",
+        "source_sha256": "dbc20bf0bf0e37b101d996a2b72648d868860df318a0520e2fcba9ede3fac9b5",
+        "dds_sha256": "98d59c56c3410ee86081e9bd018f3f6fb9ac691fb2b9a5c4c7ff7ca35459fbbe",
+        "source_mean": [
+          100.6594,
+          94.0094,
+          92.4671
+        ],
+        "packed_mean": [
+          100.641,
+          94.0227,
+          92.4597
+        ],
+        "mae": [
+          0.8167,
+          0.7801,
+          0.732
+        ],
+        "double_srgb_mae": [
+          59.0429,
+          60.7901,
+          64.0206
+        ],
+        "alpha_range": [
+          69,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt03\\car_mythic_v25_nogo_level02_rt03_main_spc.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.1872,
+          0.169,
+          0.1464
+        ]
+      },
+      {
+        "name": "main_rt03_ao",
+        "guid": "fa93fa1d33f27732",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt03_ao.png",
+        "source_sha256": "cb674eb4eb0574ef45139a05d829b9ffea7bddf78cc9ad1d1c537a44b62af20e",
+        "dds_sha256": "b71c478224c437b6acad370725fb45d9b62fbb86ed28c89b6c2ab22faf603c48",
+        "source_mean": [
+          247.6135,
+          247.6135,
+          247.6135
+        ],
+        "packed_mean": [
+          247.6382,
+          247.6382,
+          247.6382
+        ],
+        "mae": [
+          0.192,
+          0.192,
+          0.192
+        ],
+        "double_srgb_mae": [
+          3.7102,
+          3.7102,
+          3.7102
+        ],
+        "alpha_range": [
+          251,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt03\\car_mythic_v25_nogo_level02_rt03_main_ao.png",
+        "original_dimensions": [
+          1024,
+          1024
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "name": "main_rt03_cav",
+        "guid": "d7ff3446814b9ca3",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\texture_project\\.workbench_textures\\main_rt03_cav.png",
+        "source_sha256": "16caf681cbf6814cfb5c7396c5483bd1066870473ba87b41daf4c6dd836933a5",
+        "dds_sha256": "95bdba30bec9cd2d8e3ba877697e08ea2c5e0bf1f0d8789d0bc36e3df30fcbe6",
+        "source_mean": [
+          250.5744,
+          250.5744,
+          250.5744
+        ],
+        "packed_mean": [
+          250.5962,
+          250.5962,
+          250.5962
+        ],
+        "mae": [
+          0.1293,
+          0.1293,
+          0.1293
+        ],
+        "double_srgb_mae": [
+          2.2775,
+          2.2775,
+          2.2775
+        ],
+        "alpha_range": [
+          251,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt03\\car_mythic_v25_nogo_level02_rt03_main_cav.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.2459,
+          0.2459,
+          0.2459
+        ]
+      },
+      {
+        "name": "main_rt03_ilm",
+        "guid": "a4e1448ef86d62dc",
+        "dimensions": [
+          512,
+          512
+        ],
+        "mips": 10,
+        "format": "BC7_UNORM",
+        "source": "original\\work\\car_mythic\\main_rt03_ilm.png",
+        "source_sha256": "d9e3d808c82ee48ddb76e4f72f72424817cad6c167077d46ba148ede15798925",
+        "dds_sha256": "4804108e6f91149f56470f5a12a1d2ceb4024bb61bd96334ebe4a7d578167248",
+        "source_mean": [
+          0.256,
+          0.2562,
+          0.256
+        ],
+        "packed_mean": [
+          0.2558,
+          0.2561,
+          0.2557
+        ],
+        "mae": [
+          0.0063,
+          0.0068,
+          0.0064
+        ],
+        "double_srgb_mae": [
+          0.1751,
+          0.1746,
+          0.1751
+        ],
+        "alpha_range": [
+          77,
+          255
+        ],
+        "original_source": "original\\work\\car_mythic\\materials\\texture\\art\\mshop\\weapons\\class\\smg\\car\\mythic\\v25_nogo\\skins\\rt03\\car_mythic_v25_nogo_level02_rt03_main_ilm.png",
+        "original_dimensions": [
+          2048,
+          2048
+        ],
+        "original_metadata": {
+          "srgb": 0,
+          "gamma": 0.45455
+        },
+        "intermediate_vs_original_mae": [
+          0.001,
+          0.001,
+          0.001
+        ]
+      }
+    ],
+    "materials": [
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_base_default",
+        "guid": "851a81417d18e408",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_default_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_default_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_default_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_default_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_default_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_default_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_base_default",
+        "guid": "54d59ca0d081458d",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_default_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_default_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_default_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_default_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_default_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_default_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_evolved_default",
+        "guid": "9d430e60869f710f",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_default_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_default_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_default_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_default_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/eye_default_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_default_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_default_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_evolved_default",
+        "guid": "ce0ffded7621cd9a",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_default_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_default_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_default_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_default_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/eye_default_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_default_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_default_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_base_rt01",
+        "guid": "1b82910ae1953947",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_base_rt01",
+        "guid": "2e0873f3ee7fb6f8",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_evolved_rt01",
+        "guid": "1fecd4c9ee57d2d4",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_evolved_rt01",
+        "guid": "edda49de9993c955",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_rt01_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_base_rt02",
+        "guid": "ef9b5c4beb6ae9f4",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_base_rt02",
+        "guid": "02213f34ade76059",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_evolved_rt02",
+        "guid": "179b7bbbd59ceb8e",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_evolved_rt02",
+        "guid": "e7f079344180043d",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_rt02_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_base_rt03",
+        "guid": "c38daf0655324eb0",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_base_rt03",
+        "guid": "d61391ef494d749d",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_evolved_rt03",
+        "guid": "782fe9051682ce87",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/eye_evolved_rt03",
+        "guid": "47eb046482ba87d0",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/eye_rt03_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_base_default",
+        "guid": "3e94844eb79eda42",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_default_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_default_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_default_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_default_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_default_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_default_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_base_default",
+        "guid": "0db5bd952a5f0a16",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_default_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_default_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_default_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_default_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_default_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_default_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_evolved_default",
+        "guid": "f8c3c19ca5341f77",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_default_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_default_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_default_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_default_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_default_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_default_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_evolved_default",
+        "guid": "2990b129cc89017b",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_default_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_default_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_default_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_default_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_default_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_default_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_base_rt01",
+        "guid": "0e347f325d46a8db",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_base_rt01",
+        "guid": "206d710ecb584924",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_evolved_rt01",
+        "guid": "e3f8ba5f503e3178",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_evolved_rt01",
+        "guid": "b319f3a5d599e31f",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_rt01_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_base_rt02",
+        "guid": "e2005966c8437c20",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_base_rt02",
+        "guid": "f4394b434f24742d",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_evolved_rt02",
+        "guid": "3e530d061e50e090",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_evolved_rt02",
+        "guid": "0ea80a7e64fcf599",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_rt02_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_base_rt03",
+        "guid": "b5f2ac2163a99064",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_base_rt03",
+        "guid": "c82b9dfdb8ebd8e9",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_evolved_rt03",
+        "guid": "01b99e8a766d9ae6",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/feather_evolved_rt03",
+        "guid": "d174b9e9e2a5542f",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/feather_rt03_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_base_default",
+        "guid": "5cc6f71b7bd6f985",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_default_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_default_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_default_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_default_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_default_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_default_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_base_default",
+        "guid": "7033ad29c40854f4",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_default_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_default_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_default_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_default_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_default_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_default_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_evolved_default",
+        "guid": "b80ea6081efaaa03",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_default_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_default_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_default_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_default_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/main_default_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_default_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_default_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_evolved_default",
+        "guid": "87c9c1678b32634c",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_default_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_default_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_default_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_default_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/main_default_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_default_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_default_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_base_rt01",
+        "guid": "fbf9390de612fce4",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_base_rt01",
+        "guid": "919ae0ab603197c0",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_evolved_rt01",
+        "guid": "8a3df861f5753792",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_evolved_rt01",
+        "guid": "9cc3db4af5f80961",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_rt01_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_base_rt02",
+        "guid": "0fa878123af35b8a",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_base_rt02",
+        "guid": "a54a1faf837346de",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_evolved_rt02",
+        "guid": "5e56c3a2f2e33c5d",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_evolved_rt02",
+        "guid": "70dca68bf3660e2c",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_rt02_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_base_rt03",
+        "guid": "224a6b6ab47e9081",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_base_rt03",
+        "guid": "b7ec1308096627b7",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_spc",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_evolved_rt03",
+        "guid": "3249165d5caaa119",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_cav"
+        }
+      },
+      {
+        "name": "models/Weapons_R2/codex_car_mythic/main_evolved_rt03",
+        "guid": "44cef9468ecc2270",
+        "textures": {
+          "0": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_col",
+          "1": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_nml",
+          "2": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_gls",
+          "3": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_spc",
+          "4": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_ilm",
+          "11": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_ao",
+          "12": "texture/models/Weapons_R2/codex_car_mythic/main_rt03_cav"
+        }
+      }
+    ]
+  },
+  "vtf": [
+    {
+      "name": "eye_default.vtf",
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "DXT5",
+      "flags": "VTFFlags.EIGHTBITALPHA",
+      "mip_count": 10,
+      "sha256": "2039d6c86c9bc90f6de4f0413bd58671a7292e2cb9439bab864a4fbb434956d9",
+      "rgb_mean": [
+        13.3161,
+        13.4679,
+        13.3164
+      ],
+      "source_ilm_mae": [
+        24.6783,
+        24.6414,
+        24.6757
+      ],
+      "linearized_ilm_mae": [
+        4.3834,
+        4.545,
+        4.3844
+      ]
+    },
+    {
+      "name": "eye_rt01.vtf",
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "DXT5",
+      "flags": "VTFFlags.EIGHTBITALPHA",
+      "mip_count": 10,
+      "sha256": "2039d6c86c9bc90f6de4f0413bd58671a7292e2cb9439bab864a4fbb434956d9",
+      "rgb_mean": [
+        13.3161,
+        13.4679,
+        13.3164
+      ],
+      "source_ilm_mae": [
+        24.6783,
+        24.6414,
+        24.6757
+      ],
+      "linearized_ilm_mae": [
+        4.3834,
+        4.545,
+        4.3844
+      ]
+    },
+    {
+      "name": "eye_rt02.vtf",
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "DXT5",
+      "flags": "VTFFlags.EIGHTBITALPHA",
+      "mip_count": 10,
+      "sha256": "2039d6c86c9bc90f6de4f0413bd58671a7292e2cb9439bab864a4fbb434956d9",
+      "rgb_mean": [
+        13.3161,
+        13.4679,
+        13.3164
+      ],
+      "source_ilm_mae": [
+        24.6783,
+        24.6414,
+        24.6757
+      ],
+      "linearized_ilm_mae": [
+        4.3834,
+        4.545,
+        4.3844
+      ]
+    },
+    {
+      "name": "eye_rt03.vtf",
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "DXT5",
+      "flags": "VTFFlags.EIGHTBITALPHA",
+      "mip_count": 10,
+      "sha256": "2039d6c86c9bc90f6de4f0413bd58671a7292e2cb9439bab864a4fbb434956d9",
+      "rgb_mean": [
+        13.3161,
+        13.4679,
+        13.3164
+      ],
+      "source_ilm_mae": [
+        24.6783,
+        24.6414,
+        24.6757
+      ],
+      "linearized_ilm_mae": [
+        4.3834,
+        4.545,
+        4.3844
+      ]
+    },
+    {
+      "name": "main_default.vtf",
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "DXT5",
+      "flags": "VTFFlags.EIGHTBITALPHA",
+      "mip_count": 10,
+      "sha256": "fc24f6355bb8a195ddc7020144c7b3b2408b398338698eca0ad022c684fbe6a0",
+      "rgb_mean": [
+        0.0762,
+        0.0768,
+        0.0767
+      ],
+      "source_ilm_mae": [
+        0.1802,
+        0.18,
+        0.1797
+      ],
+      "linearized_ilm_mae": [
+        0.0736,
+        0.0742,
+        0.0737
+      ]
+    },
+    {
+      "name": "main_rt01.vtf",
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "DXT5",
+      "flags": "VTFFlags.EIGHTBITALPHA",
+      "mip_count": 10,
+      "sha256": "15d55390f034ff7ed2c658d7bac11ea8199c4dabd1a8a24d2b28d659c1520bbf",
+      "rgb_mean": [
+        0.2175,
+        0.2195,
+        0.2185
+      ],
+      "source_ilm_mae": [
+        0.52,
+        0.5193,
+        0.519
+      ],
+      "linearized_ilm_mae": [
+        0.1879,
+        0.1885,
+        0.188
+      ]
+    },
+    {
+      "name": "main_rt02.vtf",
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "DXT5",
+      "flags": "VTFFlags.EIGHTBITALPHA",
+      "mip_count": 10,
+      "sha256": "fc24f6355bb8a195ddc7020144c7b3b2408b398338698eca0ad022c684fbe6a0",
+      "rgb_mean": [
+        0.0762,
+        0.0768,
+        0.0767
+      ],
+      "source_ilm_mae": [
+        0.1802,
+        0.18,
+        0.1797
+      ],
+      "linearized_ilm_mae": [
+        0.0736,
+        0.0742,
+        0.0737
+      ]
+    },
+    {
+      "name": "main_rt03.vtf",
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "DXT5",
+      "flags": "VTFFlags.EIGHTBITALPHA",
+      "mip_count": 10,
+      "sha256": "ad0b6be562ce92687ccb14c9b72e59f499f549cb0d063b455803e58207e5a9fe",
+      "rgb_mean": [
+        0.0763,
+        0.0767,
+        0.082
+      ],
+      "source_ilm_mae": [
+        0.18,
+        0.1798,
+        0.1747
+      ],
+      "linearized_ilm_mae": [
+        0.0738,
+        0.0738,
+        0.0753
+      ]
+    },
+    {
+      "name": "white.vtf",
+      "dimensions": [
+        16,
+        16
+      ],
+      "format": "DXT5",
+      "flags": "VTFFlags.EIGHTBITALPHA",
+      "mip_count": 5,
+      "sha256": "34fe10676ccfb6229cd72ef52d6dde138b1b46a3aca59100a923a61a4b287b44",
+      "rgb_mean": [
+        255.0,
+        255.0,
+        255.0
+      ]
+    }
+  ],
+  "pcf": {
+    "pcfSHA256": "8494e08caedf84e690fba51b7ec519e58f38167c1d50e7ad2fa50345b282b525",
+    "binaryMatchesSourceBinary": true,
+    "parsedElements": 265,
+    "canonicalMismatchCount": 0,
+    "mismatches": [],
+    "systems": [
+      "codex_car_mythic_wpn_muzzleflash_xo_elec",
+      "codex_car_mythic_mflash_xo_elec_sparks",
+      "codex_car_mythic_mflash_xo_elec_finger2",
+      "codex_car_mythic_wpn_muzzleflash_xo_elec_FP",
+      "codex_car_mythic_mflash_xo_elec_core",
+      "codex_car_mythic_mflash_xo_elec_smoke",
+      "codex_car_mythic_mflash_xo_elec_base",
+      "codex_car_mythic_mflash_xo_elec_finger1",
+      "codex_car_mythic_mflash_xo_elec_flash",
+      "codex_car_mythic_mflash_xo_elec_FP_finger1",
+      "codex_car_mythic_mflash_xo_elec_FP_sparks",
+      "codex_car_mythic_mflash_xo_elec_FP_base",
+      "codex_car_mythic_mflash_xo_elec_FP_smoke",
+      "codex_car_mythic_mflash_xo_elec_FP_core",
+      "codex_car_mythic_mflash_xo_elec_dlight",
+      "codex_car_mythic_mflash_xo_elec_glow",
+      "codex_car_mythic_mflash_xo_elec_FP_flash",
+      "codex_car_mythic_mflash_xo_elec_rope",
+      "codex_car_mythic_mflash_xo_elec_FP_rope"
+    ],
+    "allNamespaced": true,
+    "activeSystems": {
+      "codex_car_mythic_mflash_xo_elec_dlight": {
+        "material": "particle\\glows\\glow_soft_linear_noz.vmt",
+        "maxParticles": 12,
+        "viewModelEffectExplicit": false,
+        "children": 0
+      },
+      "codex_car_mythic_mflash_xo_elec_glow": {
+        "material": "particle\\glows\\energy_cloud_add_03ob.vmt",
+        "maxParticles": 80,
+        "viewModelEffectExplicit": false,
+        "children": 0
+      }
+    },
+    "models": {
+      "ptpov_car101.mdl": {
+        "boneCount": 199,
+        "attachmentCount": 33,
+        "attachments": [
+          {
+            "index": 9,
+            "name": "VFX_eye",
+            "boneIndex": 86,
+            "bone": "def_core_orb",
+            "matrix": [
+              1.910685465164705e-15,
+              1.0,
+              4.371138828673793e-08,
+              0.0,
+              4.371138828673793e-08,
+              -4.371138828673793e-08,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              -4.371138828673793e-08,
+              0.0
+            ]
+          },
+          {
+            "index": 10,
+            "name": "VFX_base",
+            "boneIndex": 77,
+            "bone": "def_c_base",
+            "matrix": [
+              1.910685465164705e-15,
+              1.0,
+              4.371138828673793e-08,
+              0.0,
+              4.371138828673793e-08,
+              -4.371138828673793e-08,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              -4.371138828673793e-08,
+              0.0
+            ]
+          },
+          {
+            "index": 11,
+            "name": "VFX_Bifrost",
+            "boneIndex": 77,
+            "bone": "def_c_base",
+            "matrix": [
+              1.910685465164705e-15,
+              1.0,
+              4.371138828673793e-08,
+              0.0,
+              4.371138828673793e-08,
+              -4.371138828673793e-08,
+              1.0,
+              3.8976287841796875,
+              1.0,
+              0.0,
+              -4.371138828673793e-08,
+              0.0
+            ]
+          }
+        ],
+        "relevantBones": {
+          "def_c_base": {
+            "name": "def_c_base",
+            "parent": 73,
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "def_core": {
+            "name": "def_core",
+            "parent": 77,
+            "position": [
+              3.000000106112566e-06,
+              5.010082244873047,
+              0.8812923431396484
+            ]
+          },
+          "def_core_orb": {
+            "name": "def_core_orb",
+            "parent": 85,
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "def_eye_body": {
+            "name": "def_eye_body",
+            "parent": 85,
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "def_iris": {
+            "name": "def_iris",
+            "parent": 86,
+            "position": [
+              -3.000000106112566e-06,
+              0.005828857421875,
+              -0.7841081619262695
+            ]
+          }
+        }
+      },
+      "w_car101.mdl": {
+        "boneCount": 22,
+        "attachmentCount": 27,
+        "attachments": [
+          {
+            "index": 8,
+            "name": "VFX_eye",
+            "boneIndex": 15,
+            "bone": "def_core_orb",
+            "matrix": [
+              1.910685465164705e-15,
+              1.0,
+              4.371138828673793e-08,
+              0.0,
+              4.371138828673793e-08,
+              -4.371138828673793e-08,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              -4.371138828673793e-08,
+              0.0
+            ]
+          },
+          {
+            "index": 9,
+            "name": "VFX_base",
+            "boneIndex": 5,
+            "bone": "def_c_base",
+            "matrix": [
+              1.910685465164705e-15,
+              1.0,
+              4.371138828673793e-08,
+              0.0,
+              4.371138828673793e-08,
+              -4.371138828673793e-08,
+              1.0,
+              0.0,
+              1.0,
+              0.0,
+              -4.371138828673793e-08,
+              0.0
+            ]
+          },
+          {
+            "index": 10,
+            "name": "VFX_Bifrost",
+            "boneIndex": 5,
+            "bone": "def_c_base",
+            "matrix": [
+              1.910685465164705e-15,
+              1.0,
+              4.371138828673793e-08,
+              0.0,
+              4.371138828673793e-08,
+              -4.371138828673793e-08,
+              1.0,
+              3.897629976272583,
+              1.0,
+              0.0,
+              -4.371138828673793e-08,
+              0.0
+            ]
+          }
+        ],
+        "relevantBones": {
+          "def_c_base": {
+            "name": "def_c_base",
+            "parent": 1,
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "def_core": {
+            "name": "def_core",
+            "parent": 5,
+            "position": [
+              3.000000106112566e-06,
+              5.010083198547363,
+              0.8812919855117798
+            ]
+          },
+          "def_core_orb": {
+            "name": "def_core_orb",
+            "parent": 14,
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    }
+  },
+  "model_materials": {
+    "models": {
+      "ptpov_car101.mdl": {
+        "materialNames": [
+          "models/Weapons_R2/attachments/holo_reflex_sight_magnifier",
+          "models/weapons/attachments/acgs_sight",
+          "models/Weapons_R2/attachments/charge_rifle_optic",
+          "models/weapons/attachments/rifle_scope_lens",
+          "models/Weapons_R2/codex_car_mythic/eye_base_default",
+          "models/Weapons_R2/codex_car_mythic/feather_base_default",
+          "models/Weapons_R2/codex_car_mythic/main_base_default",
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_default",
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_default",
+          "models/Weapons_R2/codex_car_mythic/main_evolved_default",
+          "models/codex_car_mythic_glow/eye_default",
+          "models/codex_car_mythic_glow/main_default",
+          "models/Weapons_R2/codex_car_mythic/eye_base_rt01",
+          "models/Weapons_R2/codex_car_mythic/feather_base_rt01",
+          "models/Weapons_R2/codex_car_mythic/main_base_rt01",
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_rt01",
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_rt01",
+          "models/Weapons_R2/codex_car_mythic/main_evolved_rt01",
+          "models/Weapons_R2/codex_car_mythic/eye_base_rt02",
+          "models/Weapons_R2/codex_car_mythic/feather_base_rt02",
+          "models/Weapons_R2/codex_car_mythic/main_base_rt02",
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_rt02",
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_rt02",
+          "models/Weapons_R2/codex_car_mythic/main_evolved_rt02",
+          "models/Weapons_R2/codex_car_mythic/eye_base_rt03",
+          "models/Weapons_R2/codex_car_mythic/feather_base_rt03",
+          "models/Weapons_R2/codex_car_mythic/main_base_rt03",
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_rt03",
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_rt03",
+          "models/Weapons_R2/codex_car_mythic/main_evolved_rt03"
+        ],
+        "rpakChecks": {
+          "models/Weapons_R2/codex_car_mythic/eye_base_default": {
+            "skn": {
+              "guid": "851a81417d18e408",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "54d59ca0d081458d",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_base_default": {
+            "skn": {
+              "guid": "3e94844eb79eda42",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "0db5bd952a5f0a16",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_base_default": {
+            "skn": {
+              "guid": "5cc6f71b7bd6f985",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "7033ad29c40854f4",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_default": {
+            "skn": {
+              "guid": "9d430e60869f710f",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "ce0ffded7621cd9a",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_default": {
+            "skn": {
+              "guid": "f8c3c19ca5341f77",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "2990b129cc89017b",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_evolved_default": {
+            "skn": {
+              "guid": "b80ea6081efaaa03",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "87c9c1678b32634c",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_base_rt01": {
+            "skn": {
+              "guid": "1b82910ae1953947",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "2e0873f3ee7fb6f8",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_base_rt01": {
+            "skn": {
+              "guid": "0e347f325d46a8db",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "206d710ecb584924",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_base_rt01": {
+            "skn": {
+              "guid": "fbf9390de612fce4",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "919ae0ab603197c0",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_rt01": {
+            "skn": {
+              "guid": "1fecd4c9ee57d2d4",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "edda49de9993c955",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_rt01": {
+            "skn": {
+              "guid": "e3f8ba5f503e3178",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "b319f3a5d599e31f",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_evolved_rt01": {
+            "skn": {
+              "guid": "8a3df861f5753792",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "9cc3db4af5f80961",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_base_rt02": {
+            "skn": {
+              "guid": "ef9b5c4beb6ae9f4",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "02213f34ade76059",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_base_rt02": {
+            "skn": {
+              "guid": "e2005966c8437c20",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "f4394b434f24742d",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_base_rt02": {
+            "skn": {
+              "guid": "0fa878123af35b8a",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "a54a1faf837346de",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_rt02": {
+            "skn": {
+              "guid": "179b7bbbd59ceb8e",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "e7f079344180043d",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_rt02": {
+            "skn": {
+              "guid": "3e530d061e50e090",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "0ea80a7e64fcf599",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_evolved_rt02": {
+            "skn": {
+              "guid": "5e56c3a2f2e33c5d",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "70dca68bf3660e2c",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_base_rt03": {
+            "skn": {
+              "guid": "c38daf0655324eb0",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "d61391ef494d749d",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_base_rt03": {
+            "skn": {
+              "guid": "b5f2ac2163a99064",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "c82b9dfdb8ebd8e9",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_base_rt03": {
+            "skn": {
+              "guid": "224a6b6ab47e9081",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "b7ec1308096627b7",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_rt03": {
+            "skn": {
+              "guid": "782fe9051682ce87",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "47eb046482ba87d0",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_rt03": {
+            "skn": {
+              "guid": "01b99e8a766d9ae6",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "d174b9e9e2a5542f",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_evolved_rt03": {
+            "skn": {
+              "guid": "3249165d5caaa119",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "44cef9468ecc2270",
+              "present": true,
+              "nameMatches": true
+            }
+          }
+        },
+        "skins": [
+          {
+            "skin": 0,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 1,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 2,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 3,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 4,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 5,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 6,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 7,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 8,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          }
+        ]
+      },
+      "w_car101.mdl": {
+        "materialNames": [
+          "models/Weapons_R2/attachments/holo_reflex_sight_magnifier",
+          "models/weapons/attachments/acgs_sight",
+          "models/Weapons_R2/attachments/charge_rifle_optic",
+          "models/weapons/attachments/rifle_scope_lens",
+          "models/Weapons_R2/codex_car_mythic/eye_base_default",
+          "models/Weapons_R2/codex_car_mythic/feather_base_default",
+          "models/Weapons_R2/codex_car_mythic/main_base_default",
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_default",
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_default",
+          "models/Weapons_R2/codex_car_mythic/main_evolved_default",
+          "models/codex_car_mythic_glow/eye_default",
+          "models/codex_car_mythic_glow/main_default",
+          "models/Weapons_R2/codex_car_mythic/eye_base_rt01",
+          "models/Weapons_R2/codex_car_mythic/feather_base_rt01",
+          "models/Weapons_R2/codex_car_mythic/main_base_rt01",
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_rt01",
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_rt01",
+          "models/Weapons_R2/codex_car_mythic/main_evolved_rt01",
+          "models/Weapons_R2/codex_car_mythic/eye_base_rt02",
+          "models/Weapons_R2/codex_car_mythic/feather_base_rt02",
+          "models/Weapons_R2/codex_car_mythic/main_base_rt02",
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_rt02",
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_rt02",
+          "models/Weapons_R2/codex_car_mythic/main_evolved_rt02",
+          "models/Weapons_R2/codex_car_mythic/eye_base_rt03",
+          "models/Weapons_R2/codex_car_mythic/feather_base_rt03",
+          "models/Weapons_R2/codex_car_mythic/main_base_rt03",
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_rt03",
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_rt03",
+          "models/Weapons_R2/codex_car_mythic/main_evolved_rt03"
+        ],
+        "rpakChecks": {
+          "models/Weapons_R2/codex_car_mythic/eye_base_default": {
+            "skn": {
+              "guid": "851a81417d18e408",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "54d59ca0d081458d",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_base_default": {
+            "skn": {
+              "guid": "3e94844eb79eda42",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "0db5bd952a5f0a16",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_base_default": {
+            "skn": {
+              "guid": "5cc6f71b7bd6f985",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "7033ad29c40854f4",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_default": {
+            "skn": {
+              "guid": "9d430e60869f710f",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "ce0ffded7621cd9a",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_default": {
+            "skn": {
+              "guid": "f8c3c19ca5341f77",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "2990b129cc89017b",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_evolved_default": {
+            "skn": {
+              "guid": "b80ea6081efaaa03",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "87c9c1678b32634c",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_base_rt01": {
+            "skn": {
+              "guid": "1b82910ae1953947",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "2e0873f3ee7fb6f8",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_base_rt01": {
+            "skn": {
+              "guid": "0e347f325d46a8db",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "206d710ecb584924",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_base_rt01": {
+            "skn": {
+              "guid": "fbf9390de612fce4",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "919ae0ab603197c0",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_rt01": {
+            "skn": {
+              "guid": "1fecd4c9ee57d2d4",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "edda49de9993c955",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_rt01": {
+            "skn": {
+              "guid": "e3f8ba5f503e3178",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "b319f3a5d599e31f",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_evolved_rt01": {
+            "skn": {
+              "guid": "8a3df861f5753792",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "9cc3db4af5f80961",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_base_rt02": {
+            "skn": {
+              "guid": "ef9b5c4beb6ae9f4",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "02213f34ade76059",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_base_rt02": {
+            "skn": {
+              "guid": "e2005966c8437c20",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "f4394b434f24742d",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_base_rt02": {
+            "skn": {
+              "guid": "0fa878123af35b8a",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "a54a1faf837346de",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_rt02": {
+            "skn": {
+              "guid": "179b7bbbd59ceb8e",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "e7f079344180043d",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_rt02": {
+            "skn": {
+              "guid": "3e530d061e50e090",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "0ea80a7e64fcf599",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_evolved_rt02": {
+            "skn": {
+              "guid": "5e56c3a2f2e33c5d",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "70dca68bf3660e2c",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_base_rt03": {
+            "skn": {
+              "guid": "c38daf0655324eb0",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "d61391ef494d749d",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_base_rt03": {
+            "skn": {
+              "guid": "b5f2ac2163a99064",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "c82b9dfdb8ebd8e9",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_base_rt03": {
+            "skn": {
+              "guid": "224a6b6ab47e9081",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "b7ec1308096627b7",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/eye_evolved_rt03": {
+            "skn": {
+              "guid": "782fe9051682ce87",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "47eb046482ba87d0",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/feather_evolved_rt03": {
+            "skn": {
+              "guid": "01b99e8a766d9ae6",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "d174b9e9e2a5542f",
+              "present": true,
+              "nameMatches": true
+            }
+          },
+          "models/Weapons_R2/codex_car_mythic/main_evolved_rt03": {
+            "skn": {
+              "guid": "3249165d5caaa119",
+              "present": true,
+              "nameMatches": true
+            },
+            "fix": {
+              "guid": "44cef9468ecc2270",
+              "present": true,
+              "nameMatches": true
+            }
+          }
+        },
+        "skins": [
+          {
+            "skin": 0,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 1,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 2,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 3,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 4,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 5,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 6,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 7,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "skin": 8,
+            "validIndices": true,
+            "glowMappings": {
+              "models/codex_car_mythic_glow/eye_default": "models/codex_car_mythic_glow/eye_default",
+              "models/codex_car_mythic_glow/main_default": "models/codex_car_mythic_glow/main_default"
+            },
+            "materialIndices": [
+              0,
+              1,
+              2,
+              3,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          }
+        ]
+      }
+    },
+    "vmtReferences": {
+      "mod\\materials\\models\\codex_car_mythic_glow\\eye_default.vmt": {
+        "models/codex_car_mythic_glow/eye_default": true,
+        "models/codex_car_mythic_glow/white": true
+      },
+      "mod\\materials\\models\\codex_car_mythic_glow\\eye_rt01.vmt": {
+        "models/codex_car_mythic_glow/eye_rt01": true,
+        "models/codex_car_mythic_glow/white": true
+      },
+      "mod\\materials\\models\\codex_car_mythic_glow\\eye_rt02.vmt": {
+        "models/codex_car_mythic_glow/eye_rt02": true,
+        "models/codex_car_mythic_glow/white": true
+      },
+      "mod\\materials\\models\\codex_car_mythic_glow\\eye_rt03.vmt": {
+        "models/codex_car_mythic_glow/eye_rt03": true,
+        "models/codex_car_mythic_glow/white": true
+      },
+      "mod\\materials\\models\\codex_car_mythic_glow\\main_default.vmt": {
+        "models/codex_car_mythic_glow/main_default": true,
+        "models/codex_car_mythic_glow/white": true
+      },
+      "mod\\materials\\models\\codex_car_mythic_glow\\main_rt01.vmt": {
+        "models/codex_car_mythic_glow/main_rt01": true,
+        "models/codex_car_mythic_glow/white": true
+      },
+      "mod\\materials\\models\\codex_car_mythic_glow\\main_rt02.vmt": {
+        "models/codex_car_mythic_glow/main_rt02": true,
+        "models/codex_car_mythic_glow/white": true
+      },
+      "mod\\materials\\models\\codex_car_mythic_glow\\main_rt03.vmt": {
+        "models/codex_car_mythic_glow/main_rt03": true,
+        "models/codex_car_mythic_glow/white": true
+      }
+    }
+  }
+}
