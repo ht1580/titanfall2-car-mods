@@ -1,0 +1,695 @@
+from __future__ import annotations
+
+import json
+import os
+import queue
+import subprocess
+import sys
+import threading
+import traceback
+from pathlib import Path
+import tkinter as tk
+from tkinter import filedialog, messagebox, ttk
+
+import core
+
+
+class Workbench(tk.Tk):
+    def __init__(self) -> None:
+        super().__init__()
+        self.title(f"Titanfall Mod Workbench {core.APP_VERSION}")
+        self.geometry("1220x840")
+        self.minsize(980, 700)
+        self.option_add("*Font", ("Microsoft YaHei UI", 9))
+        self.config_data = core.load_config()
+        self.events: queue.Queue[tuple[str, object]] = queue.Queue()
+        self.path_vars: dict[str, tk.StringVar] = {}
+        self._build_ui()
+        self.after(80, self._drain_events)
+        self.protocol("WM_DELETE_WINDOW", self._close)
+
+    def _build_ui(self) -> None:
+        style = ttk.Style(self)
+        style.configure("Title.TLabel", font=("Microsoft YaHei UI", 13, "bold"))
+        style.configure("Hint.TLabel", foreground="#555555")
+
+        header = ttk.Frame(self, padding=(12, 10))
+        header.pack(fill="x")
+        ttk.Label(header, text="Titanfall Mod Workbench", style="Title.TLabel").pack(side="left")
+        ttk.Label(header, text="Apex / Titanfall 2 解包、模型贴图、脚本编辑、RPAK 和 Northstar 打包", style="Hint.TLabel").pack(side="left", padx=16)
+
+        self.tabs = ttk.Notebook(self)
+        self.tabs.pack(fill="both", expand=True, padx=10)
+        self._setup_tab()
+        self._extract_tab()
+        self._build_tab()
+        self._texture_script_tab()
+        self._mod_tab()
+
+        log_frame = ttk.LabelFrame(self, text="运行日志", padding=6)
+        log_frame.pack(fill="both", expand=False, padx=10, pady=(8, 10))
+        self.log_text = tk.Text(log_frame, height=11, wrap="word", state="disabled", bg="#101216", fg="#d7dde8", insertbackground="white")
+        scroll = ttk.Scrollbar(log_frame, orient="vertical", command=self.log_text.yview)
+        self.log_text.configure(yscrollcommand=scroll.set)
+        self.log_text.pack(side="left", fill="both", expand=True)
+        scroll.pack(side="right", fill="y")
+
+    def _setup_tab(self) -> None:
+        tab = ttk.Frame(self.tabs, padding=12)
+        self.tabs.add(tab, text="环境与工具")
+        ttk.Label(tab, text="工具路径会保存在 %LOCALAPPDATA%\\TitanfallModWorkbench\\config.json", style="Hint.TLabel").grid(row=0, column=0, columnspan=4, sticky="w", pady=(0, 8))
+        labels = {
+            "titanfall": "Titanfall 2 目录",
+            "r2vanilla": "R2Vanilla 目录",
+            "apex": "Apex 目录",
+            "sfm_game": "SFM usermod 目录",
+            "studiomdl": "StudioMDL",
+            "blender": "Blender",
+            "rsx": "RSX CLI",
+            "repak12": "RePak 1.2（兼容回退）",
+            "repak14": "RePak 1.4（官方最新）",
+            "mdlshit": "MDLShit",
+            "texconv": "TexConv",
+            "vtfcmd": "VTFCmd",
+            "legion": "Legion+",
+            "crowbar": "Crowbar",
+            "harmony": "Harmony VPK Tool",
+        }
+        folder_keys = {"titanfall", "r2vanilla", "apex", "sfm_game"}
+        for row, (key, label) in enumerate(labels.items(), 1):
+            ttk.Label(tab, text=label, width=21).grid(row=row, column=0, sticky="w", pady=2)
+            var = tk.StringVar(value=self.config_data.get(key, ""))
+            self.path_vars[key] = var
+            ttk.Entry(tab, textvariable=var).grid(row=row, column=1, columnspan=2, sticky="ew", padx=5)
+            command = lambda k=key, folder=key in folder_keys: self._browse_config(k, folder)
+            ttk.Button(tab, text="浏览", command=command, width=8).grid(row=row, column=3)
+        tab.columnconfigure(1, weight=1)
+        buttons = ttk.Frame(tab)
+        buttons.grid(row=len(labels) + 1, column=0, columnspan=4, sticky="ew", pady=(12, 0))
+        ttk.Button(buttons, text="自动检测", command=self._autodetect).pack(side="left")
+        ttk.Button(buttons, text="保存配置", command=self._save_paths).pack(side="left", padx=6)
+        ttk.Button(buttons, text="检查全部工具", command=self._check_tools).pack(side="left")
+        ttk.Button(buttons, text="打开工作目录", command=lambda: os.startfile(core.APP_HOME)).pack(side="right")
+
+    def _extract_tab(self) -> None:
+        tab = ttk.Frame(self.tabs, padding=12)
+        self.tabs.add(tab, text="资产解包")
+
+        rsx = ttk.LabelFrame(tab, text="Apex RPak / RSX", padding=10)
+        rsx.pack(fill="x")
+        self.pak_base = tk.StringVar(value="common")
+        self.asset_filter = tk.StringVar(value="0x0000000000000000")
+        self.asset_types = tk.StringVar(value="mdl_")
+        self.model_format = tk.StringVar(value="SMD")
+        self.model_skin = tk.StringVar(value="0")
+        self.rsx_output = tk.StringVar(value=str(core.APP_HOME / "exports"))
+        self.skip_postload = tk.BooleanVar(value=True)
+        self.extract_preset = tk.StringVar(value="自定义")
+        fields = [
+            ("Apex RPak 基名", self.pak_base),
+            ("资产名/GUID；多个用逗号", self.asset_filter),
+            ("资产类型", self.asset_types),
+            ("模型皮肤序号", self.model_skin),
+            ("输出目录", self.rsx_output),
+        ]
+        for row, (label, var) in enumerate(fields):
+            ttk.Label(rsx, text=label, width=24).grid(row=row, column=0, sticky="w", pady=3)
+            ttk.Entry(rsx, textvariable=var).grid(row=row, column=1, sticky="ew", padx=5)
+        ttk.Label(rsx, text="模型格式").grid(row=0, column=2, padx=(14, 4))
+        ttk.Combobox(rsx, textvariable=self.model_format, values=["CAST", "RMAX", "RMDL", "SMD"], state="readonly", width=10).grid(row=0, column=3)
+        ttk.Checkbutton(rsx, text="跳过动画后处理（当前 Apex 模型/材质推荐）", variable=self.skip_postload).grid(row=1, column=2, columnspan=2, sticky="w")
+        ttk.Label(rsx, text="经验预设").grid(row=2, column=2, padx=(14, 4))
+        preset_box = ttk.Combobox(rsx, textvariable=self.extract_preset, values=["自定义", "B3 桃心花木 当前模型", "CAR Rich Mahogany 当前模型"], state="readonly", width=27)
+        preset_box.grid(row=2, column=3)
+        preset_box.bind("<<ComboboxSelected>>", lambda _event: self._apply_extract_preset())
+        ttk.Button(rsx, text="浏览输出", command=lambda: self._browse_var(self.rsx_output, True)).grid(row=4, column=2, padx=5)
+        ttk.Button(rsx, text="导出筛选资产", command=self._rsx_export).grid(row=5, column=1, sticky="w", pady=(8, 0))
+        ttk.Button(rsx, text="生成完整资产表 CSV", command=self._rsx_list).grid(row=5, column=1, padx=(120, 0), sticky="w", pady=(8, 0))
+        ttk.Button(rsx, text="打开 Legion+", command=lambda: self._launch("legion")).grid(row=5, column=3, sticky="e", pady=(8, 0))
+        rsx.columnconfigure(1, weight=1)
+
+        vpk = ttk.LabelFrame(tab, text="Titanfall 2 VPK", padding=10)
+        vpk.pack(fill="x", pady=(12, 0))
+        self.vpk_path = tk.StringVar()
+        self.vpk_output = tk.StringVar(value=str(core.APP_HOME / "vpk_extract"))
+        for row, (label, var, folder) in enumerate([
+            ("*_dir.vpk", self.vpk_path, False),
+            ("输出目录", self.vpk_output, True),
+        ]):
+            ttk.Label(vpk, text=label, width=24).grid(row=row, column=0, sticky="w", pady=3)
+            ttk.Entry(vpk, textvariable=var).grid(row=row, column=1, sticky="ew", padx=5)
+            ttk.Button(vpk, text="浏览", command=lambda v=var, f=folder: self._browse_var(v, f)).grid(row=row, column=2)
+        ttk.Button(vpk, text="内置解包（未压缩块）", command=self._vpk_extract).grid(row=2, column=1, sticky="w", pady=(8, 0))
+        ttk.Button(vpk, text="打开 Harmony（支持 LZHAM）", command=lambda: self._launch("harmony")).grid(row=2, column=1, padx=(160, 0), sticky="w", pady=(8, 0))
+        vpk.columnconfigure(1, weight=1)
+
+    def _build_tab(self) -> None:
+        tab = ttk.Frame(self.tabs, padding=12)
+        self.tabs.add(tab, text="模型与打包")
+
+        smd = ttk.LabelFrame(tab, text="SMD 骨骼/材质映射", padding=10)
+        smd.pack(fill="x")
+        self.smd_source = tk.StringVar()
+        self.smd_reference = tk.StringVar()
+        self.smd_output = tk.StringVar()
+        self.mat_from = tk.StringVar()
+        self.mat_to = tk.StringVar(value=r"models\Weapons_R2\my_mod\material")
+        self.preserve_mat = tk.StringVar(value="b3_wingman_sknp")
+        rows = [
+            ("新模型 SMD", self.smd_source, False),
+            ("TF2 参考骨架 SMD", self.smd_reference, False),
+            ("输出 SMD", self.smd_output, False),
+            ("原材质名（可空）", self.mat_from, None),
+            ("目标材质名", self.mat_to, None),
+            ("保留参考材质面（可空）", self.preserve_mat, None),
+        ]
+        for row, (label, var, browse) in enumerate(rows):
+            ttk.Label(smd, text=label, width=24).grid(row=row, column=0, sticky="w", pady=2)
+            ttk.Entry(smd, textvariable=var).grid(row=row, column=1, sticky="ew", padx=5)
+            if browse is not None:
+                ttk.Button(smd, text="浏览", command=lambda v=var: self._browse_var(v, False, save=v is self.smd_output)).grid(row=row, column=2)
+        ttk.Button(smd, text="执行映射", command=self._smd_remap).grid(row=6, column=1, sticky="w", pady=(8, 0))
+        smd.columnconfigure(1, weight=1)
+
+        blender_auto = ttk.LabelFrame(tab, text="Blender 一键武器流程", padding=10)
+        blender_auto.pack(fill="x", pady=(10, 0))
+        self.blend_output = tk.StringVar(value=str(core.APP_HOME / "blender/weapon.blend"))
+        self.preview_output = tk.StringVar(value=str(core.APP_HOME / "blender/weapon-preview.png"))
+        for row, (label, var, save) in enumerate([
+            ("Blend 工程", self.blend_output, True),
+            ("预览 PNG", self.preview_output, True),
+        ]):
+            ttk.Label(blender_auto, text=label, width=24).grid(row=row, column=0, sticky="w", pady=2)
+            ttk.Entry(blender_auto, textvariable=var).grid(row=row, column=1, columnspan=7, sticky="ew", padx=5)
+            ttk.Button(blender_auto, text="浏览", command=lambda v=var: self._browse_var(v, False, save=True)).grid(row=row, column=8)
+        self.blender_offset = [tk.StringVar(value="0") for _ in range(3)]
+        self.blender_rotation = [tk.StringVar(value="0") for _ in range(3)]
+        self.blender_scale = tk.StringVar(value="1")
+        self.blender_mirror = tk.StringVar(value="none")
+        ttk.Label(blender_auto, text="位置 X / Y / Z", width=24).grid(row=2, column=0, sticky="w", pady=2)
+        for index, var in enumerate(self.blender_offset):
+            ttk.Entry(blender_auto, textvariable=var, width=9).grid(row=2, column=index + 1, padx=2)
+        ttk.Label(blender_auto, text="旋转 X / Y / Z（度）").grid(row=2, column=4, padx=(12, 2))
+        for index, var in enumerate(self.blender_rotation):
+            ttk.Entry(blender_auto, textvariable=var, width=9).grid(row=2, column=index + 5, padx=2)
+        ttk.Label(blender_auto, text="缩放").grid(row=3, column=0, sticky="w", pady=2)
+        ttk.Entry(blender_auto, textvariable=self.blender_scale, width=9).grid(row=3, column=1, padx=2, sticky="w")
+        ttk.Label(blender_auto, text="镜像轴").grid(row=3, column=2, padx=(8, 2))
+        ttk.Combobox(blender_auto, textvariable=self.blender_mirror, values=["none", "x", "y", "z"], state="readonly", width=7).grid(row=3, column=3)
+        ttk.Button(blender_auto, text="一键映射 → Blender → SMD/Blend/预览", command=self._blender_pipeline).grid(row=3, column=4, columnspan=4, sticky="w", padx=(12, 0))
+        blender_auto.columnconfigure(7, weight=1)
+
+        pipeline = ttk.LabelFrame(tab, text="编译流水线", padding=10)
+        pipeline.pack(fill="x", pady=(12, 0))
+        self.qc_path = tk.StringVar()
+        self.mdl_path = tk.StringVar()
+        self.rpak_map = tk.StringVar()
+        self.repak_version = tk.StringVar(value="1.2")
+        for row, (label, var, action, action_text) in enumerate([
+            ("QC 文件", self.qc_path, self._compile_qc, "StudioMDL 编译"),
+            ("已编译 MDL", self.mdl_path, self._convert_mdl, "转换为 MDL v53"),
+            ("RePak map JSON", self.rpak_map, self._build_rpak, "构建 RPak"),
+        ]):
+            ttk.Label(pipeline, text=label, width=24).grid(row=row, column=0, sticky="w", pady=3)
+            ttk.Entry(pipeline, textvariable=var).grid(row=row, column=1, sticky="ew", padx=5)
+            ttk.Button(pipeline, text="浏览", command=lambda v=var: self._browse_var(v, False)).grid(row=row, column=2)
+            ttk.Button(pipeline, text=action_text, command=action).grid(row=row, column=3, padx=(5, 0))
+        ttk.Label(pipeline, text="RePak 版本（1.2 默认）").grid(row=2, column=4, padx=(12, 4))
+        ttk.Combobox(pipeline, textvariable=self.repak_version, values=["1.2", "1.4"], state="readonly", width=6).grid(row=2, column=5)
+        ttk.Button(pipeline, text="打开 Crowbar", command=lambda: self._launch("crowbar")).grid(row=3, column=1, sticky="w", pady=(8, 0))
+        ttk.Button(pipeline, text="打开 Blender", command=lambda: self._launch("blender")).grid(row=3, column=1, padx=(105, 0), sticky="w", pady=(8, 0))
+        ttk.Button(pipeline, text="一键执行全部已填写步骤", command=self._full_model_pipeline).grid(row=3, column=3, columnspan=3, sticky="w", padx=(5, 0), pady=(8, 0))
+        pipeline.columnconfigure(1, weight=1)
+
+        effects = ttk.LabelFrame(tab, text="动画 / 发光特效 / RUI 固化流程", padding=10)
+        effects.pack(fill="x", pady=(12, 0))
+        self.fx_recipe = tk.StringVar(value=str(core.resource_path("animated-fx-recipe-template.json")))
+        ttk.Label(effects, text="特效 Recipe JSON", width=24).grid(row=0, column=0, sticky="w")
+        ttk.Entry(effects, textvariable=self.fx_recipe).grid(row=0, column=1, sticky="ew", padx=5)
+        ttk.Button(effects, text="浏览", command=lambda: self._browse_var(self.fx_recipe, False)).grid(row=0, column=2)
+        ttk.Button(effects, text="执行并静态审计", command=self._run_fx_recipe).grid(row=0, column=3, padx=(5, 0))
+        ttk.Label(
+            effects,
+            text="支持 ILM/UV 发光覆盖层、QC autoplay、MDL RUI 骨骼重映射及 PCF/脚本/VMT 风险检查；不会启动游戏。",
+            style="Hint.TLabel",
+        ).grid(row=1, column=0, columnspan=4, sticky="w", pady=(7, 0))
+        effects.columnconfigure(1, weight=1)
+
+    def _texture_script_tab(self) -> None:
+        tab = ttk.Frame(self.tabs, padding=10)
+        self.tabs.add(tab, text="贴图与脚本")
+
+        texture = ttk.LabelFrame(tab, text="自动贴图编辑 / VTF + VMT / RePak DDS", padding=8)
+        texture.pack(fill="x")
+        self.texture_sources = {suffix: tk.StringVar() for suffix in core.TEXTURE_SUFFIXES}
+        labels = {"col": "颜色", "nml": "法线", "gls": "光泽", "spc": "高光", "ao": "AO", "cav": "Cavity"}
+        for index, suffix in enumerate(core.TEXTURE_SUFFIXES):
+            row, column = divmod(index, 3)
+            base = column * 3
+            ttk.Label(texture, text=labels[suffix], width=7).grid(row=row, column=base, sticky="w", pady=2)
+            ttk.Entry(texture, textvariable=self.texture_sources[suffix], width=28).grid(row=row, column=base + 1, sticky="ew", padx=3)
+            ttk.Button(texture, text="浏览", width=6, command=lambda s=suffix: self._browse_var(self.texture_sources[s], False)).grid(row=row, column=base + 2)
+        self.texture_output = tk.StringVar(value=str(core.APP_HOME / "texture_project"))
+        self.texture_material = tk.StringVar(value="models/Weapons_R2/my_mod/weapon")
+        self.texture_size = tk.StringVar(value="1024")
+        self.texture_brightness = tk.StringVar(value="1.0")
+        self.texture_contrast = tk.StringVar(value="1.0")
+        self.texture_saturation = tk.StringVar(value="1.0")
+        self.texture_flip_green = tk.BooleanVar(value=False)
+        self.texture_vtf = tk.BooleanVar(value=True)
+        self.texture_dds = tk.BooleanVar(value=True)
+        ttk.Label(texture, text="输出工程", width=12).grid(row=2, column=0, sticky="w", pady=3)
+        ttk.Entry(texture, textvariable=self.texture_output).grid(row=2, column=1, columnspan=6, sticky="ew", padx=3)
+        ttk.Button(texture, text="浏览", command=lambda: self._browse_var(self.texture_output, True)).grid(row=2, column=7)
+        ttk.Label(texture, text="材质路径", width=12).grid(row=3, column=0, sticky="w", pady=3)
+        ttk.Entry(texture, textvariable=self.texture_material).grid(row=3, column=1, columnspan=7, sticky="ew", padx=3)
+        controls = ttk.Frame(texture)
+        controls.grid(row=4, column=0, columnspan=9, sticky="ew", pady=(5, 0))
+        for label, var, width in [
+            ("尺寸", self.texture_size, 7), ("亮度", self.texture_brightness, 6),
+            ("对比度", self.texture_contrast, 6), ("饱和度", self.texture_saturation, 6),
+        ]:
+            ttk.Label(controls, text=label).pack(side="left", padx=(0, 2))
+            ttk.Entry(controls, textvariable=var, width=width).pack(side="left", padx=(0, 8))
+        ttk.Checkbutton(controls, text="翻转法线绿通道", variable=self.texture_flip_green).pack(side="left")
+        ttk.Checkbutton(controls, text="VTF/VMT", variable=self.texture_vtf).pack(side="left", padx=5)
+        ttk.Checkbutton(controls, text="RePak DDS/Map", variable=self.texture_dds).pack(side="left")
+        ttk.Button(controls, text="生成完整贴图与材质", command=self._process_textures).pack(side="right")
+        for column in (1, 4, 7):
+            texture.columnconfigure(column, weight=1)
+
+        editor = ttk.LabelFrame(tab, text="脚本编辑与中文辅助翻译", padding=8)
+        editor.pack(fill="both", expand=True, pady=(8, 0))
+        toolbar = ttk.Frame(editor)
+        toolbar.pack(fill="x")
+        self.script_path = tk.StringVar()
+        ttk.Entry(toolbar, textvariable=self.script_path).pack(side="left", fill="x", expand=True)
+        ttk.Button(toolbar, text="打开", command=self._open_script).pack(side="left", padx=(5, 0))
+        ttk.Button(toolbar, text="刷新翻译", command=self._translate_script).pack(side="left", padx=5)
+        ttk.Button(toolbar, text="编辑翻译词典", command=self._open_glossary).pack(side="left", padx=(0, 5))
+        ttk.Button(toolbar, text="备份并保存", command=self._save_script).pack(side="left")
+        panes = ttk.PanedWindow(editor, orient="horizontal")
+        panes.pack(fill="both", expand=True, pady=(6, 0))
+        left = ttk.Frame(panes)
+        right = ttk.Frame(panes)
+        panes.add(left, weight=1)
+        panes.add(right, weight=1)
+        ttk.Label(left, text="原始可执行脚本").pack(anchor="w")
+        ttk.Label(right, text="中文辅助视图（不会写入游戏文件）").pack(anchor="w")
+        self.script_editor = tk.Text(left, wrap="none", undo=True, font=("Consolas", 10))
+        self.script_translation = tk.Text(right, wrap="none", font=("Microsoft YaHei UI", 9), bg="#f4f5f7")
+        self.script_editor.pack(fill="both", expand=True)
+        self.script_translation.pack(fill="both", expand=True)
+
+    def _mod_tab(self) -> None:
+        tab = ttk.Frame(self.tabs, padding=12)
+        self.tabs.add(tab, text="Northstar 成品")
+        self.mod_source = tk.StringVar()
+        self.mods_root = tk.StringVar(value=str(Path(self.config_data.get("r2vanilla", "")) / "mods") if self.config_data.get("r2vanilla") else "")
+        self.zip_output = tk.StringVar(value=str(core.APP_HOME / "packages/mod.zip"))
+        fields = [
+            ("模组根目录（含 mod.json）", self.mod_source, True),
+            ("R2Vanilla\\mods", self.mods_root, True),
+            ("ZIP 输出", self.zip_output, False),
+        ]
+        for row, (label, var, folder) in enumerate(fields):
+            ttk.Label(tab, text=label, width=25).grid(row=row, column=0, sticky="w", pady=4)
+            ttk.Entry(tab, textvariable=var).grid(row=row, column=1, sticky="ew", padx=5)
+            ttk.Button(tab, text="浏览", command=lambda v=var, f=folder: self._browse_var(v, f, save=not f)).grid(row=row, column=2)
+        actions = ttk.Frame(tab)
+        actions.grid(row=3, column=1, sticky="w", pady=(12, 8))
+        ttk.Button(actions, text="静态核对模组", command=self._validate_mod).pack(side="left")
+        ttk.Button(actions, text="扫描全部冲突", command=self._scan_mods).pack(side="left", padx=6)
+        ttk.Button(actions, text="生成 ZIP", command=self._package).pack(side="left")
+        ttk.Button(actions, text="备份并安装", command=self._install).pack(side="left", padx=6)
+        ttk.Label(tab, text="安装会先在 %LOCALAPPDATA%\\TitanfallModWorkbench\\backups 创建完整备份，再替换同名目录并校验哈希。", style="Hint.TLabel").grid(row=4, column=0, columnspan=3, sticky="w")
+
+        generator = ttk.LabelFrame(tab, text="自动生成 Northstar 模组", padding=8)
+        generator.grid(row=5, column=0, columnspan=3, sticky="ew", pady=(14, 0))
+        self.stage_source = tk.StringVar(value=str(core.APP_HOME / "texture_project"))
+        self.mod_output_parent = tk.StringVar(value=str(core.APP_HOME / "generated_mods"))
+        self.mod_folder_name = tk.StringVar(value="My.Weapon.Mod")
+        self.mod_manifest_name = tk.StringVar(value="My.Weapon.Mod")
+        self.mod_description = tk.StringVar(value="Generated by Titanfall Mod Workbench")
+        self.mod_version = tk.StringVar(value="1.0.0")
+        self.mod_priority = tk.StringVar(value="0")
+        generator_fields = [
+            ("素材暂存目录", self.stage_source, True), ("生成位置", self.mod_output_parent, True),
+            ("文件夹名称", self.mod_folder_name, None), ("模组 Name", self.mod_manifest_name, None),
+            ("说明", self.mod_description, None), ("版本", self.mod_version, None),
+        ]
+        for row, (label, var, folder) in enumerate(generator_fields):
+            ttk.Label(generator, text=label, width=15).grid(row=row, column=0, sticky="w", pady=2)
+            ttk.Entry(generator, textvariable=var).grid(row=row, column=1, sticky="ew", padx=4)
+            if folder is not None:
+                ttk.Button(generator, text="浏览", command=lambda v=var: self._browse_var(v, True)).grid(row=row, column=2)
+        ttk.Label(generator, text="LoadPriority").grid(row=6, column=0, sticky="w")
+        ttk.Entry(generator, textvariable=self.mod_priority, width=8).grid(row=6, column=1, sticky="w", padx=4)
+        ttk.Button(generator, text="生成、核对并打包 ZIP", command=self._assemble_mod).grid(row=6, column=1, sticky="e")
+        generator.columnconfigure(1, weight=1)
+        tab.columnconfigure(1, weight=1)
+
+    def _log(self, text: str) -> None:
+        self.events.put(("log", text))
+
+    def _job(self, title: str, function) -> None:
+        def worker():
+            self.events.put(("busy", True))
+            self._log(f"\n[{title}]")
+            try:
+                result = function()
+                if result is not None:
+                    self._log(json.dumps(result, ensure_ascii=False, indent=2) if isinstance(result, (dict, list)) else str(result))
+                self.events.put(("done", title))
+            except Exception:
+                self._log(traceback.format_exc())
+                self.events.put(("error", title))
+            finally:
+                self.events.put(("busy", False))
+        threading.Thread(target=worker, daemon=True).start()
+
+    def _drain_events(self) -> None:
+        try:
+            while True:
+                kind, payload = self.events.get_nowait()
+                if kind == "log":
+                    self.log_text.configure(state="normal")
+                    self.log_text.insert("end", str(payload) + "\n")
+                    self.log_text.see("end")
+                    self.log_text.configure(state="disabled")
+                elif kind == "busy":
+                    self.configure(cursor="wait" if payload else "")
+                elif kind == "done":
+                    messagebox.showinfo("完成", f"{payload} 已完成")
+                elif kind == "error":
+                    messagebox.showerror("失败", f"{payload} 失败，请查看运行日志")
+        except queue.Empty:
+            pass
+        self.after(80, self._drain_events)
+
+    def _browse_config(self, key: str, folder: bool) -> None:
+        self._browse_var(self.path_vars[key], folder)
+
+    def _browse_var(self, var: tk.StringVar, folder: bool, save: bool = False) -> None:
+        current = var.get()
+        if folder:
+            value = filedialog.askdirectory(initialdir=current or None)
+        elif save:
+            value = filedialog.asksaveasfilename(initialfile=Path(current).name if current else "output", initialdir=str(Path(current).parent) if current else None)
+        else:
+            value = filedialog.askopenfilename(initialdir=str(Path(current).parent) if current else None)
+        if value:
+            var.set(value)
+
+    def _save_paths(self) -> None:
+        self.config_data.update({key: var.get().strip() for key, var in self.path_vars.items()})
+        core.save_config(self.config_data)
+        messagebox.showinfo("配置", "路径配置已保存")
+
+    def _autodetect(self) -> None:
+        detected = core.autodetect()
+        for key, value in detected.items():
+            if key in self.path_vars and value:
+                self.path_vars[key].set(value)
+        self._save_paths()
+
+    def _current_config(self) -> dict[str, str]:
+        self.config_data.update({key: var.get().strip() for key, var in self.path_vars.items()})
+        return self.config_data
+
+    def _check_tools(self) -> None:
+        config = self._current_config().copy()
+        def check():
+            report = {key: {"path": value, "exists": bool(value) and Path(value).exists()} for key, value in config.items()}
+            path = core.write_report(report, "tool-check")
+            report["report"] = str(path)
+            return report
+        self._job("工具检查", check)
+
+    def _pak_chain(self) -> list[Path]:
+        return core.apex_pak_chain(Path(self._current_config()["apex"]), self.pak_base.get().strip())
+
+    def _rsx_export(self) -> None:
+        mapping = {"CAST": 0, "RMAX": 1, "RMDL": 2, "SMD": 3}
+        config = self._current_config().copy()
+        paks = core.apex_pak_chain(Path(config["apex"]), self.pak_base.get().strip())
+        output = Path(self.rsx_output.get())
+        asset_filter = self.asset_filter.get().strip()
+        asset_types = self.asset_types.get().strip()
+        model_setting = mapping[self.model_format.get()]
+        model_skin = int(self.model_skin.get())
+        skip_postload = self.skip_postload.get()
+        self._job("RSX 导出", lambda: core.rsx_export(
+            config, paks, output, asset_filter, asset_types,
+            model_setting, model_skin, self._log, skip_postload=skip_postload,
+        ))
+
+    def _apply_extract_preset(self) -> None:
+        preset = self.extract_preset.get()
+        values = {
+            "B3 桃心花木 当前模型": ("0x16578DA1CCB05E46,0x1954EE4705D96074", "2"),
+            "CAR Rich Mahogany 当前模型": ("0xCCCAC17BE1B0B512,0xCD2C450BA50A1088", "0"),
+        }
+        if preset in values:
+            self.pak_base.set("common")
+            self.asset_filter.set(values[preset][0])
+            self.asset_types.set("mdl_")
+            self.model_format.set("SMD")
+            self.model_skin.set(values[preset][1])
+            self.skip_postload.set(True)
+
+    def _rsx_list(self) -> None:
+        config = self._current_config().copy()
+        base_name = self.pak_base.get().strip()
+        paks = core.apex_pak_chain(Path(config["apex"]), base_name)
+        output = Path(self.rsx_output.get()) / f"{base_name}-assets.csv"
+        self._job("RSX 资产表", lambda: core.rsx_list(config, paks, output, self._log))
+
+    def _vpk_extract(self) -> None:
+        source, output = Path(self.vpk_path.get()), Path(self.vpk_output.get())
+        self._job("VPK 解包", lambda: core.extract_vpk(source, output, self._log))
+
+    def _launch(self, key: str) -> None:
+        config = self._current_config().copy()
+        self._job(f"启动 {key}", lambda: core.launch_tool(config, key, self._log))
+
+    def _smd_remap(self) -> None:
+        source, reference, output = Path(self.smd_source.get()), Path(self.smd_reference.get()), Path(self.smd_output.get())
+        material_from, material_to, preserve = self.mat_from.get().strip(), self.mat_to.get().strip(), self.preserve_mat.get().strip()
+        self._job("SMD 映射", lambda: core.remap_smd_to_reference(
+            source, reference, output, material_from, material_to, preserve,
+        ))
+
+    def _blender_pipeline(self) -> None:
+        config = self._current_config().copy()
+        source, reference = Path(self.smd_source.get()), Path(self.smd_reference.get())
+        output = Path(self.smd_output.get())
+        blend, preview = Path(self.blend_output.get()), Path(self.preview_output.get())
+        material_from, material_to = self.mat_from.get().strip(), self.mat_to.get().strip()
+        preserve = self.preserve_mat.get().strip()
+        try:
+            offset = tuple(float(var.get()) for var in self.blender_offset)
+            rotation = tuple(float(var.get()) for var in self.blender_rotation)
+            scale = float(self.blender_scale.get())
+        except ValueError:
+            messagebox.showerror("参数错误", "位置、旋转和缩放必须是数字")
+            return
+        mirror = self.blender_mirror.get()
+        self._job("Blender 一键武器流程", lambda: core.blender_weapon_pipeline(
+            config, source, reference, output, blend, preview,
+            material_from, material_to, preserve, offset, rotation, scale, mirror, self._log,
+        ))
+
+    def _compile_qc(self) -> None:
+        config, qc = self._current_config().copy(), Path(self.qc_path.get())
+        self._job("StudioMDL 编译", lambda: core.compile_qc(config, qc, self._log))
+
+    def _convert_mdl(self) -> None:
+        config, mdl = self._current_config().copy(), Path(self.mdl_path.get())
+        self._job("MDL v53 转换", lambda: str(core.convert_mdl(config, mdl, self._log)))
+
+    def _build_rpak(self) -> None:
+        config, map_path, version = self._current_config().copy(), Path(self.rpak_map.get()), self.repak_version.get()
+        self._job("RePak 构建", lambda: core.build_rpak(config, map_path, version, self._log))
+
+    def _run_fx_recipe(self) -> None:
+        from animated_fx import run_recipe
+        recipe = Path(self.fx_recipe.get().strip())
+        self._job("动画与特效 Recipe", lambda: run_recipe(recipe, self._log))
+
+    def _full_model_pipeline(self) -> None:
+        config = self._current_config().copy()
+        values = {
+            "source": self.smd_source.get().strip(),
+            "reference": self.smd_reference.get().strip(),
+            "output": self.smd_output.get().strip(),
+            "blend": self.blend_output.get().strip(),
+            "preview": self.preview_output.get().strip(),
+            "qc": self.qc_path.get().strip(),
+            "mdl": self.mdl_path.get().strip(),
+            "rpak": self.rpak_map.get().strip(),
+        }
+        material_from, material_to = self.mat_from.get().strip(), self.mat_to.get().strip()
+        preserve, mirror = self.preserve_mat.get().strip(), self.blender_mirror.get()
+        try:
+            offset = tuple(float(var.get()) for var in self.blender_offset)
+            rotation = tuple(float(var.get()) for var in self.blender_rotation)
+            scale = float(self.blender_scale.get())
+        except ValueError:
+            messagebox.showerror("参数错误", "位置、旋转和缩放必须是数字")
+            return
+        version = self.repak_version.get()
+
+        def execute():
+            result = {"status": "passed", "steps": {}}
+            blender_fields = ("source", "reference", "output", "blend", "preview")
+            if all(values[key] for key in blender_fields):
+                result["steps"]["blender"] = core.blender_weapon_pipeline(
+                    config, Path(values["source"]), Path(values["reference"]), Path(values["output"]),
+                    Path(values["blend"]), Path(values["preview"]), material_from, material_to,
+                    preserve, offset, rotation, scale, mirror, self._log,
+                )
+            if values["qc"]:
+                core.compile_qc(config, Path(values["qc"]), self._log)
+                result["steps"]["studiomdl"] = values["qc"]
+            if values["mdl"]:
+                result["steps"]["mdlV53"] = str(core.convert_mdl(config, Path(values["mdl"]), self._log))
+            if values["rpak"]:
+                core.build_rpak(config, Path(values["rpak"]), version, self._log)
+                result["steps"]["repak"] = values["rpak"]
+            if not result["steps"]:
+                raise ValueError("没有填写可执行步骤")
+            result["report"] = str(core.write_report(result, "full-model-pipeline"))
+            return result
+
+        self._job("完整模型构建流水线", execute)
+
+    def _process_textures(self) -> None:
+        config = self._current_config().copy()
+        sources = {key: Path(var.get()) if var.get().strip() else None for key, var in self.texture_sources.items()}
+        output, material = Path(self.texture_output.get()), self.texture_material.get().strip()
+        try:
+            size = int(self.texture_size.get())
+            brightness = float(self.texture_brightness.get())
+            contrast = float(self.texture_contrast.get())
+            saturation = float(self.texture_saturation.get())
+        except ValueError:
+            messagebox.showerror("参数错误", "尺寸和颜色调整值必须是数字")
+            return
+        flip, vtf, dds = self.texture_flip_green.get(), self.texture_vtf.get(), self.texture_dds.get()
+        self._job("贴图与材质生成", lambda: core.process_texture_set(
+            config, sources, output, material, size, brightness, contrast, saturation,
+            flip, vtf, dds, self._log,
+        ))
+
+    def _read_script_file(self, path: Path) -> str:
+        raw = path.read_bytes()
+        for encoding in ("utf-8-sig", "utf-8", "gb18030"):
+            try:
+                return raw.decode(encoding)
+            except UnicodeDecodeError:
+                continue
+        return raw.decode("utf-8", errors="replace")
+
+    def _open_script(self) -> None:
+        current = self.script_path.get().strip()
+        path_text = filedialog.askopenfilename(
+            initialdir=str(Path(current).parent) if current else None,
+            filetypes=[("脚本/配置", "*.nut *.txt *.cfg *.json *.vmt *.qc *.qci"), ("全部文件", "*.*")],
+        )
+        if not path_text:
+            return
+        path = Path(path_text)
+        self.script_path.set(str(path))
+        self.script_editor.delete("1.0", "end")
+        self.script_editor.insert("1.0", self._read_script_file(path))
+        self._translate_script()
+
+    def _translate_script(self) -> None:
+        translated = core.translate_script_for_editing(self.script_editor.get("1.0", "end-1c"))
+        self.script_translation.delete("1.0", "end")
+        self.script_translation.insert("1.0", translated)
+
+    def _open_glossary(self) -> None:
+        core.load_script_glossary()
+        os.startfile(core.GLOSSARY_PATH)
+
+    def _save_script(self) -> None:
+        path_text = self.script_path.get().strip()
+        if not path_text:
+            path_text = filedialog.asksaveasfilename(filetypes=[("全部文件", "*.*")])
+            if not path_text:
+                return
+            self.script_path.set(path_text)
+        result = core.save_script_with_backup(Path(path_text), self.script_editor.get("1.0", "end-1c"))
+        self._translate_script()
+        self._log(json.dumps(result, ensure_ascii=False))
+        messagebox.showinfo("脚本已保存", f"已保存：{result['path']}\n备份：{result['backup'] or '新文件，无旧版备份'}")
+
+    def _assemble_mod(self) -> None:
+        staging, output_parent = Path(self.stage_source.get()), Path(self.mod_output_parent.get())
+        folder, name = self.mod_folder_name.get().strip(), self.mod_manifest_name.get().strip()
+        description, version = self.mod_description.get(), self.mod_version.get().strip()
+        try:
+            priority = int(self.mod_priority.get())
+        except ValueError:
+            messagebox.showerror("参数错误", "LoadPriority 必须是整数")
+            return
+        zip_output = output_parent / f"{folder}-{version}.zip"
+        self._job("Northstar 模组生成", lambda: core.assemble_mod(
+            staging, output_parent, folder, name, description, version, priority, zip_output,
+        ))
+
+    def _validate_mod(self) -> None:
+        mod_source = Path(self.mod_source.get())
+        def validate():
+            report = core.validate_mod(mod_source)
+            report["report"] = str(core.write_report(report, "mod-validation"))
+            return report
+        self._job("模组静态核对", validate)
+
+    def _scan_mods(self) -> None:
+        mods_root = Path(self.mods_root.get())
+        def scan():
+            report = core.scan_mods(mods_root)
+            report["report"] = str(core.write_report(report, "conflict-scan"))
+            return report
+        self._job("模组冲突扫描", scan)
+
+    def _package(self) -> None:
+        source, output = Path(self.mod_source.get()), Path(self.zip_output.get())
+        self._job("生成 ZIP", lambda: core.package_zip(source, output))
+
+    def _install(self) -> None:
+        source, mods_root = Path(self.mod_source.get()), Path(self.mods_root.get())
+        self._job("备份并安装", lambda: core.install_mod(source, mods_root))
+
+    def _close(self) -> None:
+        try:
+            self._save_paths_silent()
+        finally:
+            self.destroy()
+
+    def _save_paths_silent(self) -> None:
+        self.config_data.update({key: var.get().strip() for key, var in self.path_vars.items()})
+        core.save_config(self.config_data)
+
+
+if __name__ == "__main__":
+    if "--self-test" in sys.argv:
+        result = core.self_test()
+        raise SystemExit(0 if result["status"] == "passed" else 1)
+    if "--run-project" in sys.argv:
+        index = sys.argv.index("--run-project")
+        if index + 1 >= len(sys.argv):
+            raise SystemExit(2)
+        core.run_project_file(Path(sys.argv[index + 1]))
+        raise SystemExit(0)
+    if "--run-fx-recipe" in sys.argv:
+        from animated_fx import run_recipe
+        index = sys.argv.index("--run-fx-recipe")
+        if index + 1 >= len(sys.argv):
+            raise SystemExit(2)
+        result = run_recipe(Path(sys.argv[index + 1]))
+        raise SystemExit(0 if result["status"] == "passed" else 1)
+    Workbench().mainloop()

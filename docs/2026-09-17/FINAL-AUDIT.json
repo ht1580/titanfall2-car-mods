@@ -1,0 +1,55 @@
+{
+  "builtAt": "2026-09-17",
+  "repakPolicy": "Existing RePak 1.2 split texture/material packages retained; no new RPAK was required for VMT overlays.",
+  "mythic": {
+    "folder": "D:\\TitanfallMods\\22_AnimatedFX\\CAR.Mythic.Allfather",
+    "zip": "D:\\TitanfallMods\\22_AnimatedFX\\CAR.Mythic.Allfather-1.2.0-animatedfx.zip",
+    "sha256": "6b56294afb4b51d6ace03c800a4f46d4b926ec9a26562a1c648ae3417b312b3d",
+    "viewIndependentSequences": [
+      "mythic_eye_motion",
+      "mythic_motion",
+      "mythic_wing_motion"
+    ],
+    "worldIndependentSequences": [
+      "mythic_motion"
+    ],
+    "customPcfFiles": 0,
+    "runtimeTested": false
+  },
+  "doubleTake": {
+    "folder": "D:\\TitanfallMods\\22_AnimatedFX\\Codex.DoubleTake.HunterSafari",
+    "zip": "D:\\TitanfallMods\\22_AnimatedFX\\Codex.DoubleTake.HunterSafari-1.0.8-animatedfx.zip",
+    "sha256": "1244cc5a96cb0f210085d4542d9a2b04a7fdb1caf65f2f08ea3d0dc508e956cc",
+    "ruiRecords": 5,
+    "rotorSequence": {
+      "index": 159,
+      "label": "hunter_rotors_autoplay",
+      "flags": 9
+    },
+    "rotorBones": [
+      "def_c_timemachine_ring_01",
+      "def_c_timemachine_ring_02",
+      "def_c_timemachine_ring_03"
+    ],
+    "animatedMaterial": {
+      "energyVtf": "D:\\TitanfallMods\\22_AnimatedFX\\Codex.DoubleTake.HunterSafari\\mod\\materials\\models\\doubletake_hunter_fx\\energy.vtf",
+      "flowVtf": "D:\\TitanfallMods\\22_AnimatedFX\\Codex.DoubleTake.HunterSafari\\mod\\materials\\models\\doubletake_hunter_fx\\flow.vtf",
+      "vmt": "D:\\TitanfallMods\\22_AnimatedFX\\Codex.DoubleTake.HunterSafari\\mod\\materials\\models\\doubletake_hunter_fx\\energy.vmt"
+    },
+    "overlays": [
+      {
+        "file": "D:\\TitanfallMods\\22_AnimatedFX\\doubletake_view_source\\hunter_body.smd",
+        "overlayTriangles": 660,
+        "overlayVertices": 1980
+      },
+      {
+        "file": "D:\\TitanfallMods\\22_AnimatedFX\\doubletake_world_source\\hunter_body.smd",
+        "overlayTriangles": 94,
+        "overlayVertices": 282
+      }
+    ],
+    "stockWeaponOverridePresent": false,
+    "runtimeTested": false
+  },
+  "runtimeTested": false
+}

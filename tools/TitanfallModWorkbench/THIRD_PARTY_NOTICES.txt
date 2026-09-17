@@ -1,0 +1,17 @@
+Titanfall Mod Workbench invokes or bundles independent third-party tools.
+
+RSX / reSource Xtractor: https://github.com/r-ex/rsx (AGPL-3.0)
+LegionPlus: https://github.com/r-ex/LegionPlus
+RePak: https://github.com/r-ex/RePak
+Crowbar: https://steamcommunity.com/groups/CrowbarTool
+Microsoft DirectXTex texconv: https://github.com/microsoft/DirectXTex
+Harmony VPK Tool: distributed as an independent executable by its author.
+MDLShit: distributed as an independent Titanfall model conversion utility.
+VTFEdit Reloaded / VTFCmd and VTFLib: used for VTF texture generation;
+copyright and license remain with their respective authors.
+Blender Source Tools + Batch SMD 3.4.4: Copyright (c) 2014 Tom Edwards and
+Batch SMD contributors; GNU GPL version 2 or any later version. Corresponding
+Python source is included in vendor/blender/io_scene_valvesource.
+
+Blender, Source Filmmaker, Titanfall 2 and Apex Legends are not embedded. The
+Workbench only invokes installations selected by the user.

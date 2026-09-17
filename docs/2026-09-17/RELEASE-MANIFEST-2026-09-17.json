@@ -1,0 +1,40 @@
+{
+  "builtAt": "2026-09-17",
+  "assets": [
+    {
+      "name": "CAR.Mythic.Allfather-1.2.0-animatedfx.zip",
+      "size": 17854391,
+      "sha256": "6b56294afb4b51d6ace03c800a4f46d4b926ec9a26562a1c648ae3417b312b3d"
+    },
+    {
+      "name": "Codex.DoubleTake.HunterSafari-1.0.8-animatedfx.zip",
+      "size": 17113320,
+      "sha256": "1244cc5a96cb0f210085d4542d9a2b04a7fdb1caf65f2f08ea3d0dc508e956cc"
+    },
+    {
+      "name": "TitanfallModWorkbench.exe",
+      "size": 89717517,
+      "sha256": "27f832e2ef5c74aac7f5956019772ba571003ab3b9441eae55fc1dcaa6e9563a"
+    },
+    {
+      "name": "TitanfallModWorkbench-1.4.0-Source.zip",
+      "size": 39551,
+      "sha256": "42cbbec675951e7dd9fbe1734bd196ea524e4f5e2458b6efaf69049aff99bfc8"
+    },
+    {
+      "name": "AnimatedFX-Complete-Source-2026-09-17.zip",
+      "size": 183450585,
+      "sha256": "a72b023188d60799c4bac002da1724b6b689f5f4e8c2abcaedd04378a7710836"
+    },
+    {
+      "name": "CAR-Mythic-Allfather-animatedfx-preview.png",
+      "size": 547709,
+      "sha256": "b8b361d41ba1e49e1f644b8ad36158a1584423aa274c4c3d7c0e69aa89f3fab2"
+    },
+    {
+      "name": "DoubleTake-HunterSafari-animatedfx-preview.png",
+      "size": 491167,
+      "sha256": "5d6c0013d8650d72fa06aa80842157852bd316dfe0848e2cfbcf9eda214ecaf2"
+    }
+  ]
+}

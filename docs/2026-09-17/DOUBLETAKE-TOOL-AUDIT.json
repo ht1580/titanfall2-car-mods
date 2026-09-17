@@ -1,0 +1,42 @@
+{
+  "recipe": "C:\\Users\\q1551\\Documents\\Codex\\2026-09-08\\w-3\\doubletake-fx-final-audit-recipe.json",
+  "steps": {
+    "auditMod": {
+      "status": "passed",
+      "mod": "D:\\TitanfallMods\\22_AnimatedFX\\Codex.DoubleTake.HunterSafari",
+      "name": "Codex.DoubleTake.HunterSafari",
+      "version": "1.0.8-animatedfx",
+      "scripts": [],
+      "pcfFiles": [],
+      "particleManifests": [],
+      "cameraRenderTargetMaterials": [],
+      "models": [
+        {
+          "path": "mod/models/weapons/doubletake/ptpov_doubletake.mdl",
+          "valid": true,
+          "version": 53,
+          "ruiRecords": 5
+        },
+        {
+          "path": "mod/models/weapons/doubletake/w_doubletake.mdl",
+          "valid": true,
+          "version": 53,
+          "ruiRecords": 0
+        }
+      ],
+      "foundExpectedSequences": [
+        "hunter_rotors_autoplay"
+      ],
+      "issues": [],
+      "warnings": [],
+      "runtimeTested": false
+    },
+    "previewCard": {
+      "output": "D:\\TitanfallMods\\22_AnimatedFX\\previews\\DoubleTake-HunterSafari-tool-preview.png",
+      "maskMode": "cyan",
+      "sha256": "e6d2793983b48a04e8239e2ef097f74919adeefdabad9ed8c199d4da1a9831d2"
+    }
+  },
+  "runtimeTested": false,
+  "status": "passed"
+}

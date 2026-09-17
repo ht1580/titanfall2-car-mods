@@ -1,0 +1,49 @@
+{
+  "ilmOverlay": {
+    "inputSmd": "input/weapon.smd",
+    "outputSmd": "output/weapon_fx.smd",
+    "ilm": "input/weapon_ilm.png",
+    "material": "models/my_weapon_fx/energy",
+    "threshold": 18,
+    "normalOffset": 0.012
+  },
+  "animatedVmt": {
+    "output": "output/mod/materials/models/my_weapon_fx/energy.vmt",
+    "baseTexture": "models/my_weapon_fx/energy",
+    "flowTexture": "models/my_weapon_fx/flow",
+    "color": [0.45, 0.9, 1.35],
+    "alphaMin": 0.48,
+    "alphaMax": 0.88,
+    "period": 2.6,
+    "scrollRate": 0.08,
+    "scrollAngle": 180
+  },
+  "autoplaySequence": {
+    "inputQc": "input/weapon.qc",
+    "outputQc": "output/weapon.qc",
+    "name": "weapon_fx_autoplay",
+    "animationSmd": "weapon_fx_anim.smd",
+    "fps": 30,
+    "delta": false,
+    "weightlist": ""
+  },
+  "preserveRui": {
+    "referenceMdl": "input/stock_ptpov.mdl",
+    "rebuiltMdl": "input/rebuilt_ptpov_conv.mdl",
+    "outputMdl": "output/ptpov_weapon.mdl"
+  },
+  "auditMod": {
+    "path": "output/My.Weapon.Mod",
+    "expectedSequences": ["weapon_fx_autoplay"],
+    "minRuiRecords": 1
+  },
+  "previewCard": {
+    "source": "output/blender-preview.png",
+    "output": "output/animated-fx-preview.png",
+    "title": "MY WEAPON · ANIMATED FX",
+    "subtitle": "BONE-BOUND AUTOPLAY / UV-MATCHED GLOW",
+    "accent": [50, 200, 255],
+    "maskMode": "cyan"
+  },
+  "report": "output/animated-fx-audit.json"
+}

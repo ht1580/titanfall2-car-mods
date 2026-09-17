@@ -2,9 +2,29 @@
 
 这里保存目前整理完成的 Northstar / R2Vanilla CAR 替换模组安装包。
 
-## 最新核对状态
+## 最新核对状态（2026-09-17）
 
-[最终资源核对与下一步](docs/FINAL-AUDIT-2026-09-15.md)：外域 1.0.11 已核对项目通过，但未进行游戏验收；神话 1.1.1 **未通过最终核对**，仍有底色重复 sRGB 编码和客户端粒子句柄调用问题。尚未生成神话 1.1.2。
+已发布两套带动画/发光候选包和 TitanfallModWorkbench 1.4.0。工作台新增 ILM/UV 发光覆盖层、动态 VMT、幂等 `autoplay` 序列、按骨骼名称固化内嵌 RUI、Northstar 脚本/PCF/图层污染审计，以及配方驱动的预览输出。
+
+- `CAR.Mythic.Allfather-1.2.0-animatedfx.zip`：恢复眼睛、翅膀和枪身的独立循环序列，使用随骨骼移动的发光层。
+- `Codex.DoubleTake.HunterSafari-1.0.8-animatedfx.zip`：保留原版双重击瞄具兼容路径，加入三个转环骨骼循环和第一/第三人称发光覆盖层。
+- [脚本、动画、特效与 RUI 规范](docs/2026-09-17/NORTHSTAR-SCRIPT-AND-FX-GUIDE.md)
+- [本次交付记录](docs/2026-09-17/DELIVERY-NOTES-2026-09-17.md)
+- [完整静态审计](docs/2026-09-17/FINAL-AUDIT.json)
+
+两套新包均完成结构、MDL 序列、RUI 数量、材质引用和脚本风险的静态核对；没有代替用户启动游戏，因此仍是候选包。
+
+### 带特效预览
+
+![CAR Mythic Allfather animated FX](docs/2026-09-17/CAR-Mythic-Allfather-animatedfx-preview.png)
+
+![Double Take Hunter Safari animated FX](docs/2026-09-17/DoubleTake-HunterSafari-animatedfx-preview.png)
+
+### 1.4.0 工具源码
+
+可维护源码位于 [`tools/TitanfallModWorkbench`](tools/TitanfallModWorkbench)。复制 `animated-fx-recipe-template.json` 后，可在 GUI 或命令行直接运行整套动画、发光、RUI 与审计流程。
+
+所有本次二进制、完整源码包和原尺寸预览集中在 [v2026.09.17-animated-fx Release](https://github.com/ht1580/titanfall2-car-mods/releases/tag/v2026.09.17-animated-fx)。
 
 ## 2026-09-15 跨设备交接 / 1.0.11 候选包
 

@@ -1,0 +1,9 @@
+# Historical release assets are published through GitHub Releases.
+/*.zip
+/*.exe
+
+tools/TitanfallModWorkbench/build/
+tools/TitanfallModWorkbench/dist/
+tools/TitanfallModWorkbench/vendor/
+tools/TitanfallModWorkbench/__pycache__/
+

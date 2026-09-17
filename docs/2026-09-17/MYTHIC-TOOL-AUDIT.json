@@ -1,0 +1,44 @@
+{
+  "recipe": "C:\\Users\\q1551\\Documents\\Codex\\2026-09-08\\w-3\\animated-fx-final-audit-recipe.json",
+  "steps": {
+    "auditMod": {
+      "status": "passed",
+      "mod": "D:\\TitanfallMods\\22_AnimatedFX\\CAR.Mythic.Allfather",
+      "name": "Codex.CAR.Mythic.Allfather",
+      "version": "1.2.0-animatedfx",
+      "scripts": [],
+      "pcfFiles": [],
+      "particleManifests": [],
+      "cameraRenderTargetMaterials": [],
+      "models": [
+        {
+          "path": "mod/models/weapons/car101/ptpov_car101.mdl",
+          "valid": true,
+          "version": 53,
+          "ruiRecords": 6
+        },
+        {
+          "path": "mod/models/weapons/car101/w_car101.mdl",
+          "valid": true,
+          "version": 53,
+          "ruiRecords": 0
+        }
+      ],
+      "foundExpectedSequences": [
+        "mythic_eye_motion",
+        "mythic_motion",
+        "mythic_wing_motion"
+      ],
+      "issues": [],
+      "warnings": [],
+      "runtimeTested": false
+    },
+    "previewCard": {
+      "output": "D:\\TitanfallMods\\22_AnimatedFX\\previews\\CAR-Mythic-Allfather-tool-preview.png",
+      "maskMode": "bright",
+      "sha256": "9617a17357f881b4860c9d3b416a28b783ab6cc10ad36bdd7183408d8bf18e8f"
+    }
+  },
+  "runtimeTested": false,
+  "status": "passed"
+}
