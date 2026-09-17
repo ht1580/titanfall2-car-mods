@@ -1,5 +1,25 @@
 # Titanfall Mod Workbench
 
+## 1.5.0 全自动武器替换
+
+“全自动替换”页会扫描 Apex `common.rpak` 中的武器皮肤设置，并扫描 Titanfall 2 VPK 中的第一人称/第三人称武器模型。选择一个来源皮肤和一个替换目标后，程序自动执行：
+
+1. 用 RSX 2.3.0 建立当前 Apex 资产索引，并用兼容版 RSX 导出 SMD；
+2. 用 Harmony 解压目标 v53 MDL，再由 Crowbar 自动恢复完整 QC、射击、换弹和切枪动画；
+3. 将 Apex 网格映射到目标骨架，缺失的装饰骨向最近可用祖先绑定；
+4. 生成独立 VTF/VMT 材质，不写全局 RPak 图层；
+5. 用 StudioMDL 与 MDLShit 生成单文件 v53 MDL，并从原版目标继承模型 RUI；
+6. 以原版模型路径封装 Northstar Mod 和 ZIP，固定 `LoadPriority: 0`，不写 weapon 脚本。
+
+首次使用先配置 Apex、Titanfall 2、SFM/StudioMDL 路径，然后点“扫描 Apex + Titanfall 2”。命令行等价入口：
+
+```powershell
+TitanfallModWorkbench.exe --scan-assets
+TitanfallModWorkbench.exe --auto-replace D:\path\recipe.json
+```
+
+模板见 `auto-replace-recipe-template.json`。程序完成的是离线生成和静态结构核对；游戏内位置、遮挡和动作观感仍需使用者验收。
+
 一个可以脱离 Codex 使用的 Windows 图形工具，整合 Apex / Titanfall 2 武器模型移植中重复、容易出错的步骤。
 
 ## 已整合功能

@@ -19,7 +19,7 @@ from PIL import Image, ImageEnhance, ImageOps
 
 
 APP_NAME = "TitanfallModWorkbench"
-APP_VERSION = "1.4.0"
+APP_VERSION = "1.5.0"
 APP_HOME = Path(os.environ.get("TITANFALL_WORKBENCH_HOME", r"D:\CodexStorage\TitanfallModWorkbenchData")) if Path("D:/").exists() else Path(os.environ.get("LOCALAPPDATA", Path.home())) / APP_NAME
 CONFIG_PATH = APP_HOME / "config.json"
 LOG_DIR = APP_HOME / "logs"

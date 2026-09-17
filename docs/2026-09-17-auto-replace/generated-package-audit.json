@@ -1,0 +1,34 @@
+{
+  "name": "Auto Replace Final CAR",
+  "version": "1.5.0",
+  "scope": "delivery inventory and configuration only",
+  "runtimeStatus": "NOT_TESTED",
+  "releaseAcceptance": "PENDING",
+  "loadPriority": 0,
+  "ui": {
+    "ammo": "NOT_VERIFIED",
+    "proScreen": "NOT_VERIFIED"
+  },
+  "pcfFiles": [],
+  "emissiveMaterialFiles": [],
+  "issues": [],
+  "sha256": {
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main.vmt": "51da553d8beee25a2b40b6d01fe95f3db9b74cb06d0522bb55b45c794e4f0580",
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main_ao.vtf": "c9f4e67b7e0f397c2ce850fdfe8ca1c6a0bd224b9da9ce267a198f6e54646b0b",
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main_cav.vtf": "7d580e8ece12df2649eb8a74240c60553eabc89b1b94215e62705c7fd7ba41e2",
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main_col.vtf": "2a8476d2542660061f461d20827e5d0362e00255786da06f20e4a717ca893d66",
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main_gls.vtf": "6f1176454c2004f19c07adab35efb65b33915551077a1f3ba9a51ca197679b30",
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main_nml.vtf": "f682482d0fe6a310cc6679a0da781fb78f7af4a3f7fff55462d1f3c3e896bce1",
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main_spc.vtf": "0ae8f586f414929f1db0b16d8582134e4526e766c1fbb70a710464df089c99ac",
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main.vmt": "66127c73a788843ffac40e69804fe4a72720aeee04d4ac419bec14bf41ab2435",
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main_ao.vtf": "c9f4e67b7e0f397c2ce850fdfe8ca1c6a0bd224b9da9ce267a198f6e54646b0b",
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main_cav.vtf": "7d580e8ece12df2649eb8a74240c60553eabc89b1b94215e62705c7fd7ba41e2",
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main_col.vtf": "2a8476d2542660061f461d20827e5d0362e00255786da06f20e4a717ca893d66",
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main_gls.vtf": "6f1176454c2004f19c07adab35efb65b33915551077a1f3ba9a51ca197679b30",
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main_nml.vtf": "f682482d0fe6a310cc6679a0da781fb78f7af4a3f7fff55462d1f3c3e896bce1",
+    "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main_spc.vtf": "0ae8f586f414929f1db0b16d8582134e4526e766c1fbb70a710464df089c99ac",
+    "mod/models/weapons/car101/ptpov_car101.mdl": "50f011bb2ae84930dbaedcb93c5f57c87a5af1bb7b18ae1f4dd606dccbede6b5",
+    "mod/models/weapons/car101/w_car101.mdl": "35750ce468db3a6c1adcf9c10034285f74af2c70a338799d8c4070b21725b9c5",
+    "mod.json": "7537e13eac304e49095f6305c2a21bdcb3848311e1b442f1bd04d03963d41a43"
+  }
+}

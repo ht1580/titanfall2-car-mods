@@ -5,7 +5,7 @@ a = Analysis(
     ['app.py'],
     pathex=[],
     binaries=[],
-    datas=[('vendor/blender', 'vendor/blender'), ('vendor/legion', 'vendor/legion'), ('vendor/tools', 'vendor/tools'), ('vendor/rsx/rsx.exe', 'vendor/rsx'), ('project-template.json', '.'), ('animated-fx-recipe-template.json', '.'), ('THIRD_PARTY_NOTICES.txt', '.')],
+    datas=[('vendor/blender', 'vendor/blender'), ('vendor/legion', 'vendor/legion'), ('vendor/tools', 'vendor/tools'), ('vendor/harmony', 'vendor/harmony'), ('vendor/rsx', 'vendor/rsx'), ('project-template.json', '.'), ('animated-fx-recipe-template.json', '.'), ('auto-replace-recipe-template.json', '.'), ('THIRD_PARTY_NOTICES.txt', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

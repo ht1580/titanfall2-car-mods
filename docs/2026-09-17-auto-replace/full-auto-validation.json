@@ -1,0 +1,200 @@
+{
+  "status": "passed",
+  "source": {
+    "id": "car/factory_issue",
+    "display": "car | SKIN_FACTORY_ISSUE | factory_issue",
+    "weapon": "car",
+    "skin": "factory_issue",
+    "viewModel": "mdl/techart/mshop/weapons/class/smg/car/car_base_v.rmdl",
+    "worldModel": "mdl/techart/mshop/weapons/class/smg/car/car_base_w.rmdl",
+    "viewGuid": "0x75A6D7F161178103",
+    "worldGuid": "0x76085B8187AE3B89",
+    "camoIndex": 0,
+    "skinName": "",
+    "modelSkin": 0,
+    "reactive": false
+  },
+  "target": {
+    "id": "models/weapons/car101/ptpov_car101.mdl",
+    "display": "car101 | ptpov_car101.mdl",
+    "viewModel": "models/weapons/car101/ptpov_car101.mdl",
+    "viewVpk": "D:\\SteamLibrary\\steamapps\\common\\Titanfall2\\vpk\\englishclient_mp_common.bsp.pak000_dir.vpk",
+    "worldModel": "models/weapons/car101/w_car101.mdl",
+    "worldVpk": "D:\\SteamLibrary\\steamapps\\common\\Titanfall2\\vpk\\englishclient_mp_common.bsp.pak000_dir.vpk",
+    "animInclude": ""
+  },
+  "preset": "compatibility",
+  "scriptOverrides": 0,
+  "loadPriority": 0,
+  "steps": {
+    "view": {
+      "status": "passed",
+      "stock": "D:\\CodexStorage\\TitanfallModWorkbenchData\\auto_jobs\\20260917-143916-Auto.Final.CAR\\stock\\models\\weapons\\car101\\ptpov_car101.mdl",
+      "output": "D:\\CodexStorage\\TitanfallModWorkbenchData\\auto_jobs\\20260917-143916-Auto.Final.CAR\\staging\\mod\\models\\weapons\\car101\\ptpov_car101.mdl",
+      "companions": [],
+      "combined": {
+        "meshes": 3,
+        "triangles": 25578
+      },
+      "remap": {
+        "fallbackBones": [
+          "def_c_aog",
+          "def_c_bullet",
+          "def_c_bullet_empty",
+          "def_c_hcog",
+          "def_c_hcog_og",
+          "def_c_holo_mag",
+          "def_c_lasersight",
+          "def_c_suppressor",
+          "def_l_cuff_1",
+          "def_l_cuff_2",
+          "def_l_cuff_3",
+          "def_l_cuff_4",
+          "def_l_finIndexA_helper",
+          "def_l_finMidA_helper",
+          "def_l_finRingA_helper",
+          "def_l_finThumbB_helper",
+          "def_l_finThumbC_helper",
+          "def_l_finThumbmiddle_helper",
+          "def_l_forearm_shield",
+          "def_l_outterwrist",
+          "def_r_cuff_1",
+          "def_r_cuff_2",
+          "def_r_cuff_3",
+          "def_r_cuff_4",
+          "def_r_finIndexA_helper",
+          "def_r_finMidA_helper",
+          "def_r_finRingA_helper",
+          "def_r_finThumbB_helper",
+          "def_r_finThumbC_helper",
+          "def_r_finThumbmiddle_helper",
+          "def_r_outterwrist",
+          "sight"
+        ],
+        "materials": {
+          "car_base_main": "models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main"
+        },
+        "fallbackTarget": 77
+      },
+      "materials": {
+        "count": 1,
+        "materials": [
+          "models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main"
+        ]
+      },
+      "rui": {
+        "output": "D:\\CodexStorage\\TitanfallModWorkbenchData\\auto_jobs\\20260917-143916-Auto.Final.CAR\\staging\\mod\\models\\weapons\\car101\\ptpov_car101.mdl",
+        "ruiRecords": 6,
+        "sha256": "50f011bb2ae84930dbaedcb93c5f57c87a5af1bb7b18ae1f4dd606dccbede6b5"
+      }
+    },
+    "world": {
+      "status": "passed",
+      "stock": "D:\\CodexStorage\\TitanfallModWorkbenchData\\auto_jobs\\20260917-143916-Auto.Final.CAR\\stock\\models\\weapons\\car101\\w_car101.mdl",
+      "output": "D:\\CodexStorage\\TitanfallModWorkbenchData\\auto_jobs\\20260917-143916-Auto.Final.CAR\\staging\\mod\\models\\weapons\\car101\\w_car101.mdl",
+      "companions": [],
+      "combined": {
+        "meshes": 2,
+        "triangles": 2982
+      },
+      "remap": {
+        "fallbackBones": [
+          "def_c_aog",
+          "def_c_hcog",
+          "def_c_hcog_og",
+          "def_c_holo_mag",
+          "def_c_lasersight",
+          "def_c_suppressor"
+        ],
+        "materials": {
+          "car_base_main": "models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main"
+        },
+        "fallbackTarget": 5
+      },
+      "materials": {
+        "count": 1,
+        "materials": [
+          "models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main"
+        ]
+      },
+      "rui": {
+        "count": 0,
+        "status": "not-applicable"
+      }
+    }
+  },
+  "package": {
+    "status": "passed",
+    "target": "D:\\CodexStorage\\TestOutputs\\AutoReplaceFinal\\Auto.Final.CAR",
+    "packagesCopied": [],
+    "validation": {
+      "status": "passed",
+      "validationScope": "static_structure_only",
+      "runtimeStatus": "NOT_TESTED",
+      "releaseAcceptance": "PENDING",
+      "workflowReview": {
+        "name": "Auto Replace Final CAR",
+        "version": "1.5.0",
+        "scope": "delivery inventory and configuration only",
+        "runtimeStatus": "NOT_TESTED",
+        "releaseAcceptance": "PENDING",
+        "loadPriority": 0,
+        "ui": {
+          "ammo": "NOT_VERIFIED",
+          "proScreen": "NOT_VERIFIED"
+        },
+        "pcfFiles": [],
+        "emissiveMaterialFiles": [],
+        "issues": [],
+        "sha256": {
+          "mod.json": "7537e13eac304e49095f6305c2a21bdcb3848311e1b442f1bd04d03963d41a43",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main.vmt": "51da553d8beee25a2b40b6d01fe95f3db9b74cb06d0522bb55b45c794e4f0580",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main_ao.vtf": "c9f4e67b7e0f397c2ce850fdfe8ca1c6a0bd224b9da9ce267a198f6e54646b0b",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main_cav.vtf": "7d580e8ece12df2649eb8a74240c60553eabc89b1b94215e62705c7fd7ba41e2",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main_col.vtf": "2a8476d2542660061f461d20827e5d0362e00255786da06f20e4a717ca893d66",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main_gls.vtf": "6f1176454c2004f19c07adab35efb65b33915551077a1f3ba9a51ca197679b30",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main_nml.vtf": "f682482d0fe6a310cc6679a0da781fb78f7af4a3f7fff55462d1f3c3e896bce1",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/view/car_base_main_spc.vtf": "0ae8f586f414929f1db0b16d8582134e4526e766c1fbb70a710464df089c99ac",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main.vmt": "66127c73a788843ffac40e69804fe4a72720aeee04d4ac419bec14bf41ab2435",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main_ao.vtf": "c9f4e67b7e0f397c2ce850fdfe8ca1c6a0bd224b9da9ce267a198f6e54646b0b",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main_cav.vtf": "7d580e8ece12df2649eb8a74240c60553eabc89b1b94215e62705c7fd7ba41e2",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main_col.vtf": "2a8476d2542660061f461d20827e5d0362e00255786da06f20e4a717ca893d66",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main_gls.vtf": "6f1176454c2004f19c07adab35efb65b33915551077a1f3ba9a51ca197679b30",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main_nml.vtf": "f682482d0fe6a310cc6679a0da781fb78f7af4a3f7fff55462d1f3c3e896bce1",
+          "mod/materials/models/Weapons_R2/auto_replace/Auto.Final.CAR/world/car_base_main_spc.vtf": "0ae8f586f414929f1db0b16d8582134e4526e766c1fbb70a710464df089c99ac",
+          "mod/models/weapons/car101/ptpov_car101.mdl": "50f011bb2ae84930dbaedcb93c5f57c87a5af1bb7b18ae1f4dd606dccbede6b5",
+          "mod/models/weapons/car101/w_car101.mdl": "35750ce468db3a6c1adcf9c10034285f74af2c70a338799d8c4070b21725b9c5"
+        }
+      },
+      "name": "Auto Replace Final CAR",
+      "version": "1.5.0",
+      "loadPriority": 0,
+      "files": 17,
+      "models": [
+        {
+          "path": "mod/models/weapons/car101/ptpov_car101.mdl",
+          "bytes": 2618324,
+          "version": 53
+        },
+        {
+          "path": "mod/models/weapons/car101/w_car101.mdl",
+          "bytes": 318410,
+          "version": 53
+        }
+      ],
+      "rpaks": [],
+      "starpaks": [],
+      "errors": []
+    },
+    "package": {
+      "path": "D:\\CodexStorage\\TestOutputs\\AutoReplaceFinal\\Auto.Final.CAR-1.5.0.zip",
+      "bytes": 5715114,
+      "sha256": "ed5f60ac2f6bbb1558cf51d91fd2dd4a2c6afa3207a5d477c5d76c52e39139db",
+      "audit": "D:\\CodexStorage\\TestOutputs\\AutoReplaceFinal\\Auto.Final.CAR-1.5.0.zip.audit.json",
+      "runtimeStatus": "NOT_TESTED",
+      "releaseAcceptance": "PENDING"
+    },
+    "report": "D:\\CodexStorage\\TitanfallModWorkbenchData\\logs\\20260917-144035-mod-build.json"
+  },
+  "runtimeStatus": "NOT_TESTED"
+}

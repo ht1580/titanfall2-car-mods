@@ -1,0 +1,38 @@
+{
+  "version": "1.5.0",
+  "tag": "v2026.09.17-auto-replace",
+  "generatedAt": "2026-09-17T14:47:13-07:00",
+  "scan": {
+    "apexWeaponSkins": 3065,
+    "titanfallViewModels": 82
+  },
+  "validation": {
+    "sourceFullAuto": "passed",
+    "exeFullAuto": "passed",
+    "runtimeGame": "NOT_TESTED",
+    "loadPriority": 0,
+    "scriptOverrides": 0
+  },
+  "assets": [
+    {
+      "name": "asset-catalog-2026-09-17.json",
+      "bytes": 1799231,
+      "sha256": "C18C8E6ED3E23908FCA5C55AA8E9AD695D8FA69C5FFBF506854BBB092EB2F368"
+    },
+    {
+      "name": "RELEASE-NOTES.md",
+      "bytes": 1139,
+      "sha256": "119407375D563B5062DED0FF47FCC07EC40B6D54FBF01693A6DFDAE0218ED545"
+    },
+    {
+      "name": "TitanfallModWorkbench-1.5.0-source.zip",
+      "bytes": 76337222,
+      "sha256": "4A7F6AAF788AF40B7A6C156B0E739D31D88F8CE73010DCEE20C88D0762820B16"
+    },
+    {
+      "name": "TitanfallModWorkbench-1.5.0.exe",
+      "bytes": 97493314,
+      "sha256": "F7AF9DD53D42209C80EB18005E6F745A4D68F18FBCFA6212D4B769BF0327C6E4"
+    }
+  ]
+}

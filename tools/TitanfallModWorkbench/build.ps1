@@ -12,9 +12,11 @@ python -m PyInstaller --noconfirm --clean --onefile --windowed `
     --add-data "vendor\blender;vendor\blender" `
     --add-data "vendor\legion;vendor\legion" `
     --add-data "vendor\tools;vendor\tools" `
-    --add-data "vendor\rsx\rsx.exe;vendor\rsx" `
+    --add-data "vendor\harmony;vendor\harmony" `
+    --add-data "vendor\rsx;vendor\rsx" `
     --add-data "project-template.json;." `
     --add-data "animated-fx-recipe-template.json;." `
+    --add-data "auto-replace-recipe-template.json;." `
     --add-data "THIRD_PARTY_NOTICES.txt;." `
     app.py
 

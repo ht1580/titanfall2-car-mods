@@ -2,6 +2,16 @@
 
 这里保存目前整理完成的 Northstar / R2Vanilla CAR 替换模组安装包。
 
+## TitanfallModWorkbench 1.5.0 全自动替换
+
+工作台现在可扫描 Apex 武器皮肤和 Titanfall 2 武器模型，在“全自动替换”页选择来源与目标后，自动完成 VPK 提取、完整目标 QC/动画恢复、Apex 网格与目标骨架映射、VTF/VMT 生成、StudioMDL 编译、MDL v53 转换、原版 RUI 保留及 Northstar ZIP 打包。
+
+默认同时生成第一与第三人称模型，固定 `LoadPriority: 0`，不覆盖 weapon 脚本，也不写全局 RPak 图层。独立 EXE 已通过一次实际的端到端离线生成；游戏内位置、遮挡和动作观感仍由使用者验收。
+
+- [1.5.0 源码](tools/TitanfallModWorkbench)
+- [1.5.0 发布说明](docs/2026-09-17-auto-replace/RELEASE-NOTES.md)
+- [v2026.09.17-auto-replace 下载](https://github.com/ht1580/titanfall2-car-mods/releases/tag/v2026.09.17-auto-replace)
+
 ## 最新核对状态（2026-09-17）
 
 已发布两套带动画/发光候选包和 TitanfallModWorkbench 1.4.0。工作台新增 ILM/UV 发光覆盖层、动态 VMT、幂等 `autoplay` 序列、按骨骼名称固化内嵌 RUI、Northstar 脚本/PCF/图层污染审计，以及配方驱动的预览输出。
