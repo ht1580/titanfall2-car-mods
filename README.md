@@ -2,6 +2,12 @@
 
 这里保存目前整理完成的 Northstar / R2Vanilla CAR 替换模组安装包。
 
+## 2026-09-18 PCF 导图修正候选包
+
+CAR 神话皮 1.3.2 / 双重击 1.0.11：修正重复帧和转环循环跳动，恢复 Apex 转环局部朝向，补齐漏装发光材质；缩短粒子事件参数，统一两包的共享 PCF 和完整粒子清单，并补充普通动画序列触发。已离线核对，游戏内光效和姿态仍待验收。
+
+[下载候选包与修正源码](https://github.com/ht1580/titanfall2-car-mods/releases/tag/v2026.09.18-pcfguide) · [核对记录](docs/2026-09-18-pcfguide/REPAIR-NOTES.md)
+
 ## Idle Auto Delta + 完整 PCF 清单修正版（2026-09-17）
 
 此前 1.3.0 / 1.0.9 错把 Delta 建成独立 autoplay 序列，并使用了只含自定义 PCF 的精简粒子清单，现已废弃。修正版严格把效果层烘焙进原有 `idle_anim_autoplay` 与 `idle_ads_anim_autoplay`：CAR 写入 107 个眼睛、翅膀和羽毛效果骨骼，并把开火层写入原攻击动画；双重击写入 4 个时间装置骨骼。模型中不再包含新建的 reactive/rotor autoplay 序列。

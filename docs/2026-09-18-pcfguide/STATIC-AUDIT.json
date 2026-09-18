@@ -1,0 +1,28 @@
+{
+  "mythic": {
+    "particleEvents": 40,
+    "maxEventBytes": 59,
+    "zipCRC": true
+  },
+  "doubleTake": {
+    "particleEvents": 42,
+    "maxEventBytes": 62,
+    "zipCRC": true
+  },
+  "ringLoop": {
+    "frames": 191,
+    "noRepeatedFrames": true,
+    "closedRotations": true,
+    "constantAngularStep": true
+  },
+  "sharedPCF": {
+    "definitions": 38,
+    "identicalManifestAndPCF": true
+  },
+  "restoredMaterials": [
+    "energy.vmt",
+    "energy.vtf",
+    "flow.vtf"
+  ],
+  "runtimeTested": false
+}

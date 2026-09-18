@@ -1,0 +1,535 @@
+from __future__ import annotations
+
+import hashlib
+import json
+import math
+import re
+import shutil
+import struct
+import subprocess
+import sys
+import zipfile
+from pathlib import Path
+
+
+ROOT = Path(r"D:\TitanfallMods\24_PCFGuideRepair")
+RELEASE = ROOT / "release"
+WORK = ROOT / "work"
+PROJECT = Path(r"D:\CodexStorage\Projects\2026-09-08\w-3")
+WORKBENCH = PROJECT / "TitanfallModWorkbench"
+sys.path.insert(0, str(WORKBENCH.parent))
+from TitanfallModWorkbench import core  # noqa: E402
+
+CONFIG = core.load_config()
+MYTHIC_PROJECT = PROJECT / "work" / "car_mythic"
+MYTHIC_MOD_SOURCE = Path(r"D:\TitanfallMods\17_ReferenceRepair\CAR.Mythic.Allfather")
+MYTHIC_GLOW_ZIP = Path(r"D:\TitanfallMods\22_AnimatedFX\CAR.Mythic.Allfather-1.2.0-animatedfx.zip")
+NATIVE = MYTHIC_PROJECT / "apex_native/animrig/techart/mshop/weapons/class/smg/car/anims_car_mythic_v25_nogo_level2_v_animRig"
+DOUBLE_MOD_SOURCE = Path(r"D:\TitanfallMods\21_DoubleTakeUIRotors\Codex.DoubleTake.HunterSafari")
+DOUBLE_VIEW_SOURCE = Path(r"D:\TitanfallMods\22_AnimatedFX\doubletake_view_source")
+DOUBLE_WORLD_SOURCE = Path(r"D:\TitanfallMods\22_AnimatedFX\doubletake_world_source")
+PARTICLE_SOURCE = MYTHIC_PROJECT / "fx_assets/mod/particles/codex_car_mythic_glow.pcf"
+PARTICLE_TEXT = MYTHIC_PROJECT / "fx_assets/source/codex_car_mythic_glow.pcf.txt"
+DMX = Path(r"E:\SteamLibrary\steamapps\common\SourceFilmmaker\game\bin\dmxconvert.exe")
+VANILLA_PARTICLE_MANIFEST = Path("D:/TitanfallMods/23_AdditivePCF_Rebuild/research/vanilla/particles/particles_manifest.txt")
+
+
+def sha256(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for block in iter(lambda: f.read(1024 * 1024), b""):
+            h.update(block)
+    return h.hexdigest()
+
+
+def zip_folder(folder: Path, archive: Path) -> None:
+    with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
+        for file in sorted(folder.rglob("*")):
+            if file.is_file():
+                z.write(file, Path(folder.name) / file.relative_to(folder))
+    with zipfile.ZipFile(archive) as z:
+        assert z.testzip() is None
+
+
+def read_smd(path: Path):
+    lines = path.read_text(encoding="utf-8-sig").splitlines()
+    na = lines.index("nodes")
+    nb = lines.index("end", na)
+    nodes = {}
+    for line in lines[na + 1 : nb]:
+        m = re.match(r'\s*(\d+) "([^"]+)" (-?\d+)', line)
+        if m:
+            nodes[int(m.group(1))] = (m.group(2), int(m.group(3)))
+    sa = lines.index("skeleton")
+    sb = lines.index("end", sa)
+    frames = []
+    for line in lines[sa + 1 : sb]:
+        words = line.split()
+        if not words:
+            continue
+        if words[0] == "time":
+            frames.append({})
+        else:
+            frames[-1][int(words[0])] = tuple(float(x) for x in words[1:7])
+    return nodes, frames
+
+
+def write_smd(path: Path, nodes, frames) -> None:
+    out = ["version 1", "nodes"]
+    out += [f'{i} "{name}" {parent}' for i, (name, parent) in nodes.items()]
+    out += ["end", "skeleton"]
+    for frame_index, frame in enumerate(frames):
+        out.append(f"time {frame_index}")
+        for i in nodes:
+            values = frame.get(i, (0.0,) * 6)
+            out.append(f"{i} " + " ".join(f"{x:.9f}" for x in values))
+    out += ["end"]
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(out) + "\n", encoding="utf-8", newline="\n")
+
+
+def effect_bone(name: str) -> bool:
+    return (
+        name.startswith("def_body_feather_")
+        or name.startswith("def_wing_")
+        or name in {
+            "def_upper_body",
+            "def_core",
+            "def_core_orb",
+            "def_iris",
+            "def_upper_lid",
+            "def_lower_lid",
+            "def_eye_lid_cover",
+            "def_bifrost_core",
+        }
+    )
+
+
+def quat_mul(a, b):
+    aw, ax, ay, az = a
+    bw, bx, by, bz = b
+    return (
+        aw * bw - ax * bx - ay * by - az * bz,
+        aw * bx + ax * bw + ay * bz - az * by,
+        aw * by - ax * bz + ay * bw + az * bx,
+        aw * bz + ax * by - ay * bx + az * bw,
+    )
+
+
+def quat_inv(q):
+    w, x, y, z = q
+    n = w*w + x*x + y*y + z*z
+    return (w/n, -x/n, -y/n, -z/n)
+
+
+def euler_xyz_to_quat(v):
+    x, y, z = v
+    cx, sx = math.cos(x/2), math.sin(x/2)
+    cy, sy = math.cos(y/2), math.sin(y/2)
+    cz, sz = math.cos(z/2), math.sin(z/2)
+    return quat_mul((cz, 0, 0, sz), quat_mul((cy, 0, sy, 0), (cx, sx, 0, 0)))
+
+
+def quat_to_euler_xyz(q):
+    w, x, y, z = q
+    return (math.atan2(2*(w*x+y*z), 1-2*(x*x+y*y)),
+            math.asin(max(-1.0,min(1.0,2*(w*y-z*x)))),
+            math.atan2(2*(w*z+x*y), 1-2*(y*y+z*z)))
+
+
+
+def compose_delta_values(base, overlay):
+    # NLA Add semantics for local-space delta: translation adds and rotation composes.
+    q = quat_mul(euler_xyz_to_quat(base[3:6]), euler_xyz_to_quat(overlay[3:6]))
+    return tuple(base[i] + overlay[i] for i in range(3)) + quat_to_euler_xyz(q)
+
+
+def bake_delta_layer(target: Path, layer: Path, selected_names: set[str] | None = None) -> dict:
+    target_nodes, target_frames = read_smd(target)
+    layer_nodes, layer_frames = read_smd(layer)
+    target_by_name = {name: i for i, (name, _) in target_nodes.items()}
+    layer_by_name = {name: i for i, (name, _) in layer_nodes.items()}
+    missing_base = sorted(set(target_by_name) - set(layer_by_name))
+    if missing_base:
+        raise RuntimeError(f"layer skeleton misses target bones: {missing_base[:8]}")
+    selected = [name for _, (name, _) in layer_nodes.items() if name in layer_by_name and (selected_names is None or name in selected_names)]
+    out_frames = []
+    for fi, target_frame in enumerate(target_frames):
+        # Preserve phase over different clip lengths and include both endpoints.
+        li = 0 if len(target_frames) == 1 else round(fi * (len(layer_frames) - 1) / (len(target_frames) - 1))
+        source_frame = layer_frames[li]
+        out_frame = {}
+        for i, (name, _) in layer_nodes.items():
+            base_value = target_frame[target_by_name[name]] if name in target_by_name else (0.0,) * 6
+            if name in selected:
+                out_frame[i] = compose_delta_values(base_value, source_frame[layer_by_name[name]])
+            else:
+                out_frame[i] = base_value
+        out_frames.append(out_frame)
+    if "hunter_rotor_delta" in layer.name:
+        for fi, frame in enumerate(out_frames):
+            for i, (name, _) in layer_nodes.items():
+                if "timemachine_ring_" in name:
+                    turns = {"01": 1, "02": -1, "03": 2}[name[-2:]]
+                    frame[i] = (0.0, 0.0, 0.0, 0.0, turns * math.tau * fi / (len(out_frames)-1), 0.0)
+    write_smd(target, layer_nodes, out_frames)
+    return {"target": str(target), "layer": str(layer), "frames": len(target_frames), "bones": selected}
+
+
+def remap_baked_delta(source: Path, target_reference: Path, output: Path) -> dict:
+    target_nodes, _ = read_smd(target_reference)
+    source_nodes, source_frames = read_smd(source)
+    source_by_name = {name: i for i, (name, _) in source_nodes.items()}
+    selected = [name for _, (name, _) in target_nodes.items() if effect_bone(name) and name in source_by_name]
+    frames = []
+    for source_frame in source_frames:
+        frame = {}
+        for i, (name, _) in target_nodes.items():
+            frame[i] = source_frame[source_by_name[name]] if name in selected else (0.0,) * 6
+        frames.append(frame)
+    write_smd(output, target_nodes, frames)
+    return {"source": str(source), "output": str(output), "frames": len(frames), "bones": selected}
+
+
+def convert_full_to_delta(source: Path, output: Path, selected_names: set[str] | None = None) -> dict:
+    nodes, frames = read_smd(source)
+    base = frames[0]
+    selected = []
+    out_frames = []
+    for frame in frames:
+        result = {}
+        for i, (name, _) in nodes.items():
+            allowed = selected_names is None or name in selected_names
+            if allowed:
+                q0 = euler_xyz_to_quat(base[i][3:6])
+                q = euler_xyz_to_quat(frame[i][3:6])
+                result[i] = tuple(frame[i][j] - base[i][j] for j in range(3)) + quat_to_euler_xyz(quat_mul(quat_inv(q0), q))
+                if name not in selected and any(abs(x) > 1e-7 for x in result[i]):
+                    selected.append(name)
+            else:
+                result[i] = (0.0,) * 6
+        out_frames.append(result)
+    write_smd(output, nodes, out_frames)
+    return {"source": str(source), "output": str(output), "frames": len(frames), "bones": selected}
+
+
+def add_attachment(qc_text: str, name: str, bone: str) -> str:
+    if re.search(rf'^\$attachment\s+"{re.escape(name)}"', qc_text, re.M):
+        return qc_text
+    marker = '$attachment "MENU_ROTATE"'
+    at = qc_text.find(marker)
+    if at < 0:
+        raise RuntimeError(f"attachment insertion marker absent: {name}")
+    return qc_text[:at] + f'$attachment "{name}" "{bone}" 0 0 0 rotate 0 0 0\n' + qc_text[at:]
+
+
+def add_event_to_sequences(qc_text: str, sequence_names: list[str], event: str) -> tuple[str, list[str]]:
+    changed = []
+    for name in sequence_names:
+        pattern = re.compile(rf'(\$sequence\s+"{re.escape(name)}"\s*\{{)')
+        if pattern.search(qc_text):
+            qc_text = pattern.sub(rf'\1\n\t{{ event "AE_CL_CREATE_PARTICLE_EFFECT" 0 "{event}" }}', qc_text, count=1)
+            changed.append(name)
+    return qc_text, changed
+
+
+def add_idle_particle_events(qc_text: str, effect: str, attachment: str, stop_frame: int = 189) -> str:
+    pattern = re.compile(r'(\$sequence\s+"idle_seq_autoplay"\s*\{)')
+    if not pattern.search(qc_text):
+        raise RuntimeError("idle_seq_autoplay missing")
+    events = (
+        f'\n\t{{ event "AE_CL_CREATE_PARTICLE_EFFECT" 0 "{effect} follow_attachment {attachment}" }}'
+        f'\n\t{{ event "AE_CL_STOP_PARTICLE_EFFECT" {stop_frame} "{effect} 0" }}'
+    )
+    qc_text = pattern.sub(r'\1' + events, qc_text, count=1)
+    # Use ordinary activity sequences as well: autoplay event dispatch is not
+    # established for the TF2 viewmodel. Stop the previous instance before start.
+    names = re.findall(r'^\$sequence\s+"([^"]+)"', qc_text, re.M)
+    for name in names:
+        if name.startswith(("draw", "raise", "sprintdraw")) or name in ("idle_seq", "idle_seq_air"):
+            start_frame = 0 if name in ("idle_seq", "idle_seq_air") else 1
+            ev = (f'\n\t{{ event "AE_CL_STOP_PARTICLE_EFFECT" 0 "{effect} 1" }}'
+                  f'\n\t{{ event "AE_CL_CREATE_PARTICLE_EFFECT" {start_frame} "{effect} follow_attachment {attachment}" }}')
+            qc_text = re.sub(r'(\$sequence\s+"'+re.escape(name)+r'"\s*\{)',r'\1'+ev,qc_text,count=1)
+    return qc_text
+
+
+def write_merged_particle_manifest(destination: Path, pcf_name: str) -> dict:
+    text = VANILLA_PARTICLE_MANIFEST.read_text(encoding="utf-8-sig")
+    entry = f'\t"file"\t\t"particles/{pcf_name}"\n'
+    if entry.strip() not in text:
+        close = text.rfind("}")
+        if close < 0:
+            raise RuntimeError("invalid vanilla particles manifest")
+        text = text[:close] + entry + text[close:]
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(text, encoding="utf-8", newline="\n")
+    return {"bytes": destination.stat().st_size, "customEntry": f"particles/{pcf_name}"}
+
+
+def build_pcf(prefix: str, output_dir: Path, color_replacements: list[tuple[str, str]]) -> dict:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    text = PARTICLE_TEXT.read_text(encoding="utf-8")
+    text = text.replace("codex_car_mythic_", prefix)
+    short = "cxcar_" if prefix == "codex_car_mythic_" else "cxdt_"
+    text = text.replace(prefix, short)
+    prefix = short
+    for old, new in color_replacements:
+        text = text.replace(old, new)
+    text_path = output_dir / f"{prefix.rstrip('_')}.pcf.txt"
+    pcf_path = output_dir / f"{prefix.rstrip('_')}.pcf"
+    text_path.write_text(text, encoding="utf-8", newline="\n")
+    subprocess.run([str(DMX), "-i", str(text_path), "-ie", "keyvalues2", "-o", str(pcf_path), "-oe", "binary", "-of", "pcf"], check=True)
+    systems = re.findall(r'"name" "string" "(' + re.escape(prefix) + r'[^"]+)"', text)
+    text_path.unlink()
+    return {"pcf": str(pcf_path), "systems": sorted(set(systems)), "root": prefix + "wpn_muzzleflash_xo_elec_FP"}
+
+
+def compile_model(qc: Path, log_path: Path) -> Path:
+    with log_path.open("w", encoding="utf-8") as log:
+        core.compile_qc(CONFIG, qc, lambda line: log.write(str(line) + "\n"))
+    model_name = re.search(r'^\$modelname\s+"([^"]+)"', qc.read_text(encoding="utf-8-sig"), re.M).group(1)
+    mdl = Path(CONFIG["sfm_game"]) / "models" / model_name
+    with log_path.with_name(log_path.stem + "-convert.log").open("w", encoding="utf-8") as log:
+        return core.convert_mdl(CONFIG, mdl, lambda line: log.write(str(line) + "\n"))
+
+
+def model_sequences(data: bytes) -> list[dict]:
+    count, offset = struct.unpack_from("<2i", data, 192)
+    rows = []
+    for index in range(count):
+        base = offset + index * 232
+        label_start = base + struct.unpack_from("<i", data, base + 4)[0]
+        label = data[label_start : data.index(0, label_start)].decode("utf-8", "replace")
+        rows.append({"label": label, "flags": struct.unpack_from("<I", data, base + 12)[0]})
+    return rows
+
+
+def bone_names(data: bytes) -> list[str]:
+    count, start = struct.unpack_from("<2i", data, 160)
+    names = []
+    for index in range(count):
+        record = start + index * 244
+        name_start = record + struct.unpack_from("<i", data, record)[0]
+        names.append(data[name_start : data.index(0, name_start)].decode("utf-8", "replace"))
+    return names
+
+
+def append_stock_rui(model: bytes) -> tuple[bytes, int]:
+    stock = Path(r"D:\TitanfallMods\14_DoubleTake_Hunter\stock\ptpov_doubletake.mdl").read_bytes()
+    old_names, new_names = bone_names(stock), bone_names(model)
+    count, start = struct.unpack_from("<2i", stock, 296)
+    end = start + count * 8
+    for index in range(count):
+        header = start + index * 8
+        record = header + struct.unpack_from("<i", stock, header + 4)[0]
+        pc, vc, fc, po, vo, vmo, fo = struct.unpack_from("<7i", stock, record)
+        end = max(end, record + po + pc * 2, record + vo + vc * 16, record + vmo + vc * 2, record + fo + fc * 32)
+    block = bytearray(stock[start:end])
+    for index in range(count):
+        header = index * 8
+        record = header + struct.unpack_from("<i", block, header + 4)[0]
+        parent_count, _, _, parent_offset, _, _, _ = struct.unpack_from("<7i", block, record)
+        for pi in range(parent_count):
+            loc = record + parent_offset + pi * 2
+            old_index = struct.unpack_from("<h", block, loc)[0]
+            struct.pack_into("<h", block, loc, new_names.index(old_names[old_index]))
+    output = bytearray(model)
+    new_start = (len(output) + 15) & ~15
+    output += b"\0" * (new_start - len(output)) + block
+    struct.pack_into("<2i", output, 296, count, new_start)
+    struct.pack_into("<i", output, 80, len(output))
+    return bytes(output), count
+
+
+def copy_glow_materials(destination: Path) -> None:
+    prefix = "CAR.Mythic.Allfather/mod/materials/models/codex_car_mythic_glow/"
+    with zipfile.ZipFile(MYTHIC_GLOW_ZIP) as z:
+        for name in z.namelist():
+            if name.startswith(prefix) and not name.endswith("/"):
+                target = destination / "mod/materials/models/codex_car_mythic_glow" / Path(name).name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(z.read(name))
+
+
+def build_mythic() -> dict:
+    work = WORK / "mythic_view"
+    destination = RELEASE / "CAR.Mythic.Allfather"
+    shutil.copytree(MYTHIC_PROJECT / "source/view", work)
+    shutil.copytree(MYTHIC_MOD_SOURCE, destination)
+    copy_glow_materials(destination)
+    ref = work / "mythic_evolved.smd"
+    native_dir = work / "native_additive"
+    feather = remap_baked_delta(next(NATIVE.glob("*feather_pose_tweak*")), ref, native_dir / "feather_native_delta.smd")
+    fire = remap_baked_delta(next(NATIVE.glob("*fire_layer_tier2*")), ref, native_dir / "fire_native_delta.smd")
+    idle_bakes = [
+        bake_delta_layer(work / "ptpov_car101_anims/idle_anim_autoplay.smd", native_dir / "feather_native_delta.smd", set(feather["bones"])),
+        bake_delta_layer(work / "ptpov_car101_anims/idle_ads_anim_autoplay.smd", native_dir / "feather_native_delta.smd", set(feather["bones"])),
+    ]
+    attack_bakes = []
+    for attack in sorted((work / "ptpov_car101_anims").glob("attack*.smd")):
+        attack_bakes.append(bake_delta_layer(attack, native_dir / "fire_native_delta.smd", set(fire["bones"])))
+    qc = work / "ptpov_car101.qc"
+    text = qc.read_text(encoding="utf-8-sig")
+    text = add_attachment(text, "VFX_eye", "def_core_orb")
+    text = add_attachment(text, "VFX_base", "def_c_base")
+    text = add_idle_particle_events(text, "cxcar_mflash_xo_elec_glow", "VFX_eye")
+    event = "cxcar_wpn_muzzleflash_xo_elec_FP follow_attachment VFX_base"
+    text, attack_events = add_event_to_sequences(text, ["attack_seq", "attack_seq_regrip", "attack_seq_alt1", "attack_seq_regrip_alt1", "attack_seq_alt2", "attack_seq_regrip_alt2"], event)
+    qc.write_text(text, encoding="utf-8", newline="\n")
+    pcf = build_pcf("codex_car_mythic_", destination / "mod/particles", [])
+    manifest = write_merged_particle_manifest(destination / "mod/particles/particles_manifest.txt", Path(pcf["pcf"]).name)
+    compiled = compile_model(qc, ROOT / "mythic-view-build.log")
+    target = destination / "mod/models/weapons/car101/ptpov_car101.mdl"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_bytes(compiled.read_bytes())
+    metadata_path = destination / "mod.json"
+    metadata = json.loads(metadata_path.read_text(encoding="utf-8-sig"))
+    metadata.update(Version="1.3.2-pcfguide", LoadPriority=0, Description="Apex effect-bone Delta baked into the stock idle/ADS autoplay channels; full vanilla particle manifest retained and custom PCF appended.")
+    metadata_path.write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    sequences = model_sequences(target.read_bytes())
+    row = next(x for x in sequences if x["label"] == "idle_seq_autoplay")
+    assert row["flags"] & 4 and row["flags"] & 8
+    assert not any(x["label"] in {"mythic_feather_native", "mythic_fire_native", "mythic_killreact_native"} for x in sequences)
+    archive = RELEASE / "CAR.Mythic.Allfather-1.3.2-pcfguide.zip"
+    zip_folder(destination, archive)
+    return {"folder": str(destination), "zip": str(archive), "sha256": sha256(archive), "sourceLayers": [feather, fire], "idleBakes": idle_bakes, "attackBakes": attack_bakes, "attackEventSequences": attack_events, "pcf": pcf, "manifest": manifest}
+
+
+def build_double() -> dict:
+    work = WORK / "double_view"
+    destination = RELEASE / "Codex.DoubleTake.HunterSafari"
+    shutil.copytree(DOUBLE_VIEW_SOURCE, work)
+    shutil.copytree(DOUBLE_MOD_SOURCE, destination)
+    selected = {"def_c_timemachine_core", "def_c_timemachine_ring_01", "def_c_timemachine_ring_02", "def_c_timemachine_ring_03"}
+    rotor = smooth_rotors(work, selected)
+    shutil.copytree(Path("D:/TitanfallMods/22_AnimatedFX/Codex.DoubleTake.HunterSafari/mod/materials"), destination / "mod/materials", dirs_exist_ok=True)
+    idle_bakes = [
+        bake_delta_layer(work / "ptpov_doubletake_anim_idle_anim_autoplay.smd", work / "hunter_rotor_delta.smd", selected),
+        bake_delta_layer(work / "ptpov_doubletake_anim_idle_ads_anim_autoplay.smd", work / "hunter_rotor_delta.smd", selected),
+    ]
+    qc = work / "ptpov_doubletake.qc"
+    text = qc.read_text(encoding="utf-8-sig")
+    text = re.sub(r'^\$sequence\s+"hunter_rotors_autoplay".*(?:\n(?:\t.*|\})*)?', '', text, flags=re.M)
+    text = add_attachment(text, "hunter_fx", "def_c_timemachine_core")
+    text = add_idle_particle_events(text, "cxdt_mflash_xo_elec_glow", "hunter_fx")
+    event = "cxdt_wpn_muzzleflash_xo_elec_FP follow_attachment muzzle_flash"
+    text, attack_events = add_event_to_sequences(text, ["attack_seq", "attack_seq_regrip", "attack_seq_alt1", "attack_seq_regrip_alt1", "attack_seq_alt2", "attack_seq_regrip_alt2"], event)
+    qc.write_text(text, encoding="utf-8", newline="\n")
+    pcf = build_pcf("codex_doubletake_hunter_", destination / "mod/particles", [("255 190 72 255", "80 210 255 255"), ("174 92 255 255", "210 150 62 255")])
+    manifest = write_merged_particle_manifest(destination / "mod/particles/particles_manifest.txt", Path(pcf["pcf"]).name)
+    compiled = compile_model(qc, ROOT / "double-view-build.log")
+    view_data, rui_count = append_stock_rui(compiled.read_bytes())
+    target = destination / "mod/models/weapons/doubletake/ptpov_doubletake.mdl"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_bytes(view_data)
+    metadata_path = destination / "mod.json"
+    metadata = json.loads(metadata_path.read_text(encoding="utf-8-sig"))
+    metadata.update(Version="1.0.11-pcfguide", LoadPriority=0, Description="Stock optics and five RUI meshes retained; ring Delta baked into the stock idle/ADS autoplay channels with a full vanilla particle manifest.")
+    metadata_path.write_text(json.dumps(metadata, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    sequences = model_sequences(view_data)
+    row = next(x for x in sequences if x["label"] == "idle_seq_autoplay")
+    assert row["flags"] & 4 and row["flags"] & 8
+    assert not any(x["label"] in {"hunter_rotors_additive", "hunter_rotors_autoplay"} for x in sequences)
+    assert rui_count == 5
+    for required in (b"doubletake_rui_lower", b"doubletake_rui_upper", b"pro_screen_rui_upper", b"attach_scope_ads_2_crosshair"):
+        assert required in view_data
+    archive = RELEASE / "Codex.DoubleTake.HunterSafari-1.0.11-pcfguide.zip"
+    zip_folder(destination, archive)
+    return {"folder": str(destination), "zip": str(archive), "sha256": sha256(archive), "rotor": rotor, "idleBakes": idle_bakes, "ruiRecords": rui_count, "attackEventSequences": attack_events, "pcf": pcf, "manifest": manifest}
+
+
+def main() -> None:
+    if WORK.exists():
+        shutil.rmtree(WORK)
+    if RELEASE.exists():
+        shutil.rmtree(RELEASE)
+    WORK.mkdir(parents=True)
+    RELEASE.mkdir(parents=True)
+    report = {"builtAt": "2026-09-18", "runtimeTested": False, "ruiEditorWorkPaused": True, "mythic": build_mythic(), "doubleTake": build_double()}
+    finalize_shared_pcf(report)
+    (ROOT / "FINAL-AUDIT.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(report, ensure_ascii=False, indent=2))
+
+
+def smooth_rotors(work, selected):
+    # Restore the Apex local axes discarded by the original rotor importer.
+    import ast
+    sys.path.insert(0, r"D:\TitanfallMods\21_DoubleTakeUIRotors\python_deps")
+    import numpy as np
+    source = Path(r"D:\TitanfallMods\21_DoubleTakeUIRotors\build_rotors.py").read_text()
+    tree = ast.parse(source)
+    fn = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == "parse_smd")
+    ns = {"np": np, "re": re}
+    exec(compile(ast.Module(body=[fn], type_ignores=[]), "parse_smd", "exec"), ns)
+    apex = Path(r"D:\TitanfallMods\14_DoubleTake_Hunter\source\view\tripletake_react_v22_huntersafari_v_MAINBODY_0_lod0.smd")
+    _, nodes, _, world, _, _ = ns["parse_smd"](apex)
+    ids = {name: i for i, (name, _) in nodes.items()}
+    axes = {}
+    for name in selected:
+        m = np.linalg.inv(world[ids["def_c_base"]]) @ world[ids[name]]
+        y = math.asin(max(-1., min(1., -m[2,0])))
+        axes[name] = (math.atan2(m[2,1],m[2,2]), y, math.atan2(m[1,0],m[0,0]))
+    for file in work.glob("*.smd"):
+        text = file.read_text(encoding="utf-8-sig")
+        if "triangles" not in text:
+            continue
+        n, frames = read_smd(file)
+        lines = text.splitlines()
+        a = lines.index("skeleton"); b = lines.index("end", a)
+        for j in range(a+1,b):
+            bits = lines[j].split()
+            if not bits or bits[0] == "time": continue
+            name = n[int(bits[0])][0]
+            if name in axes:
+                lines[j] = " ".join(bits[:4]) + " " + " ".join(f"{v:.9f}" for v in axes[name])
+        file.write_text("\n".join(lines)+"\n",encoding="utf-8")
+    n, _ = read_smd(work / "hunter_body.smd")
+    frames = []
+    for fi in range(191):
+        frame = {i: (0.,)*6 for i in n}
+        for i,(name,_) in n.items():
+            if "timemachine_ring_" in name:
+                turns = {"01":1,"02":-1,"03":2}[name[-2:]]
+                frame[i] = (0.,0.,0.,0.,math.tau*turns*fi/190,0.)
+        frames.append(frame)
+    write_smd(work / "hunter_rotor_delta.smd", n, frames)
+    return {"frames":191, "method":"analytic-per-frame-closed-loop", "restoredApexAxes":axes}
+
+
+def finalize_shared_pcf(report):
+    import uuid
+    parts = []
+    for key in ("mythic", "doubleTake"):
+        pcf = Path(report[key]["pcf"]["pcf"])
+        out = ROOT / (key + "-pcf-source.txt")
+        subprocess.run([str(DMX),"-i",str(pcf),"-ie","binary","-o",str(out),"-oe","keyvalues2","-of","pcf"],check=True)
+        txt = out.read_text()
+        if key == "doubleTake":
+            txt = re.sub(r'[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}',lambda m: str(uuid.uuid5(uuid.NAMESPACE_URL,"doubletake/"+m[0])),txt)
+        # Flag the persistent sprite for the viewmodel renderer, and bound emitter life.
+        txt = txt.replace('"emission_duration" "float" "999999"','"emission_duration" "float" "6.3"')
+        txt = txt.replace('"max_particles" "int" "80"','"view model effect" "bool" "1"\n\t"max_particles" "int" "80"')
+        start = txt.index('[',txt.index('"particleSystemDefinitions"'))
+        end = txt.index('\n\t]\n}',start)
+        parts.append((txt[:start+1],txt[start+1:end].strip(),txt[end+len('\n\t]\n}'):]))
+    merged = parts[0][0]+"\n"+parts[0][1]+",\n"+parts[1][1]+"\n\t]\n}\n"+parts[0][2]+parts[1][2]
+    textpath = ROOT / "codex_weapon_fx_shared.pcf.txt"
+    textpath.write_text(merged,encoding="utf-8")
+    binary = ROOT / "codex_weapon_fx_shared.pcf"
+    subprocess.run([str(DMX),"-i",str(textpath),"-ie","keyvalues2","-o",str(binary),"-oe","binary","-of","pcf"],check=True)
+    for key in ("mythic","doubleTake"):
+        folder = Path(report[key]["folder"])
+        old = Path(report[key]["pcf"]["pcf"])
+        old.unlink()
+        target = folder / "mod/particles" / binary.name
+        shutil.copy2(binary,target)
+        report[key]["manifest"] = write_merged_particle_manifest(folder/"mod/particles/particles_manifest.txt",binary.name)
+        report[key]["sharedPCF"] = str(target)
+        zip_folder(folder,Path(report[key]["zip"]))
+        report[key]["sha256"] = sha256(Path(report[key]["zip"]))
+    report["sharedParticleManifestIdentical"] = True
+
+
+if __name__ == "__main__":
+    main()
