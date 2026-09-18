@@ -2,16 +2,18 @@
 
 这里保存目前整理完成的 Northstar / R2Vanilla CAR 替换模组安装包。
 
-## Additive + PCF 严格重做（2026-09-17）
+## Idle Auto Delta + 完整 PCF 清单修正版（2026-09-17）
 
-本轮按本地 Delta 教程与 Source 粒子事件规范重做：CAR 神话皮使用 RSX 导出的 Apex 原生 `__sub_...` 烘焙 Delta，仅叠加枪体、眼睛、翅膀和羽毛骨骼；双重击的三组时间环改为 frame-0 相对 Delta。两套 PCF 使用独立命名空间、粒子清单以及 QC 创建/停止事件。
+此前 1.3.0 / 1.0.9 错把 Delta 建成独立 autoplay 序列，并使用了只含自定义 PCF 的精简粒子清单，现已废弃。修正版严格把效果层烘焙进原有 `idle_anim_autoplay` 与 `idle_ads_anim_autoplay`：CAR 写入 107 个眼睛、翅膀和羽毛效果骨骼，并把开火层写入原攻击动画；双重击写入 4 个时间装置骨骼。模型中不再包含新建的 reactive/rotor autoplay 序列。
 
-- `CAR.Mythic.Allfather-1.3.0-additive-pcf.zip`
-- `Codex.DoubleTake.HunterSafari-1.0.9-additive-pcf.zip`
-- [制作说明与静态核对](docs/2026-09-17-additive-pcf/BUILD-NOTES.md)
-- [v2026.09.17-additive-pcf 下载](https://github.com/ht1580/titanfall2-car-mods/releases/tag/v2026.09.17-additive-pcf)
+两包都从原版前端 VPK 提取完整 `particles_manifest.txt`，保留全部原版粒子条目后仅追加自己的 PCF，避免覆盖地图与环境粒子注册。QC 事件名已与反向解码后的 PCF 特效名逐项核对。双重击继续保留 5 个原版内嵌 RUI 和原版瞄具。
 
-当前 Apex 安装不再包含旧版 Huntersafari reactive ASeq，因此双重击转环是严格按 Delta 规范兼容重建，并非冒充 Apex 原始动画。两包均完成离线编译、MDL53 转换、PCF 反向解码、RUI、ZIP 与哈希检查，尚未启动游戏验证。
+- `CAR.Mythic.Allfather-1.3.1-idleauto-pcf.zip`
+- `Codex.DoubleTake.HunterSafari-1.0.10-idleauto-pcf.zip`
+- [制作说明与静态核对](docs/2026-09-17-idleauto-pcf/BUILD-NOTES.md)
+- [v2026.09.17-idleauto-pcf 下载](https://github.com/ht1580/titanfall2-car-mods/releases/tag/v2026.09.17-idleauto-pcf)
+
+当前 Apex 安装不含旧版 Huntersafari reactive ASeq，因此双重击转环是基于现有 Apex 时间装置骨骼制作的兼容 Delta，并非原版 Apex 动画。两包已完成离线编译、MDL53 转换、PCF 反向解码、RUI、ZIP 与哈希检查；未启动游戏验证。
 
 ## TitanfallModWorkbench 1.5.0 全自动替换
 
