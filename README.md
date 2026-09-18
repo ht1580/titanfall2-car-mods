@@ -2,6 +2,17 @@
 
 这里保存目前整理完成的 Northstar / R2Vanilla CAR 替换模组安装包。
 
+## Additive + PCF 严格重做（2026-09-17）
+
+本轮按本地 Delta 教程与 Source 粒子事件规范重做：CAR 神话皮使用 RSX 导出的 Apex 原生 `__sub_...` 烘焙 Delta，仅叠加枪体、眼睛、翅膀和羽毛骨骼；双重击的三组时间环改为 frame-0 相对 Delta。两套 PCF 使用独立命名空间、粒子清单以及 QC 创建/停止事件。
+
+- `CAR.Mythic.Allfather-1.3.0-additive-pcf.zip`
+- `Codex.DoubleTake.HunterSafari-1.0.9-additive-pcf.zip`
+- [制作说明与静态核对](docs/2026-09-17-additive-pcf/BUILD-NOTES.md)
+- [v2026.09.17-additive-pcf 下载](https://github.com/ht1580/titanfall2-car-mods/releases/tag/v2026.09.17-additive-pcf)
+
+当前 Apex 安装不再包含旧版 Huntersafari reactive ASeq，因此双重击转环是严格按 Delta 规范兼容重建，并非冒充 Apex 原始动画。两包均完成离线编译、MDL53 转换、PCF 反向解码、RUI、ZIP 与哈希检查，尚未启动游戏验证。
+
 ## TitanfallModWorkbench 1.5.0 全自动替换
 
 工作台现在可扫描 Apex 武器皮肤和 Titanfall 2 武器模型，在“全自动替换”页选择来源与目标后，自动完成 VPK 提取、完整目标 QC/动画恢复、Apex 网格与目标骨架映射、VTF/VMT 生成、StudioMDL 编译、MDL v53 转换、原版 RUI 保留及 Northstar ZIP 打包。

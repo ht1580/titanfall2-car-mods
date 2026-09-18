@@ -1,0 +1,29 @@
+{
+  "CAR.Mythic.Allfather-1.3.0-additive-pcf.zip": {
+    "sha256": "13cb975a5d925ca12df5c6a4f0ca49ad6951068c23fdba0dce5ab2dc5e701c4c",
+    "bytes": 17620591,
+    "entries": 48,
+    "zipTest": null,
+    "pcfCount": 1,
+    "pcfTextCount": 0,
+    "scriptCount": 0
+  },
+  "Codex.DoubleTake.HunterSafari-1.0.9-additive-pcf.zip": {
+    "sha256": "33b2fbc609406c27c38e0a65cdcad4331934a62ea2b19fb52e603578627fdaf4",
+    "bytes": 15547278,
+    "entries": 9,
+    "zipTest": null,
+    "pcfCount": 1,
+    "pcfTextCount": 0,
+    "scriptCount": 0
+  },
+  "policy": {
+    "runtimeTested": false,
+    "loadPriority": 0,
+    "repak": "existing RePak 1.2 assets preserved",
+    "ruiEditorWork": "paused",
+    "doubleTakeNativeApexReactiveSourceAvailable": false,
+    "doubleTakeAnimation": "compatibility delta authored on exact Apex time-machine bones",
+    "mythicAnimation": "RSX-extracted Apex baked delta SMDs"
+  }
+}
